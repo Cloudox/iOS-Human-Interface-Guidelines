@@ -24,3 +24,7 @@ iOS包含了下面这些主旨：
 #### 服从内容
 尽管一个清新的、漂亮的UI和流动的手势被iOS体验所强调，但用户的内容才是它的核心。  
 这里是一些确保你的设计能够提升功能以及服从用户的内容的方法。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Designing%20for%20iOS/20150924160244562.png)
+
+`利用全屏的优势。`天气app是这个方法的一个很好的例子：这个显示某个地区当前的天气的漂亮的、全屏的描述界面，包括那些显示每小时的天气信息的空间立即传达了最重要的信息。
