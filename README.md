@@ -87,3 +87,11 @@ iOS通常在清晰的层级下展示内容来传达层级和位置，这可以�
 
 ### <a name="iOS App Anatomy"/>iOS App Anatomy
 几乎所有的iOS app都至少使用了一些UIKit框架定义的UI部件。了解这些基础部件的名字、角色和功能可以帮助你明智地决定你的app的UI设计。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/iOS%20App%20Anatomy/1.png)
+
+这些UIKit提供的UI元素大概分成四个种类：
+* `Bars。`Bars包含可以告诉用户他们在哪的上下文信息和帮助用户导航或发起动作的控制装置。
+* `Content Views。`Content Views包含app的详细内容，并且可以使用滚动、插入、删除和元件重布局的行为。
+* `Controls。`Controls执行动作或者展示信息。
+* `Temporary views。`Temporary views短暂地出现来给用户重要的信息或者额外的选项和功能。
