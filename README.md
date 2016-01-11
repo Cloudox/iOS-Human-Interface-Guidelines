@@ -4,6 +4,7 @@
 ## 目录
 * [UI Design Basics](#UI Design Basics)
   * [Designing for iOS](#Designing for iOS)
+  * [iOS App Anatomy](#iOS App Anatomy)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -82,3 +83,7 @@ iOS通常在清晰的层级下展示内容来传达层级和位置，这可以�
 ![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Designing%20for%20iOS/14.png)
 
 当用户选择一个日期时会发生相似的过渡效果：月份视图会裂开，将当前一周的日期推到屏幕顶部，然后显示所选中日期的小时视图。通过每个过渡效果，日历加强了年份、月份和日期之间的层次关系。
+
+
+### <a name="iOS App Anatomy"/>iOS App Anatomy
+几乎所有的iOS app都至少使用了一些UIKit框架定义的UI部件。了解这些基础部件的名字、角色和功能可以帮助你明智地决定你的app的UI设计。
