@@ -95,3 +95,5 @@ iOS通常在清晰的层级下展示内容来传达层级和位置，这可以�
 * `Content Views。`Content Views包含app的详细内容，并且可以使用滚动、插入、删除和元件重布局的行为。
 * `Controls。`Controls执行动作或者展示信息。
 * `Temporary views。`Temporary views短暂地出现来给用户重要的信息或者额外的选项和功能。
+
+除了定义UI元素以外，UIKit还定义实施功能的对象，比如手势识别、绘图、可及性和印刷支持。
