@@ -133,3 +133,17 @@ iOS定义了两个尺寸是如何描绘不同设备的显示环境的。比如iP
 `NOTE`
 在支持多任务处理的iPad上，你的app也许要和别的app共享屏幕。确保使用Auto Layout，这样你的app才会在用户决定使用多任务处理是进行响应，比如Splite View和SlideOver。
 除了使用Auto Layout，当你在iPad Pro上展示可读的内容时使用UIView 的readableContentGuide属性也很重要，这可以使得边界对读者来说更加的舒适。
+
+iPhone的显示环境非常依赖于设备和它的方向。
+
+在垂直时，iPhone 6 Plus使用紧致的水平尺寸和正常的垂直尺寸。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Adaptivity%20and%20Layout/3.jpeg)
+
+在水平时，iPhone 6 Plus使用正常的水平尺寸和紧致的垂直尺寸。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Adaptivity%20and%20Layout/4.jpeg)
+
+在其他的iPhone机型上，包括iPhone 6，使用了同样的尺寸设置。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Adaptivity%20and%20Layout/5.jpeg)
