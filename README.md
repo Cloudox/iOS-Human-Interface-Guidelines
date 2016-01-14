@@ -1,5 +1,5 @@
 # iOS-Human-Interface-Guidelines
-翻译苹果官方文档《iOS Human Interface Guidelines》
+翻译自苹果官方文档《iOS Human Interface Guidelines》
 
 ## 目录
 * [UI Design Basics](#UI Design Basics)
