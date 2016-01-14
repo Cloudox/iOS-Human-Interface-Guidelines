@@ -146,4 +146,10 @@ iPhone的显示环境非常依赖于设备和它的方向。
 
 在其他的iPhone机型上，包括iPhone 6，使用了同样的尺寸设置。
 
+在垂直时，iPhone 6、iPhone 5和iPhone 4s使用紧致的水平尺寸和正常的垂直尺寸。
+
 ![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Adaptivity%20and%20Layout/5.jpeg)
+
+在水平时，这些设备在水平和垂直尺寸上都是用紧致尺寸。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Adaptivity%20and%20Layout/6.jpeg)
