@@ -190,9 +190,4 @@ iPhone的显示环境非常依赖于设备和它的方向。
 
 ![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Adaptivity%20and%20Layout/9.png) ![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Adaptivity%20and%20Layout/10.png)
 
-
-
-
-
-
 未完待续...
