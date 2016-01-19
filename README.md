@@ -6,6 +6,7 @@
   * [Designing for iOS](#Designing for iOS)
   * [iOS App Anatomy](#iOS App Anatomy)
   * [Adaptivity and Layout](#Adaptivity and Layout)
+  * [Starting and Stopping](#Starting and Stopping)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -189,5 +190,16 @@ iPhone的显示环境非常依赖于设备和它的方向。
 `给每一个交互的元素足够的空间来让人们易于与内容和控制器进行交互。`给可点击的控制器一个44*44像素的点击区域。
 
 ![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Adaptivity%20and%20Layout/9.png) ![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Adaptivity%20and%20Layout/10.png)
+
+
+### <a name="Starting and Stopping"/>Starting and Stopping
+#### 立即开始
+一般经常认为人们最多花一到两分钟时间来评估一个新的app。当你充分利用这段简短的时间立马展示有用的内容时，可以挑起新用户的兴趣并且给所有的用户一个超凡的体验。
+
+`IMPORTANT`
+不要告诉用户在安装你的app后重启设备。重启需要时间，而且会使你的app看上去不可靠以及难以使用。  
+如果你的app有着内存使用或其他问题让其必须在系统刚启动时才能运行的话，你需要处理这些问题。查看Use Memory Efficiently获取一些开发一个优化的app的指导。
+
+尽可能地避免展示一个启动画面或者其他启动体验。用户能立即使用的你的app是最好的。
 
 未完待续...
