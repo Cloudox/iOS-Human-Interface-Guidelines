@@ -7,6 +7,7 @@
   * [iOS App Anatomy](#iOS App Anatomy)
   * [Adaptivity and Layout](#Adaptivity and Layout)
   * [Starting and Stopping](#Starting and Stopping)
+  * [Navigation](#Navigation)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -252,5 +253,17 @@ iPhone的显示环境非常依赖于设备和它的方向。
 `如果只有部分的app功能无法获取，当人们想要使用这个功能是显示一个界面或者一个警告框来告诉人们。`否则，人们可能会使用其他的app。如果你打算使用一个警告框，确保只在人们尝试获取无法获取的功能时才显示它。
 
 ![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Starting%20and%20Stopping/5.png)
+
+
+### <a name="Navigation"/>Navigation
+#### 导航栏
+除非没有达到用户的期待，否则人们不会意识到一个app中导航栏的体验。你的工作就是在不引起注意的情况下，使用一种方式来实现导航栏来支持你app的结构和目的。
+
+一般来说，有三种导航栏风格，每一种都很好的适应了一个独特的app结构：
+* 层级
+* 平面
+* 内容或体验主导
+
+在一个分层级的app中，用户通过在每一个屏幕做出一个选择来导航，直到到达了他们的目的地。为了导航到另一个目的地，用户必须回退一些步骤——或者从头开始——然后进行不同的选择。设置和邮件是使用分层结构的app的例子。
 
 未完待续...
