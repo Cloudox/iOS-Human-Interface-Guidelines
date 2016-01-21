@@ -276,4 +276,22 @@ iPhone的显示环境非常依赖于设备和它的方向。
 
 ![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Navigation/3.jpeg)
 
+在一些例子中，将多个导航风格组合到一个app中会工作的很好。比如说，一个平面结构的某一个基础分类下的条目，使用层级结构来显示是最好的。
+
+`用户也应该一直清楚他们在你的app的哪个位置，以及如何去往他们的目的地。`无论哪一种导航风格适合你的app，最重要的是，用户到达内容的路径是有逻辑的，可预知的，易于跟随的。
+
+UIKit定义了一些基础的UI元素来简单的实现层级和平面导航风格，除了一些帮助你实现内容导向的导航栏元素，比如在一个图书风格或者多媒体浏览app中。一个提供体验导向导航风格的游戏或者其他app，通常依赖自定义的元素和行为。
+
+`使用navigation bar来让用户简单的查看分层级的数据。`navigation bar的标题可以告诉用户他们现在在层级中的位置；返回按钮使回到之前的层级变得简单。查看Navagation Bar来学习更多。
+
+`使用tab bar来显示对等的内容或功能类别。`tab bar是支持平面信息结构的好方法，并且可以让用户持续的在类别间切换，不管他们现在在哪个位置。查看Tab Bar学习更多。
+
+`当每一个app的屏幕都表示同样类型的条目或页面的一个独立的实例时，使用page control。`page control可以很好地告诉用户有多少条目或页面是可接触的，以及现在显示的是哪一个。比如说，天气使用page control来显示用户打开过多少个地点的天气界面。查看Page Control学习更多。
+
+`一般的，最好给用户一个可以到每个屏幕的路径。`如果有一个屏幕用户需要在多个环境下查看，考虑使用一个临时的界面，比如modal view、action sheet或alert。查看Modal View、Action Sheet和Alert学习更多。
+
+UIKit还提供了如下这些相关的控制器：
+* Segmented Control。segmented control让用户在屏幕在看到不同类别或方面的内容；它不能导航向一个新屏幕。
+* Toolbar。即使toolbar看起来和navigation bar或tab bar很相似，它不能够导航。它只是给用户一些对当前屏幕内容动作的控制。
+
 未完待续...
