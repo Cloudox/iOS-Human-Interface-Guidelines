@@ -266,4 +266,14 @@ iPhone的显示环境非常依赖于设备和它的方向。
 
 在一个分层级的app中，用户通过在每一个屏幕做出一个选择来导航，直到到达了他们的目的地。为了导航到另一个目的地，用户必须回退一些步骤——或者从头开始——然后进行不同的选择。设置和邮件是使用分层结构的app的例子。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Navigation/1.jpeg)
+
+在一个平面信息结构的app中，用户可以直接从一个基础分类导航到另一个基础分类，因为所有的基础分类都可以在主屏幕进入。音乐和应用商店是使用平面结构的app的例子。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Navigation/2.jpeg)
+
+显然，在一个使用内容或体验导向的结构的app里，导航栏也是根据内容或体验来定义的。比如说，用户在书中直接从一页移动到另一页或者通过一个内容表单来选择页码；在一个游戏中，导航栏也经常是体验的一个重要部分。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Navigation/3.jpeg)
+
 未完待续...
