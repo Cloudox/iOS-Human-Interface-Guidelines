@@ -8,6 +8,7 @@
   * [Adaptivity and Layout](#Adaptivity and Layout)
   * [Starting and Stopping](#Starting and Stopping)
   * [Navigation](#Navigation)
+  * [Modal Contexts](#Modal Contexts)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -293,5 +294,10 @@ UIKit定义了一些基础的UI元素来简单的实现层级和平面导航风�
 UIKit还提供了如下这些相关的控制器：
 * Segmented Control。segmented control让用户在屏幕在看到不同类别或方面的内容；它不能导航向一个新屏幕。
 * Toolbar。即使toolbar看起来和navigation bar或tab bar很相似，它不能够导航。它只是给用户一些对当前屏幕内容动作的控制。
+
+
+### <a name="Modal Contexts"/>Modal Contexts
+Modality——即一种事物存在或体验的模式——优缺点并存。它可以让用户心无旁骛地完成任务或获取信息，但却是以临时性的禁止与app的其他内容交互来实现的。
+
 
 未完待续...
