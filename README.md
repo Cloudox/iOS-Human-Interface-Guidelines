@@ -9,6 +9,7 @@
   * [Starting and Stopping](#Starting and Stopping)
   * [Navigation](#Navigation)
   * [Modal Contexts](#Modal Contexts)
+  * [Interactivity and Feedback](#Interactivity and Feedback)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -314,5 +315,10 @@ Modality——即一种事物存在或体验的模式——优缺点并存。它
 `将警告框用于传达必要的——并且理论上可交互的——信息。`警告框会打断用户的体验并需要一次点击才能退出，所以让用户觉得这个警告框的信息是值得这次打断的。查看Alert学习更多。
 
 `尊重用户接收通知的偏好。`在设置中，用户会指明他们希望如何从你的app中获取通知。确保遵守这些偏好，免得用户关闭你app的所有通知。
+
+
+### <a name="Interactivity and Feedback"/>Interactivity and Feedback
+#### 交互式的元素会引导触摸
+
 
 未完待续...
