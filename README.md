@@ -9,6 +9,7 @@
   * [Starting and Stopping](#Starting and Stopping)
   * [Navigation](#Navigation)
   * [Modal Contexts](#Modal Contexts)
+  * [Interactivity and Feedback](#Interactivity and Feedback)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -299,5 +300,25 @@ UIKit还提供了如下这些相关的控制器：
 ### <a name="Modal Contexts"/>Modal Contexts
 Modality——即一种事物存在或体验的模式——优缺点并存。它可以让用户心无旁骛地完成任务或获取信息，但却是以临时性的禁止与app的其他内容交互来实现的。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Modal%20Contexts/1.png)
+
+理论上，用户可以和iOS app非线性地交互，所以最好减少你app中模式化体验的数量。一般来说，只在下面这些情况下考虑模式化内容：
+* 必须获取用户的关注时
+* 一个独立的任务必须被完成——或者确定被抛弃——来避免在模糊不清的状态下丢失用户的数据。
+
+`保持模式化任务简单、短暂和刚好被关注。`你不会想要用户将一个模式化界面当成你的app中一个迷你app来体验。如果一个子任务太复杂，人们会在进入模式化环境时忘记他们暂停的主任务。尤其在创建一个包含多层级视图的模式化任务时要谨慎，因为人们会迷失并忘记怎么回退回去。如果一个模式化任务必须包含多视图的子任务，确保给用户一个简单、清晰的路径来浏览层级，同时避免成环。查看Modal View来学习模式化界面。
+
+`始终提供一个明显的、安全的方式来退出模式化任务。`人们应该能够预知他们退出一个模式化视图所带来的结果。
+
+`如果任务需要一个多层级的模式化视图，确保你的用户理解他们按下一个顶层下面的视图的完成按钮时会发生什么。`检查任务来决定一个完成按钮是否只完成其自身界面的任务，还是整个任务。由于存在这种潜在的疑惑，尽量避免在次级的界面添加完成按钮。
+
+`将警告框用于传达必要的——并且理论上可交互的——信息。`警告框会打断用户的体验并需要一次点击才能退出，所以让用户觉得这个警告框的信息是值得这次打断的。查看Alert学习更多。
+
+`尊重用户接收通知的偏好。`在设置中，用户会指明他们希望如何从你的app中获取通知。确保遵守这些偏好，免得用户关闭你app的所有通知。
+
+
+### <a name="Interactivity and Feedback"/>Interactivity and Feedback
+#### 交互式的元素会引导触摸
+为了显示交互，安装的app使用了一系列的提示，包括按压的相应、颜色、位置、环境和有意义的图标及标签。用户很少需要额外的装饰来告诉他们屏幕上的一个元素是可交互的或者说明它会做什么。
 
 未完待续...
