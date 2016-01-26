@@ -356,4 +356,38 @@ App Store在列表行中使用按钮边框来强调点击行获取更多信息�
 
 人们不需要为了使用3D Touch而学习新的手势。当人们轻按屏幕得到响应的时候，会很快发现3D Touch带来的新的交互维度。
 
+`Tap（点击）：`按或选择一个控制器或元素
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/8.jpeg)
+
+`Drag（拖拽）：`去滚动或摇——即左右摇摆。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/9.jpeg)
+
+`Flick（轻弹）：`快速的滚动或摇。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/10.jpeg)
+
+`Swipe（滑动）：`用一个手指，来回到上一个界面，或在一个分裂视图控制器中显示一个隐藏的界面，或者是显示列表行中的删除按钮。使用peek，滑动可以显示快速响应的内容（查看3D Touch来获取更多信息）。
+使用四个手指，在iPad上切换app。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/11.jpeg)
+
+`Double tap（双击）：`放大并居中内容中的一块区域或图片。
+如果已经放大了，则是缩小。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/12.jpeg)
+
+`Pinch（捏）：`外捏来放大；内捏来缩小。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/13.jpeg)
+
+`Touch and hold（触摸并保持）：`在可编辑或可选择的文本区域，展示一个光标位置的放大的视图。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/14.jpeg)
+
+`Shake（摇晃）：`来开始一个撤销或重复的动作。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/15.jpeg)
+
 未完待续...
