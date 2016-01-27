@@ -356,4 +356,51 @@ App Store在列表行中使用按钮边框来强调点击行获取更多信息�
 
 人们不需要为了使用3D Touch而学习新的手势。当人们轻按屏幕得到响应的时候，会很快发现3D Touch带来的新的交互维度。
 
+`Tap（点击）：`按或选择一个控制器或元素
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/8.jpeg)
+
+`Drag（拖拽）：`去滚动或摇——即左右摇摆。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/9.jpeg)
+
+`Flick（轻弹）：`快速的滚动或摇。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/10.jpeg)
+
+`Swipe（滑动）：`用一个手指，来回到上一个界面，或在一个分裂视图控制器中显示一个隐藏的界面，或者是显示列表行中的删除按钮。使用peek，滑动可以显示快速响应的内容（查看3D Touch来获取更多信息）。
+使用四个手指，在iPad上切换app。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/11.jpeg)
+
+`Double tap（双击）：`放大并居中内容中的一块区域或图片。
+如果已经放大了，则是缩小。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/12.jpeg)
+
+`Pinch（捏）：`外捏来放大；内捏来缩小。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/13.jpeg)
+
+`Touch and hold（触摸并保持）：`在可编辑或可选择的文本区域，展示一个光标位置的放大的视图。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/14.jpeg)
+
+`Shake（摇晃）：`来开始一个撤销或重复的动作。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/15.jpeg)
+
+除了用户知道的标准手势，iOS还定义了一些唤起全系统动作的手势，比如显示控制中心或通知中心。无论人们使用什么app，都依赖于这些手势去操作。
+
+`不要给标准手势关联不同的动作。`除非你的app是一个游戏，重定义一个标准手势的意义会使你的用户感到困惑并使你的app变得难用。
+
+`不要自定义会调用标准手势相同动作的手势。`人们习惯标准手势的行为，而且他们并不会对学习不同的方式来做同样的事情感到感谢。
+
+`使用复杂的手势作为加快任务的快捷方式，而不是完成它的唯一方式。`尽可能地给用户一个简单、直接的方式来完成动作，即使这需要额外的一两次点击。简单的手势让用户集中在体验和内容上，而不是交互。
+
+`一般来说，不要定义新的手势，除非你的app是个游戏。`在游戏或其他沉浸式app中，自定义的手势会变成有趣体验的一部分。但对于一些帮助用户做一些对他们来说重要的事情的时候，最好使用标准手势，因为用户不需要努力去发现或记住他们。
+
+`在一个合理的环境下，考虑使用多触点的手势。`尽管复杂的手势在每一个app中都不被期待，它们却可以丰富app的体验，使人们在其中度过大量的时间，比如在游戏或创造内容的环境下。永远记住，非标准手势不是可发现的，并且应该稀少，如果有，那么就要是完成动作的唯一方式。
+
 未完待续...
+查看最新内容参见[我的博客](http://blog.csdn.net/column/details/cloudox-column0.html)
