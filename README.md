@@ -10,6 +10,7 @@
   * [Navigation](#Navigation)
   * [Modal Contexts](#Modal Contexts)
   * [Interactivity and Feedback](#Interactivity and Feedback)
+  * [Animation](#Animation)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -421,6 +422,14 @@ App Store在列表行中使用按钮边框来强调点击行获取更多信息�
 `合适的从iOS获取信息。`用户在他们的设备中存储了大量的信息。可以的话，不要强制用户给你一些你可以很容易自己找到的信息，比如他们的联系人或日历信息。
 
 `通过给用户一些有用的内容来平衡输入的请求。`给予和获取的感受帮助人们感觉他们在你的app中正在前进。
+
+### <a name="Animation"/>Animation
+#### 动画
+漂亮、精细的动画贯穿了iOS 的UI，并且使app的体验变得更加的迷人而有活力。
+恰当的动画可以：
+* 传达状态和提供反馈
+* 增强操纵的直接观感
+* 帮助人们显示他们操作的结果
 
 未完待续...
 查看最新内容参见[我的博客](http://blog.csdn.net/column/details/cloudox-column0.html)
