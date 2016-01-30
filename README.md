@@ -12,6 +12,7 @@
   * [Interactivity and Feedback](#Interactivity and Feedback)
   * [Animation](#Animation)
   * [Branding](#Branding)
+  * [Color and Typography](#Color and Typography)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -456,6 +457,17 @@ iOS可以非常简单的使用自定义的图标、颜色和字体来创造一�
 如果你需要在你的app中提示用户一个现有的品牌，遵守以下这些指南。
 
 `精妙、不唐突的包含品牌资源。`人们使用你的app来做事情或者娱乐；他们不想感觉到他们被强制观看一段广告。最好的用户体验是，安静的从你选择的字体、颜色和图像中提示用户品牌本身。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Branding/1.jpeg)
+
+`不要占用人们关心的内容区域。`比如说，在屏幕顶端显示一个持久的第二显示栏，除了展示品牌资源外不做任何事情，这意味着内容区域变少了。相反，尊重用户的内容并且考虑少使用打扰的方式展示无处不在的广告，比如使用一个自定义的色调或字体，或者巧妙地自定义屏幕背景。
+
+`抵制贯穿于app地展示你的logo的诱惑。`移动设备的屏幕相对较小，每一次logo的出现都会占据用户想要看到的内容空间。并且，在app中显示logo并不会达到在web页面里显示的同样目的：用户打开一个未知的web页面很普遍，但用户打开一个iOS app之前通常都会看app的图标。
+
+### <a name="Color and Typography"/>Color and Typography
+#### 颜色和排版
+#### 颜色增强沟通
+在iOS中，颜色帮助指明交互、给予活力、并提供视觉连贯性。内置的app使用了一系列无论从个体上还是整体上看，或者明亮和阴暗的背景下看都很棒的纯净的颜色。
 
 未完待续...
 查看最新内容参见[我的博客](http://blog.csdn.net/column/details/cloudox-column0.html)
