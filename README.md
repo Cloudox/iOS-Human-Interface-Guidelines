@@ -511,5 +511,7 @@ San Francisco包括两种视觉尺寸：Text和Display。Text用于低于20点�
 `NOTE`
 如果你使用类似Sketch或Photoshop的应用来创建你的设计，你需要在设置20点以上的类型时切换到Display。iOS会自动地为San Francisco调整建立在字体尺寸上的跟踪值（Tracking value）（跟踪值用来修改某个点尺寸下的字母间距）。Text和Display中每个尺寸的跟踪值分别显示在表10-1和表10-2中。
 
+表10-1 在SF-UI Text中每个尺寸的跟踪值
+
 未完待续...
 查看最新内容参见[我的博客](http://blog.csdn.net/column/details/cloudox-column0.html)
