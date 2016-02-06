@@ -13,6 +13,7 @@
   * [Animation](#Animation)
   * [Branding](#Branding)
   * [Color and Typography](#Color and Typography)
+  * [Icons and Graphics](#Icons and Graphics)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -538,6 +539,10 @@ San Francisco包括两种视觉尺寸：Text和Display。Text用于低于20点�
 `一般来说，在你的app中使用单一的字体。`混合多种不同的字体会使你的app看起来零散和稀松。相反的，要使用一种字体以及少量的风格和尺寸。
 
 ![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Color%20and%20Typography/5.jpeg)
+
+### <a name="Icons and Graphics"/>Icons and Graphics
+#### App图标
+每个app都需要一个漂亮的app图标。人们经常会根据你的app图标生成对你app的第一印象，包括你app的质量、目的和可靠性。
 
 
 
