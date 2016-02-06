@@ -9,6 +9,11 @@
   * [Starting and Stopping](#Starting and Stopping)
   * [Navigation](#Navigation)
   * [Modal Contexts](#Modal Contexts)
+  * [Interactivity and Feedback](#Interactivity and Feedback)
+  * [Animation](#Animation)
+  * [Branding](#Branding)
+  * [Color and Typography](#Color and Typography)
+  * [Icons and Graphics](#Icons and Graphics)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -315,4 +320,231 @@ Modality——即一种事物存在或体验的模式——优缺点并存。它
 
 `尊重用户接收通知的偏好。`在设置中，用户会指明他们希望如何从你的app中获取通知。确保遵守这些偏好，免得用户关闭你app的所有通知。
 
+
+### <a name="Interactivity and Feedback"/>Interactivity and Feedback
+#### 交互式的元素会引导触摸
+为了显示交互，安装的app使用了一系列的提示，包括按压的相应、颜色、位置、环境和有意义的图标及标签。用户很少需要额外的装饰来告诉他们屏幕上的一个元素是可交互的或者说明它会做什么。
+
+在一个支持3D Touch的设备上，当用户按压主屏幕上的一个图标时，他们看到的背景模糊表示了有更多的功能是可获取的。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/1.jpeg)
+
+一个主颜色给用户一种很强的可交互的视觉暗示，特别是在那些不使用丰富的其他颜色的app中。在通讯录中，蓝色标志了可交互元素，并给app一种统一的，可辨识的视觉主题。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/2.jpeg)
+
+这个返回按钮使用了很多的提示来表示它的可交互性，并传达它的功能：它在导航栏中出现，它显示了一个返回的V形标记，它典型地使用了一个主颜色，并且它显示了一个标题来描述上一个屏幕。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/3.jpeg)
+
+一个提供了明确的动作响应的图标或标题会吸引用户来点击。比如说，地图中的标题，例如“Flyover Tour”和“Directions to Here”明确的描述了用户会执行的动作。结合一个主颜色，可执行的标题会使用按钮边界或其他多余的装饰。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/4.jpeg)
+
+`在一个内容区域，只在需要时添加按钮边界或者背景。`在bars、action sheets和alerts中，因为用户知道这些区域中的大部分元素都是可以交互的，所以不需要边界。另一方面，在一个内容区域中的按钮就需要一个边界或者背景来区分它和内容的其他区域。比如说，音乐、时钟、照片和App Store就在一些特殊的环境下使用这样的按钮。
+
+照片使用了按钮边框来区分Start Sharing按钮和它上面的解释文字。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/5.jpeg)
+
+时钟在计时器和Timer屏幕中使用了按钮背景来将人们的注意力吸引到Start和Pause按钮上，使人们即使周围的环境很分散注意力也能容易的点击到按钮。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/6.jpeg)
+
+App Store在列表行中使用按钮边框来强调点击行获取更多信息和点击按钮来开始（或安装）一个购买的区别。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/7.jpeg)
+
+#### 用户知道标准的手势
+用户使用手势——例如点击、拖拽和收缩——去和apps以及iOS设备交互。使用手势给了人们一个和设备的近距离沟通，并且加强了对屏幕上物体的直接操纵感。人们希望他们使用的所有app中手势都是同样工作的。
+
+人们不需要为了使用3D Touch而学习新的手势。当人们轻按屏幕得到响应的时候，会很快发现3D Touch带来的新的交互维度。
+
+`Tap（点击）：`按或选择一个控制器或元素
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/8.jpeg)
+
+`Drag（拖拽）：`去滚动或摇——即左右摇摆。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/9.jpeg)
+
+`Flick（轻弹）：`快速的滚动或摇。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/10.jpeg)
+
+`Swipe（滑动）：`用一个手指，来回到上一个界面，或在一个分裂视图控制器中显示一个隐藏的界面，或者是显示列表行中的删除按钮。使用peek，滑动可以显示快速响应的内容（查看3D Touch来获取更多信息）。
+使用四个手指，在iPad上切换app。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/11.jpeg)
+
+`Double tap（双击）：`放大并居中内容中的一块区域或图片。
+如果已经放大了，则是缩小。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/12.jpeg)
+
+`Pinch（捏）：`外捏来放大；内捏来缩小。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/13.jpeg)
+
+`Touch and hold（触摸并保持）：`在可编辑或可选择的文本区域，展示一个光标位置的放大的视图。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/14.jpeg)
+
+`Shake（摇晃）：`来开始一个撤销或重复的动作。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/15.jpeg)
+
+除了用户知道的标准手势，iOS还定义了一些唤起全系统动作的手势，比如显示控制中心或通知中心。无论人们使用什么app，都依赖于这些手势去操作。
+
+`不要给标准手势关联不同的动作。`除非你的app是一个游戏，重定义一个标准手势的意义会使你的用户感到困惑并使你的app变得难用。
+
+`不要自定义会调用标准手势相同动作的手势。`人们习惯标准手势的行为，而且他们并不会对学习不同的方式来做同样的事情感到感谢。
+
+`使用复杂的手势作为加快任务的快捷方式，而不是完成它的唯一方式。`尽可能地给用户一个简单、直接的方式来完成动作，即使这需要额外的一两次点击。简单的手势让用户集中在体验和内容上，而不是交互。
+
+`一般来说，不要定义新的手势，除非你的app是个游戏。`在游戏或其他沉浸式app中，自定义的手势会变成有趣体验的一部分。但对于一些帮助用户做一些对他们来说重要的事情的时候，最好使用标准手势，因为用户不需要努力去发现或记住他们。
+
+`在一个合理的环境下，考虑使用多触点的手势。`尽管复杂的手势在每一个app中都不被期待，它们却可以丰富app的体验，使人们在其中度过大量的时间，比如在游戏或创造内容的环境下。永远记住，非标准手势不是可发现的，并且应该稀少，如果有，那么就要是完成动作的唯一方式。
+
+#### 反馈帮助理解
+反馈帮助人们知道一个app正在干什么，发现他们接下来可以做什么，并理解他们动作的结果。UIKit的控制器和视图提供了很多种反馈。
+
+`尽可能地整体化常规的和其他相关的反馈信息到你的UI中。`最好用户可以不需要动作就获取这种类型的信息，并且不会被他们的内容迷惑。比如说，邮件在工具栏显示了当前信箱的状态，这样就不会和用户的内容竞争。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/16.jpeg)
+
+`避免不必要的警告框。`警告框是一种很有力的反馈机制，但它只应该用于显示重要的——并且情理上可交互的——信息。如果用户看到了太多包含不重要信息的警告框，他们很快会变得忽略所有的警告框。查看Alert学习更过关于警告框的使用。
+
+#### 输入信息应该简单
+不论用户是点击控制器还是使用键盘，输入信息都花费时间和注意力。当一个app在展现有用的内容之前因为要求太多用户输入使人们进度变慢，人们会对使用它变得气馁。
+
+`让用户做选择变得简单。`比如说，你可以使用一个选择器或列表代替文本框，因为大多数用户认为从列表中选择一个元素比输入文字要容易。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Interactivity%20and%20Feedback/17.jpeg)
+
+`合适的从iOS获取信息。`用户在他们的设备中存储了大量的信息。可以的话，不要强制用户给你一些你可以很容易自己找到的信息，比如他们的联系人或日历信息。
+
+`通过给用户一些有用的内容来平衡输入的请求。`给予和获取的感受帮助人们感觉他们在你的app中正在前进。
+
+### <a name="Animation"/>Animation
+#### 动画
+漂亮、精细的动画贯穿了iOS 的UI，并且使app的体验变得更加的迷人而有活力。
+恰当的动画可以：
+* 传达状态和提供反馈
+* 增强操纵的直接观感
+* 帮助人们显示他们操作的结果
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Animation/1.jpeg)
+
+`慎重地添加动画，特别是在那些非沉浸式体验的app里。`过多无用的动画会妨碍app的流程，降低性能，并使用户从他们的任务中分心。
+
+特别是要使用运动效果和UIKit动态行为为目的和约束，并确保测试结果。使用合适的话，这些效果可以提升用户的理解和享受过程；过度使用它们则会使app看起来迷惑和难以操控。
+
+`合适的时候，使自定义的动画和内嵌的动画保持一致。`用户习惯了内嵌在iOS app中精细的动画。事实上，用户倾向于将视图间平滑的过渡、改变设备方向时流动的响应、和符合物理原理的滚动作为对iOS体验的期待。除非你正在创造一个沉浸式体验的app——譬如游戏——否则自定义的动画应该和内嵌的动画保持一致。
+
+`让动画始终贯穿你的app。`就如其他类型的定制化一样，始终使用自定义动画来贯穿很重要，这样用户就会从使用你的app中建立体验。
+
+`一般来说，在自定义动画中追求现实性和可信性。`用户倾向于期望获取艺术性的外表，但是他们会在体验无意义或无视物理规律的运动时感到迷惑。比如说，如果你从屏幕的顶端滑动到底部来展现一个视图，你应该在销毁这个界面时让它原路返回，这样可以帮助用户记住视图是从哪来的。如果你继续往下滑动来销毁这个视图，你就打破了用户对其从屏幕顶端出现的心理模型。
+
+### <a name="Branding"/>Branding
+#### 品牌推广
+
+成功的推广不仅仅是在app中添加品牌资源。最好的app会将已有的资源整合在统一的视觉里，并且会给用户一种愉悦的、难忘的体验。
+
+iOS可以非常简单的使用自定义的图标、颜色和字体来创造一个与众不同的UI，使你的app区别于其他的app。当你设计这些元素时，牢记两件事：
+* 每个自定义的元素自己都应该好看且功能良好，但是它也应该看起来和app中的其他元素统一，不论它们是自定义的还是标准的。
+* 要在iOS中宾至如归，app不需要看起来像内置的app，但需要在遵守、清晰、深度上统一（查看[Designing for iOS](#Designing for iOS)学习更多关于这些主旨的内容）。花时间思考在你的app中遵守、清晰、深度意味着什么，然后在自定义的元素中表达出来。
+
+如果你需要在你的app中提示用户一个现有的品牌，遵守以下这些指南。
+
+`精妙、不唐突的包含品牌资源。`人们使用你的app来做事情或者娱乐；他们不想感觉到他们被强制观看一段广告。最好的用户体验是，安静的从你选择的字体、颜色和图像中提示用户品牌本身。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Branding/1.jpeg)
+
+`不要占用人们关心的内容区域。`比如说，在屏幕顶端显示一个持久的第二显示栏，除了展示品牌资源外不做任何事情，这意味着内容区域变少了。相反，尊重用户的内容并且考虑少使用打扰的方式展示无处不在的广告，比如使用一个自定义的色调或字体，或者巧妙地自定义屏幕背景。
+
+`抵制贯穿于app地展示你的logo的诱惑。`移动设备的屏幕相对较小，每一次logo的出现都会占据用户想要看到的内容空间。并且，在app中显示logo并不会达到在web页面里显示的同样目的：用户打开一个未知的web页面很普遍，但用户打开一个iOS app之前通常都会看app的图标。
+
+### <a name="Color and Typography"/>Color and Typography
+#### 颜色和排版
+#### 颜色增强沟通
+在iOS中，颜色帮助指明交互、给予活力、并提供视觉连贯性。内置的app使用了一系列无论从个体上还是整体上看，或者明亮和阴暗的背景下看都很棒的纯净的颜色。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Color%20and%20Typography/1.jpeg)
+
+`如果你创造了多种自定义颜色，确保他们整体效果良好。`比如说，如果蜡笔在你的app风格中是必须的，你需要创造一系列协调的蜡笔色贯穿你的app。
+
+`关注颜色在不同环境中的对比。`比如说，如果导航栏背景和栏上的按钮标题没有对比度，用户就很难看到这些按钮。一个快速但不科学的检验你的颜色是否有足够的对比度的方法是：在一个不同亮度下的设备上查看你的app，包括太阳天的户外环境。
+
+即使在设备上查看你的app可以帮助你找到一些你需要调整的区域，这仍然取代不了更加客观地得出可靠结果的方式。这种方法包括测定前景和背景颜色亮度的比值。你可以使用在线对比比值计算器或者自己使用符合WCAG 2.0标准的公式来计算去获取这个比值。app中理想的颜色对比值为4.5:1或更高。
+
+`当你使用自定义的栏色调时考虑半透明的栏和app内容。`如果你需要创造一个匹配特殊颜色的栏色调，比如一个商标中的颜色，你也许需要尝试很多种颜色才能得到想要的结果。一个栏的外观会被iOS提供的半透明效果和app中在栏后方出现的内容共同影响。
+
+`API NOTE`
+使用tintColor属性来设置栏上按钮标题的色调；使用barTintColor属性来设置栏本身的色调。查看UINavigationBar Class Reference，UITabBar Class Reference，UIToolbar Class Reference，和UISearchBar Class Reference来学习更多关于栏的属性。
+
+`注意色盲。`大部分色盲患者难以区分红色和绿色。测试你的app确保没有任何地方使用红色和绿色作为唯一区分两种状态和值的方式（一些图片编辑软件有工具可以帮助你校验色盲）。一般来说，使用多种方式来显示一个元素的交互是好的方法（查看Interactive Elements Invite Touch学习在iOS中显示交互的内容）。
+
+`考虑选择一个主颜色来显示交互和状态。`内置的app中的主颜色有备忘录中的黄色和日历中的红色。如果你确定一个主颜色去显示交互和状态，确保app中的其他颜色不与其竞争。
+
+`避免对可交互和不可交互的元素使用相同的颜色。`颜色是UI元素表示其是否可交互的一种方式。如果可交互和不可交互的元素有了相同的颜色，用户很难知道点击那里。
+
+`颜色会沟通，但并不总是你想要的方式。`每个人看待颜色都不一样，很多文化也对颜色的意义有不同的定义。花时间去研究你使用的颜色在其他的国家和文化中会被怎样感知。你会想要尽可能地确保你app中的颜色传达合适的信息。
+
+`大部分情况下，不要让颜色使用户分心。`除非颜色是你app的必要目的，否则让颜色成为一种微妙的优化方式。
+
+#### 好的排版使沟通更清晰
+苹果设计了San Francisco系列排版来提供一种贯穿全平台的漂亮的、一致的声音和阅读体验，在iOS 9 之后，San Francisco变成了系统字体。
+
+San Francisco与动态排版（Dynamic Type）携手工作来给你：
+* 在所有用户设置中一系列的自动字体尺寸，包括无障碍设置中提供了最高的识别率的和很好的的阅读体验
+* 每一种字体尺寸都自动调节字母间距（字距）和行高
+* 能够为语义不同的文本块指定不同的文本风格，比如正文、注脚和标题
+* 对用户做出的文字大小设置进行合适的响应变化（包括无障碍的文字尺寸）
+
+访问[https://developer.apple.com/fonts/](https://developer.apple.com/fonts/)下载San Francisco。（注意iOS 9 中San Francisco字体叫SF-UI）当你在你的app中采用San Francisco时，你可以在模拟器 > 设置中调整数值来测试你的app文本在不同尺寸下的表现。
+
+`NOTE`
+如果你使用自定义的字体，仍然可以根据系统设置中的的文本尺寸调整动态排版和比例类型。你的app要对用户改变设置时做出适当的响应。查看Text Styles来学习如何使用文本类型在用户改变文本尺寸设置时确保app得到通知。
+
+San Francisco包括两种视觉尺寸：Text和Display。Text用于低于20点的尺寸，Display用于高于20点的尺寸。当你在你的app中使用San Francisco时，iOS会自动地在Text和Display中切换。
+
+`NOTE`
+如果你使用类似Sketch或Photoshop的应用来创建你的设计，你需要在设置20点以上的类型时切换到Display。iOS会自动地为San Francisco调整建立在字体尺寸上的跟踪值（Tracking value）（跟踪值用来修改某个点尺寸下的字母间距）。Text和Display中每个尺寸的跟踪值分别显示在表10-1和表10-2中。
+
+表10-1 在SF-UI Text中每个尺寸的跟踪值  
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Color%20and%20Typography/2.jpeg)
+
+表10-2 Display中每个尺寸的跟踪值  
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Color%20and%20Typography/3.jpeg)
+
+为了强调某些文本或者创造不同内容部分之间的视觉关系，你可以依靠动态排版支持的语义定义样式，比如标题和正文，或者指定字体宽度，比如纤细和半粗。采用动态排版风格可以简单地传达你内容的意义，但是如果你想要更多对设计的掌控，你也可以对某个特定的文本块设置特定的宽度。（查看UIFont Class Reference学习更多关于调整文本宽度的内容。）
+
+比如说，你也许会想要增加某个文本的宽度来帮助用户了解内容的层级或者吸引他们的注意力到某个特定的单词或短语。或者你想要增加小字体的宽度并减小大字体的宽度来创造一种多个靠近的文本的凝聚感。字体宽度对整体风格和内容表达也具有显著的影响，所以你也许会选择一个特殊的宽度来达到一种特殊的设计目标。
+
+`当响应文本尺寸变化时区分优先次序。`不同内容对用户的重要性是不同的。当用户选择一种更大的文本尺寸时，他们是想要让他们关心的内容更加易于阅读；他们并不想让屏幕上的每一个单词都变得更大。
+
+比如说，当用户选择一个大的无障碍文本尺寸，邮件会将标题和文本用大的尺寸显示，但不会变化其他重要的文本——比如日期和收件人。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Color%20and%20Typography/4.jpeg)
+
+`确保自定义字体在每一种风格、不同的尺寸下都是清晰的。`方法是对iOS在不同尺寸下显示不同字体风格的方式进行模仿。比如：
+* 文本永远不应该小于11点，即使用户选择了特小号的尺寸。相应的，正文风格使用17点作为默认的大尺寸。
+* 一般来说，在每种尺寸设置下，字体尺寸和引导值相差一点。只有两种标题风格例外，它们在特小号、小号和中号下使用相同的字体尺寸、引导值、跟踪值。
+* 在最小的三种文本尺寸下，跟踪值会相对地大一些；在最大的三种文本尺寸下，跟踪值会相对地紧致一些。
+* 标题和正文风格使用相同的字体尺寸。为了区分正文风格，标题使用了更宽的宽度。
+* 导航栏中的文本使用17点，与正文风格在大号下相同。
+* 文本总是使用常规或中号宽度；它不使用浅或粗体，因为浅和粗体在小号下看起来不好。
+
+`一般来说，在你的app中使用单一的字体。`混合多种不同的字体会使你的app看起来零散和稀松。相反的，要使用一种字体以及少量的风格和尺寸。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Color%20and%20Typography/5.jpeg)
+
+### <a name="Icons and Graphics"/>Icons and Graphics
+#### App图标
+每个app都需要一个漂亮的app图标。人们经常会根据你的app图标生成对你app的第一印象，包括你app的质量、目的和可靠性。
+
+
+
 未完待续...
+查看最新内容参见[我的博客](http://blog.csdn.net/column/details/cloudox-column0.html)
