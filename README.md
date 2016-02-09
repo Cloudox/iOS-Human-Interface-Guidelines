@@ -14,6 +14,7 @@
   * [Branding](#Branding)
   * [Color and Typography](#Color and Typography)
   * [Icons and Graphics](#Icons and Graphics)
+  * [Terminology and Wording](#Terminology and Wording)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -574,6 +575,10 @@ iOS app往往生动丰富。无论你是在展示用户的图片还是创造一�
 `不要在你的设计中使用复制苹果产品的图片。`这些标志是受版权保护的，并且产品的设计常常会改变。
 
 `不要在你的设计中使用苹果的app图标、图片和截屏。`苹果的设计是受版权保护的，除非他们是系统提供的，否则不能出现在你的UI中。
+
+### <a name="Terminology and Wording"/>Terminology and Wording
+#### 术语和词汇
+每一个你显示在app中的单词都是你和用户交流的一部分。利用这个交流的机会来让用户觉得清晰并帮助用户在你的app中感到舒适。
 
 
 未完待续...
