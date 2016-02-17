@@ -16,6 +16,8 @@
   * [Icons and Graphics](#Icons and Graphics)
   * [Terminology and Wording](#Terminology and Wording)
   * [Integrating with iOS](#Integrating with iOS)
+* [Design Strategies](#Design Strategies)
+  * [Design Principles](#Design Principles)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -663,6 +665,12 @@ iOS app可以帮助人们创建和操作文件，但这不意味着人们需要�
 iOS提供了丰富的技术来用用户期待的方式支持常见的任务和情景。这个期待意味着，将系统支持的技术整合进你的app总是会比设计一个自定义的方式要好。
 
 一些iOS技术——比如Multitasking和VoiceOver——是所有app都应该包含的系统特性。其他的可以实现特殊的app功能，比如处理票和礼物卡片（Wallet），让用户使用app购买（In-App Purchase），展示app内置广告（iAd Rich Media Ads），结合Game Center以及支持iCloud。
+
+## <a name="Design Strategies"/>Design Strategies
+### <a name="Design Principles"/>Design Principles
+#### 设计原则
+#### 整体美学
+整体美学并不是测量一个app插图的美丽程度或者表述它的风格；而是表示一个app的外表和行为与其功能整合来传达一种连贯的信息的程度。
 
 
 
