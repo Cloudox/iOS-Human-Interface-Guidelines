@@ -1,7 +1,7 @@
 # iOS-Human-Interface-Guidelines
 翻译自苹果官方文档《iOS Human Interface Guidelines》
 
-## 目录
+## <a name="Catalogue"/>目录
 * [UI Design Basics](#UI Design Basics)
   * [Designing for iOS](#Designing for iOS)
   * [iOS App Anatomy](#iOS App Anatomy)
@@ -13,6 +13,11 @@
   * [Animation](#Animation)
   * [Branding](#Branding)
   * [Color and Typography](#Color and Typography)
+  * [Icons and Graphics](#Icons and Graphics)
+  * [Terminology and Wording](#Terminology and Wording)
+  * [Integrating with iOS](#Integrating with iOS)
+* [Design Strategies](#Design Strategies)
+  * [Design Principles](#Design Principles)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -511,7 +516,164 @@ San Francisco包括两种视觉尺寸：Text和Display。Text用于低于20点�
 `NOTE`
 如果你使用类似Sketch或Photoshop的应用来创建你的设计，你需要在设置20点以上的类型时切换到Display。iOS会自动地为San Francisco调整建立在字体尺寸上的跟踪值（Tracking value）（跟踪值用来修改某个点尺寸下的字母间距）。Text和Display中每个尺寸的跟踪值分别显示在表10-1和表10-2中。
 
-表10-1 在SF-UI Text中每个尺寸的跟踪值
+表10-1 在SF-UI Text中每个尺寸的跟踪值  
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Color%20and%20Typography/2.jpeg)
+
+表10-2 Display中每个尺寸的跟踪值  
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Color%20and%20Typography/3.jpeg)
+
+为了强调某些文本或者创造不同内容部分之间的视觉关系，你可以依靠动态排版支持的语义定义样式，比如标题和正文，或者指定字体宽度，比如纤细和半粗。采用动态排版风格可以简单地传达你内容的意义，但是如果你想要更多对设计的掌控，你也可以对某个特定的文本块设置特定的宽度。（查看UIFont Class Reference学习更多关于调整文本宽度的内容。）
+
+比如说，你也许会想要增加某个文本的宽度来帮助用户了解内容的层级或者吸引他们的注意力到某个特定的单词或短语。或者你想要增加小字体的宽度并减小大字体的宽度来创造一种多个靠近的文本的凝聚感。字体宽度对整体风格和内容表达也具有显著的影响，所以你也许会选择一个特殊的宽度来达到一种特殊的设计目标。
+
+`当响应文本尺寸变化时区分优先次序。`不同内容对用户的重要性是不同的。当用户选择一种更大的文本尺寸时，他们是想要让他们关心的内容更加易于阅读；他们并不想让屏幕上的每一个单词都变得更大。
+
+比如说，当用户选择一个大的无障碍文本尺寸，邮件会将标题和文本用大的尺寸显示，但不会变化其他重要的文本——比如日期和收件人。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Color%20and%20Typography/4.jpeg)
+
+`确保自定义字体在每一种风格、不同的尺寸下都是清晰的。`方法是对iOS在不同尺寸下显示不同字体风格的方式进行模仿。比如：
+* 文本永远不应该小于11点，即使用户选择了特小号的尺寸。相应的，正文风格使用17点作为默认的大尺寸。
+* 一般来说，在每种尺寸设置下，字体尺寸和引导值相差一点。只有两种标题风格例外，它们在特小号、小号和中号下使用相同的字体尺寸、引导值、跟踪值。
+* 在最小的三种文本尺寸下，跟踪值会相对地大一些；在最大的三种文本尺寸下，跟踪值会相对地紧致一些。
+* 标题和正文风格使用相同的字体尺寸。为了区分正文风格，标题使用了更宽的宽度。
+* 导航栏中的文本使用17点，与正文风格在大号下相同。
+* 文本总是使用常规或中号宽度；它不使用浅或粗体，因为浅和粗体在小号下看起来不好。
+
+`一般来说，在你的app中使用单一的字体。`混合多种不同的字体会使你的app看起来零散和稀松。相反的，要使用一种字体以及少量的风格和尺寸。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Color%20and%20Typography/5.jpeg)
+
+### <a name="Icons and Graphics"/>Icons and Graphics
+#### App图标
+每个app都需要一个漂亮的app图标。人们经常会根据你的app图标生成对你app的第一印象，包括你app的质量、目的和可靠性。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Icons%20and%20Graphics/1.jpeg)
+
+当你思考你的app图标时，考虑下面这些事情。当你准备去创建它时，查看App Icon获得更多的指导和规格。
+* app图标是你app品牌很重要的一部分。将设计作为一个讲述你app故事的机会，并建立和用户之间的情感沟通。
+* 最好的app图标是独特的、整洁的、迷人的并且难忘的。
+* app图标需要在不同尺寸下和不同背景下都看起来不错。在大尺寸在丰富图标的细节可能会在小尺寸下模糊不清。
+
+#### 小图标
+iOS提供了很多的小图标——表示常见的任务和内容类型——给标签栏、工具栏、导航栏和主页面快速访问使用。尽可能多的使用内置图标是一个好主意，因为用户已经知道他们代表什么意思了。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Icons%20and%20Graphics/2.jpeg)
+
+如果你需要表示自定义的动作和内容类型，你可以创造自定义的栏图标。设计这些小的、精简的图标和设计app图标是非常不同的。如果你需要创造一个自定义的栏图标，查看Template Icons学习怎样创造。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Icons%20and%20Graphics/3.jpeg)
+
+注意那些在导航栏或者工具栏中可以使用文字代替图标表示条目的地方。比如说，日历在工具栏中使用了“Today”、“Calendars”和“Inbox”代替图标。
+
+考虑屏幕上一次可以看到多少图标，来帮助你决定在你app的导航栏或工具栏中你是应该使用文字还是图标。在一个屏幕上使用太多图标会让app看起来难以编译。还有，注意当在横向环境时这个决定也许会不同，因为横向环境会有更多的空间在栏上显示文字。
+
+#### 图形
+iOS app往往生动丰富。无论你是在展示用户的图片还是创造一个自定义的插图，都应该遵守下面这些指南。
+
+`支持视网膜（Retina）显示。`确保你提供了你app中所有插图和图形的高分辨率资源。尤其是，为iPhone 6 Plus提供@3x资源，为其他所有高分辨率设备提供@2x资源。
+
+`在原始长宽比上显示照片和图形，并避免拉伸超过100%。`你不希望你app中的插图和图形看起来倾斜和太大。让用户选择他们是否要放大或缩小图片。
+
+`不要在你的设计中使用复制苹果产品的图片。`这些标志是受版权保护的，并且产品的设计常常会改变。
+
+`不要在你的设计中使用苹果的app图标、图片和截屏。`苹果的设计是受版权保护的，除非他们是系统提供的，否则不能出现在你的UI中。
+
+### <a name="Terminology and Wording"/>Terminology and Wording
+#### 术语和词汇
+每一个你显示在app中的单词都是你和用户交流的一部分。利用这个交流的机会来让用户觉得清晰并帮助用户在你的app中感到舒适。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Terminology%20and%20Wording/1.jpeg)
+
+设置对每个用户来说都是基本且必要的，所以他使用了简单、直接的语言告诉用户可以做什么。比如说，设置（Settings）>免打扰（Do not Disturb）解释了很多选项的效果，而没有使用一些可能会让纯朴的用户不能理解的术语。
+
+`使用你确保你的用户能理解的术语。`根据你对用户的了解来确定你打算使用的单词和短语是否合适。比如说，在面向纯朴用户的app中技术术语没有任何帮助，但是对于为理解技术的用户设计的app则很合适。
+
+`使用非正式并友好的语气，但不要太随意。`你会想避免呆板和太正式，但是你不会想要冒听起来快乐到虚伪或傲慢的险。记住用户可能在你的UI中阅读文本很多次，那些第一次看觉得机智的内容重复看的时候可能会变得刺激人。
+
+`像一个新闻编辑一样思考，并提防多余或不必要的单词。`当你的UI文本短而直接时，用户会很快很容易的理解。确定最重要的信息，简明的表述它，然后显著地显示它，这样用户就不用阅读大量的文字找到他们要找的或者了解他们接下去该做什么。
+
+`给控件赋予简短的文字或者使用易理解的图标。`人们应该看一眼就能知道一个控件是做什么的。
+
+`描述日期时注意精确。`大多时候，在你的UI中使用友好的词语比如今天和明天来显示日期信息是合适的。但是当你没有计算用户当前的位置时可能会变得迷惑。比如说，有一件事恰好在午夜前开始，对于同一个时区的用户来说，这件事是今天开始的，但对于早一些时区的用户来说，同一件事可能是昨天开始的。
+
+`编辑一段好的App Store描述来尽可能的多和潜在的用户交流。`除了精准的描述你的app以及对你认为人们最感兴趣的品质进行高亮以外，确保：
+* `纠正所有的拼写、语法和标点符号错误。`尽管这种错误不会影响每个人，对有些人来说这会带来一种对你app质量的坏印象。
+* `保持全大写单词在一个最小的数量。`有时候全大写单词可以吸引人们的注意，但当整段话都是大写的时候，它会很难阅读而且会看起来像叫喊。
+* `考虑描述特殊的bug修复。`如果你app的新版本包含了用户期望的bug修复，最好在描述中提到它。
+
+### <a name="Integrating with iOS"/>Integrating with iOS
+#### 和iOS整合
+和iOS整合的意思是给用户一种吸引人的、愉快的体验来让用户在平台上宾至如归；它不是说要创建一个看起来像复制内置的app一样的app。
+
+将你的独特的app和平台整合的最好方式是理解促进iOS的那些主旨——在[Designing for iOS](#Designing for iOS)中有这些主旨的描述——并且思考你的app怎样表达它们。为了达成这个目标，遵守这一节的指南可以帮助你给予用户他们期待的体验。
+
+#### 恰当的使用标准UI元素
+尽可能的使用UIKit提供的标准UI元素是好的方式。当你使用标准元素而不是自定义一个时，你和你的用户都可以获益：
+* 标准UI元素会在iOS提供重新设计的样式时自动获取更新——自定义的元素不会获取更新。
+* 标准UI元素会提供很多种自定义他们样式或行为的方式。比如说，所有的视图（即继承自UIVies的对象）都可以使用tintColor属性进行上色，这就可以很容易的为你的app加上颜色。
+* 人们会对标准UI元素感到习惯，所以他们可以很容易的理解怎样在你的app中使用它们。
+
+为了得到这些使用标准UI元素带来的优势，这些事情很重要：
+
+`遵守每一个UI元素的指导方针。`当一个UI元素看起来和工作起来都符合人们期待的方式的时候，人们就可以根据以前的经验来帮助他们在你的app中使用它。你可以在Bars、Content Views、Controls和Temporary Views中找到UI元素的指导方针。
+
+`不要混合不同iOS版本下的UI元素风格。`你不会希望通过显示看起来像在不同于当前设备运行的iOS系统版本的UI元素来让用户感到迷惑。
+
+`一般来说，不要创建一个自定义的UI元素来展现标准的动作。`首先，问问你自己为什么你要创建一个行为和标准UI元素一样的自定义UI元素。如果你只是想要一个自定义的外表，考虑使用UIKit的外表定制API来改变一个标准元素的外观，或者上色。如果你想要一些稍微不同的行为，确定找出一个标准元素在调整性能和属性后会不会做出你想要的效果。如果你需要完全自定义行为，最好设计一个看起来不那么像标准元素的自定义元素。
+
+`TIP`
+Interface Builder让获取标准UI元素，使用外观定制API，修改性能和属性，以及为你的控件使用自定义和系统提供的图标变得很容易。查看Xcode Overview学习更多关于Interface Builder的内容。
+
+`不要使用系统定制的按钮和图标来表示其他东西。`iOS提供了很多你可以用在你app中的按钮和图标。确保你理解了文件上记录的这些按钮和图标的含义；不要依赖于你对他们外表的理解。（你可以在Toolbar and Navigation Bar Buttons和Tab Bar Icons中找到每个图标的含义。）
+
+如果你不能找到一个系统提供的按钮或图标来合适的表述你app中的一个功能，你可以创建你自己的。查看Bar Button Icons来获取指导方针帮助你设计自定义图标。
+
+如果你的app提供了沉浸式的任务或体验，创建完全自定义的控件就变得有意义。这是因为你在创建一个独特的环境，探寻如何去控制这个环境是用户在这种app中所期待的体验。
+
+#### 淡化文件和文档处理
+iOS app可以帮助人们创建和操作文件，但这不意味着人们需要思考iOS设备上的文件系统。
+
+如果你的app帮助人们创建和操作文档，最好提供一些app独特的文档库视图来让用户打开一个已有的文档或者创建一个新的文档。理论上，这种库应该：
+* `是高度图形化的。`人们应该能够可以通过屏幕上的文档视觉呈现来简单的鉴别他们想要的文档。
+* `让人们通过最少的手势来做他们想做的。`比如说，人们可以水平的滚动一个已存在文档组成的滚轮或者网格来找到他们想要的文档，并通过一次点击打开它。
+* `包含新建文档的功能。`一个文档库应该可以通过点击一个图标来创建一个新的文档，而不是让人们到别的地方去创建新的文档。
+
+比如说，Pages通过一个图形化的文档库视图和一个简单的创建新文档的方式来展示用户的文档。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Design%20Basics/Integrating%20with%20iOS/1.jpeg)
+
+`TIP`
+你可以使用快速预览特性来让人们在你的app中预览文档，即使你的app不能打开他们。查看Quick Look来学习怎样在你的app中提供这个特性。
+
+如果你的app允许人们使用他们在别的app中创建的文档，你可以显示一个文档选取控制器来帮助他们使用这些文档。文档选取控制器可以显示那些存在用户iCloud Drive中的除了Document Provider extensions中的文档，这与其他创建文档或者存储文档的app相关联。查看Document Provider Extensions学习更多关于Document Provider extensions的内容；查看Document Picker Programming Guide学习更多关于文档选取控制器的内容。
+
+`给人们他们的工作始终都被保存的自信，除非他们明确的取消或删除它。`如果你的app帮助人们创建或者编辑文档，不要要求他们进行明确的存储动作。iOS app应该为存储用户的输入负责，包括周期地和他们打开其他的文档或在app间切换的时候。
+
+如果你app的主要功能不是创造内容——但你允许人们在查看信息和编辑信息之间切换——要求他们保存更改就变得有意义。在这种情况下，最好在查看信息的界面提供一个编辑按钮。当人们点击编辑按钮时，用保存按钮代替它并添加一个取消按钮。编辑按钮的转变提醒人们他们是在编辑模式，并且也许需要保存更改，而取消按钮让他们可以不保存更改的退出。
+
+#### 如果必要的话，实现可配置
+一些app也许需要给用户设置或配置选项的方式，但大多数app可以避免或延后这个工作。成功的app适应大多数人，当然也提供一些便捷的方式去调整用户体验。
+
+当你以大部分用户期待的方式设计你的app时，你就降低了设置的需求。如果你需要用户的信息，向系统寻求而不是要求用户来提供。如果你认为以一定要提供人们很少会改变的app设置，查看The Setting Bundle来学习怎样在你的代码中支持它们。
+
+`尽可能的，在主UI中提供配置选项。`当该选项是主任务并且人们经常会想要改变它们的时候，将其放在主UI就会有意义。如果人们只是偶尔改变app的配置，就将其放在分页面。
+
+`必要的话，帮助人们直接在设置中去到你app的设置。`尤其是如果你显示一段描述如何找到你的设置的信息，比如“去往设置>我的app>隐私>定位服务”，用一个直接去往这个位置的按钮代替描述。查看Setting Launch URL学习如何实现这个动作。
+
+#### 利用iOS技术
+iOS提供了丰富的技术来用用户期待的方式支持常见的任务和情景。这个期待意味着，将系统支持的技术整合进你的app总是会比设计一个自定义的方式要好。
+
+一些iOS技术——比如Multitasking和VoiceOver——是所有app都应该包含的系统特性。其他的可以实现特殊的app功能，比如处理票和礼物卡片（Wallet），让用户使用app购买（In-App Purchase），展示app内置广告（iAd Rich Media Ads），结合Game Center以及支持iCloud。
+
+## <a name="Design Strategies"/>Design Strategies
+### <a name="Design Principles"/>Design Principles
+#### 设计原则
+#### 整体美学
+整体美学并不是测量一个app插图的美丽程度或者表述它的风格；而是表示一个app的外表和行为与其功能整合来传达一种连贯的信息的程度。
+
+
 
 未完待续...
-查看最新内容参见[我的博客](http://blog.csdn.net/column/details/cloudox-column0.html)
+查看最新内容参见[我的博客](http://blog.csdn.net/column/details/cloudox-column0.html)  
+[回到目录](#Catalogue)
