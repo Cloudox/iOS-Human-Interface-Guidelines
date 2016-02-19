@@ -19,6 +19,7 @@
 * [Design Strategies](#Design Strategies)
   * [Design Principles](#Design Principles)
   * [From Concept to Product](#From Concept to Product)
+  * [Case Study:From Desktop to iOS](#Case Study:From Desktop to iOS)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -827,7 +828,7 @@ iOS app有着非常大适用范围的象征，因为人们在直接和屏幕交�
 
 当你的原型基于一个Xcode app模板时，你会免费获得很多功能而且对反馈响应的设计调整也会相当容易。经过简短的回顾，你应该可以在巩固你的设计并付诸实现前测试你的原型的很多次迭代了。查看Xcode Overview开始学习关于Xcode的内容
 
-
+### <a name="Case Study:From Desktop to iOS"/>Case Study:From Desktop to iOS
 
 
 未完待续...
