@@ -909,6 +909,7 @@ iOS端的Safari提供了iOS设备中杰出的移动Web浏览体验。人们欣�
 `协调iOS端Safari中的弹出菜单控件。`在桌面端的Safari中，包含大量内容的弹出菜单会像在OS X的app中一样显示；也就是说，菜单会打开来显示所有的内容，如果必须的话甚至会超出窗口的边界。而对于iOS端的Safari，弹出菜单是使用原生的元素显示的，因而提供了一个更好的体验。比如说，在iPhone上，弹出菜单通过一个选取器（一个用户可选的内容组成的列表）来显示。（查看Picker学习更多关于选取器控件的内容）。
 
 
+
 未完待续...
 查看最新内容参见[我的博客](http://blog.csdn.net/column/details/cloudox-column0.html)  
 [回到目录](#Catalogue)
