@@ -20,6 +20,8 @@
   * [Design Principles](#Design Principles)
   * [From Concept to Product](#From Concept to Product)
   * [Case Study - From Desktop to iOS](#Case Study - From Desktop to iOS)
+* [iOS Technologies](#iOS Technologies)
+  * [3D Touch](#3D Touch)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -907,6 +909,14 @@ iOS端的Safari提供了iOS设备中杰出的移动Web浏览体验。人们欣�
 `协调iOS端Safari中的键盘。`当键盘和格式助手可见的时候，iPhone中的Safari会在URL文本内容以下、键盘和格式助手以上的区域显示你的网页。
 
 `协调iOS端Safari中的弹出菜单控件。`在桌面端的Safari中，包含大量内容的弹出菜单会像在OS X的app中一样显示；也就是说，菜单会打开来显示所有的内容，如果必须的话甚至会超出窗口的边界。而对于iOS端的Safari，弹出菜单是使用原生的元素显示的，因而提供了一个更好的体验。比如说，在iPhone上，弹出菜单通过一个选取器（一个用户可选的内容组成的列表）来显示。（查看Picker学习更多关于选取器控件的内容）。
+
+## <a name="iOS Technologies"/>iOS Technologies
+### <a name="3D Touch"/>3D Touch
+#### 3D Touch
+3D Touch让iOS 9的用户多了一个交互的维度。在支持的设备上，人们可以通过按压主屏幕上的app图标来快速地选择其特有的操作。在app内，人们可以使用多种压力来获取一个内容的预览、在另一个视图打开内容以及获取相关的操作。（查看Adopting 3D Touch on iPhone来学习更多关于在你的代码中支持3D Touch的内容。）
+
+#### Peek 和 Pop
+Peek让用户可以在不离开当前环境的情况下预览一个内容以及执行相关的操作。元素通过在轻按时显示一个小的矩形视图（有时称为hint）来表明其支持peek。
 
 
 
