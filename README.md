@@ -22,6 +22,7 @@
   * [Case Study - From Desktop to iOS](#Case Study - From Desktop to iOS)
 * [iOS Technologies](#iOS Technologies)
   * [3D Touch](#3D Touch)
+  * [Live Photos](#Live Photos)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -971,7 +972,8 @@ peek：
 
 ![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/3D%20Touch/3.jpeg)
 
-
+### <a name="Live Photos"/>Live Photos
+Live Photos可以让用户捕获并通过一个简短的、充满动感的体验重现一段他们最喜爱的记忆。从iOS 9开始，相机app会捕获额外的内容——包括声音以及照片前后额外的帧——来将生活添加到传统的静止图片中。
 
 
 
