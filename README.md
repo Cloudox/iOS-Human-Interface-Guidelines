@@ -975,6 +975,33 @@ peek：
 ### <a name="Live Photos"/>Live Photos
 Live Photos可以让用户捕获并通过一个简短的、充满动感的体验重现一段他们最喜爱的记忆。从iOS 9开始，相机app会捕获额外的内容——包括声音以及照片前后额外的帧——来将生活添加到传统的静止图片中。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Live%20Photos/1.jpeg)
+
+在iOS 9.1以及之后的系统运行的app中，你可以让用户在你的app内享受并分享Live Photos。这里的指南可以帮助你给予用户一个好的体验。
+
+`在不支持Live Photos的环境中将Live Photo用传统图片显示。`不要在支持Live Photo的环境下使用自定义实现的类似Live Photo提供的体验。
+
+`不要分开显示Live Photo的额外的帧和声音。`在整个app中使用相同的视觉效果和交互模式给用户一个统一的Live Photo体验很重要。拆开Live Photo来显示分开的部分会给用户一个很差的体验。
+
+`确保用户能够区分Live Photo和传统的静止图片。`尤其是当用户可以分享图片时帮助用户区分这一点很重要。最好的告诉用户他们正在看一个Live Photo的方式是显示一点运动来提供一个hint体验。如果是在不能用hint的地方，你可以显示系统提供的Live Photo 的标记。Live Photo从不显示看起来像一个视频的回放按钮。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Live%20Photos/2.jpeg)
+
+`注意`
+当用户在照片app中使用全屏浏览照片时不支持视觉运动效果。
+
+`对Live Photo的所有帧使用用户调整的内容。`如果你的app允许用户对照片添加效果或调整，确保更新整个Live Photo。如果你不支持调整用户希望分享的整个Live Photo，让他们知道他们只能将其作为一个传统图片分享。
+
+`在用户决定分享之前让他们预览Live Photo的所有内容。`如果你的app包含帮助用户选择照片去分享的UI，引入一种方式让他们可以将Live Photo作为传统照片分享。
+
+`如果你使用了系统提供的标记，在每张Live Photo上都将其放在同样的位置。`一般将标记放在照片的一角是比较好看的，这样它就不会干扰到用户查看照片。确保在你整个app中都使用标记这样用户就可以依赖它来识别Live Photo。iOS提供了两种风格的标记图片：
+* 覆盖。覆盖风格包含一个阴影使其在照片内容上方看起来不错。
+* 固色。固色风格（不包含阴影）可以被用来创建你可以调色的模板图片。
+
+  iOS也为固色风格提供了很多标记，包括图片上的中划线来表示这个Live Photo现在被当成传统照片对待。
+ 
+`当用户下载Live Photo时给他们好的体验。`尤其是用户需要知道他们正在下载的是一张Live Photo以及他们何时可以播放它。如果你显示一个加载显示器来说明一张Live Photo还不能播放，确保使用与你app中其他下载体验一致的加载显示器。
+
 
 
 未完待续...
