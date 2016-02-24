@@ -23,6 +23,7 @@
 * [iOS Technologies](#iOS Technologies)
   * [3D Touch](#3D Touch)
   * [Live Photos](#Live Photos)
+  * [Wallet](#Wallet)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -1002,6 +1003,9 @@ Live Photos可以让用户捕获并通过一个简短的、充满动感的体验
  
 `当用户下载Live Photo时给他们好的体验。`尤其是用户需要知道他们正在下载的是一张Live Photo以及他们何时可以播放它。如果你显示一个加载显示器来说明一张Live Photo还不能播放，确保使用与你app中其他下载体验一致的加载显示器。
 
+### <a name="Wallet"/>Wallet
+#### 钱包
+Wallet（钱包）帮助人们查看和管理Pass（凭证），这是一种类似于登机牌、优惠券、会员卡、奖励卡和各种票的物理凭证的数字替代。Wallet也允许人们添加信用卡、借记卡和储值卡来和Apple Pay一起使用。在你的app中，你可以创建一个Pass，将其分配给用户，然后当内容更改时更新它。
 
 
 未完待续...
