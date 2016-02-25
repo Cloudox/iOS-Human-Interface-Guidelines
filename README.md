@@ -24,6 +24,7 @@
   * [3D Touch](#3D Touch)
   * [Live Photos](#Live Photos)
   * [Wallet](#Wallet)
+  * [Apple Pay](#Apple Pay)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -1034,6 +1035,12 @@ PassKit 框架使自定义内容来接收Pass以及当用户的Pass库中有它�
 `性能最好的图片。`由于用户经常通过邮件或Safari接收pass，使下载尽可能的快很重要。为了提升用户体验，使用能达成想要的视觉外观的最小的图片文件。
 
 `当合适的时候更新pass来加强它的实用性。`即使pass是用来代替基本不会更改的物理凭证的，你的数字pass也可以通过反映现实世界的事件来提供更好的体验。比如说，你可以在飞机延误的时候更新航空登机牌，这样用户就总是能在他们查看pass的时候获取当前的信息。
+
+### <a name="Apple Pay"/>Apple Pay
+#### Apple Pay
+Aplle Pay是iOS设备上一种易用的、安全的、私有的支付方式。当使用app购买物理商品和服务时，人们可以使用Apple Pay来快速、安全地提供支付对象、运送方式和支付信息。
+
+
 
 
 未完待续...
