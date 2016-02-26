@@ -25,6 +25,7 @@
   * [Live Photos](#Live Photos)
   * [Wallet](#Wallet)
   * [Apple Pay](#Apple Pay)
+  * [Research Apps](#Research Apps)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -1109,6 +1110,23 @@ Apple Pay的UI是清晰的、精简的、不引人注目的。在不同的环境
 `合适的话，在你的确认界面标注Apple Pay。`虽然在你的确认屏幕上提及Apple Pay不是必要的，如果你选择去提及，使用这些形式：
 * “Visa····1234(Apple Pay)”
 * “使用Apple Pay支付”
+
+### <a name="Research Apps"/>Research Apps
+#### 研究型App
+研究型App使iOS用户可以利用他们iOS设备的便利性参与到研究工作中去。Apple的开源ResearchKit工程中初步设计的界面和可获取的跳转使得创建一个漂亮的研究型app变得很容易，这个app可以根据你的研究来定制并且会让人们乐于使用。查看researchkit.org学习如何使用[ResearchKit](http://researchkit.org)来为你的研究开发一个研究型的app。
+
+`重点`
+这些指南仅供参考，不构成法律意见。你应该联系律师获得关于研究型app开发方面和其他适用的法律方面的建议。
+
+一般来说，一个研究型app组会自定义ResearchKit界面和app独特的界面来契合三个基本的体验：
+* 信息载入
+* 研究相关的调查
+* 管理条目
+
+遵循这三个体验组成的指南，你就能设计一个帮助参与者感到舒适并保持使用的研究型app。
+
+#### 信息载入
+信息载入体验由一系列的部分组成，包括向潜在的参与者介绍研究和让你获取他们的同意。参与者一般在完成这些信息载入部分之后不会再次访问。信息载入体验包含这些部分：
 
 
 
