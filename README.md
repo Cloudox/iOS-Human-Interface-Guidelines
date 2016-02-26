@@ -1128,6 +1128,74 @@ Apple Pay的UI是清晰的、精简的、不引人注目的。在不同的环境
 #### 信息载入
 信息载入体验由一系列的部分组成，包括向潜在的参与者介绍研究和让你获取他们的同意。参与者一般在完成这些信息载入部分之后不会再次访问。信息载入体验包含这些部分：
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Research%20Apps/1.jpeg)
+
+你应该在信息载入体验部分提出这些内容——即介绍、资格、授权以及（如果合适的话）使用信息的许可。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Research%20Apps/2.jpeg)
+
+`创建一个介绍来通知并提供一个活动的号召。`介绍版块应该帮助人们了解更多关于你研究的信息并告诉他们如何成为一个参与者。最好还为已经是参与者的人提供一个登录的快速方式并继续完成在进展中的调查。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Research%20Apps/3.jpeg)
+
+`尽快地确定资格。`在介绍版块之后、授权版块之前显示一个资格版块（如果参与者不符合调查的资格那就不需要看到授权版块）。确保只显示对你的调查必要的资格需求。使用简单、直观的语言来描述需求并让人们能简单地输入信息。
+
+`在你获取参与者的授权之前确保他们了解你的调查。`ResearchKit可以帮你使得授权过程简明而友好，且允许你在授权中包含法律许可或者机构审查委员会或伦理审查委员会设置的许可。（如果你的app包含人体研究，你必须确保你的app遵守相应的App Store指南，包括同意许可。）一般来说，授权版块：
+* 解释调查是怎样进行的
+* 确保参与者理解调查以及他们的职责
+* 获取参与者的授权
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Research%20Apps/4.jpeg)
+
+`将长篇的授权文章拆分成易于消化的子章节。`每个子章节可以涵盖调查的一个方面，例如数据采集、数据使用、潜在的好处、可能的风险、付出的时间、如何撤回等等。对每一个章节，使用简单、直观的语言提供高度的概括。如果必要的话，提供一个子章节的详细说明让参与者点击一个了解更多按钮就可以阅读。参与者应该在他们同意参与之前能查看到整个的授权内容。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Research%20Apps/5.jpeg)
+
+`如果有意义的话，提供一个小测验来测试参与者对调查的理解。`如果你亲自去获取参与者的授权你也可能选择去问同样的问题。
+
+`获取参与者的授权，并且如果合适的话，获取一些联系信息。`同意参与调查之后，参与者会收到一个确认对话框，按照下方屏幕的方式让他们提供他们的签名和联系信息。大部分的研究型app会给参与者发一封PDF形式的知情同意书让他们保留。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Research%20Apps/6.jpeg)
+
+如果你需要使用参与者的设备或数据，要获得许可。清晰地解释为什么你的研究型app需要使用定位、健康app或其他数据，并且确保不要询问使用对你的调查不关键的数据。如果你的app需要的话，发送通知到参与者的设备也要获得许可。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Research%20Apps/7.jpeg)
+
+#### 调查特有的调查问卷
+为了获取参与者的输入，你的调查必须使用调查问卷、活动性任务，或者两者兼而有之。依赖于你调查的结构，参与者会和每个版块交互一次或多次。
+
+`创建能使参与者保持专注和使用的调查。`ResearchKit让显示需要不同类型答案的调查问题变得简单，比如对或错、多选、日期和时间、滑动范围以及开放性地输入文本作为结束。当你使用ResearchKit界面创建调查问卷时，遵循下面这些指南来提供一个好的用户体验：
+* 告诉参与者有多少问题以及完成调查需要多少时间
+* 每个问题使用一个界面
+* 在调查过程中向参与者展示他们的进度
+* 使调查过程尽可能地短。多个短调查比一个长调查要好
+* 对于需要额外说明的问题，为问题使用标准字体，为说明文字使用稍微小一点的字体
+* 当调查完成时告知参与者
+
+ResearchKit提供了很多自定义的界面，你可以在你的调查中使用它们。这里是一些调查界面的例子。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Research%20Apps/8.jpeg)
+
+`使活动性的任务易于理解。`一个活动性的任务要求参与者保持一个活动，比如对着麦克风讲话、将他们的手指按在屏幕上或者进行一个记忆测试。遵循这些指南来鼓励参与者执行一项活动性任务或者使他们成功的机会最高：
+* 使用每个人都能理解的清晰、简单的语言来描述如何执行任务
+* 说明任务是否必须在一个特殊的时间或者情况下执行
+* 确保当任务完成时告知参与者
+
+这里是两种ResearchKit支持的活动性任务例子。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Research%20Apps/9.jpeg)
+
+#### 管理条目
+ResearchKit提供了一个资料界面给用户在你的研究型app中管理他们的个人信息。此外，创建一个界面来激励用户并让他们可以追踪他们在调查中的进度是一个好主意。大部分情况下，参与者应该能够在任何时候进入这两个界面。
+
+`使用一个资料界面来帮助参与者管理个人信息和关于你调查的内容。`资料界面可以让参与者编辑在调查过程中能够改变的资料——例如重量或者睡眠习惯——并且提醒他们即将到来的活动。你也可以使用资料界面给参与者一个简单的方式去离开调查并查看授权文档和app的隐私政策。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Research%20Apps/10.jpeg)
+
+`使用一个仪表板来激励参与者和显示进度。`一个仪表板界面能够鼓励参与者继续调查。如果对你的调查合适的话，你可以使用仪表板给参与者一个丰富的反馈，比如每日进度、每周测验、特殊活动的结果、甚至将参与者的结果和调查的其他结果的总和进行对比。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Research%20Apps/11.jpeg)
+
 
 
 未完待续...
