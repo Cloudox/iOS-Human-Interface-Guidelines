@@ -26,6 +26,7 @@
   * [Wallet](#Wallet)
   * [Apple Pay](#Apple Pay)
   * [Research Apps](#Research Apps)
+  * [App Extensions](#App Extensions)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -1195,6 +1196,43 @@ ResearchKit提供了一个资料界面给用户在你的研究型app中管理他
 `使用一个仪表板来激励参与者和显示进度。`一个仪表板界面能够鼓励参与者继续调查。如果对你的调查合适的话，你可以使用仪表板给参与者一个丰富的反馈，比如每日进度、每周测验、特殊活动的结果、甚至将参与者的结果和调查的其他结果的总和进行对比。
 
 ![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Research%20Apps/11.jpeg)
+
+### <a name="App Extensions"/>App Extensions
+#### App扩展
+App扩展增加了你app的延伸，让用户在使用其他app时可以关注你app的部分功能。比如说，挡在Safari中查看网页时，人们可以使用你的分享扩展来将一个图片或者文章贴到你的社交网站。或者当使用照片时，人们也许会使用你的图片编辑扩展来给图片加滤镜。（在这种情况下，Safari和照片称为host app，因为他们给了用户扩展的链接。）
+
+你提交应用到App Store时交付了一个app扩展功能齐全的iOS app（一个包含扩展的app称为包容性app——containing app）。在你的包容性app中添加扩展以后，人们可以在使用其他app时通过扩展执行快速任务。比如说，当在邮件中阅读一个商品时，人们也许会使用你的动作扩展来添加一个商品到购物清单中去而不用离开邮件。
+
+表22-1列出来很多你可以创建的iOS app扩展
+
+表22-1 app扩展类型  
+
+app扩展类型 | 人们使用扩展来 
+----------  | ------------- 
+桌面日历    | 在通知中心的日历视图中获取快速更新或者执行快速任务 
+分享        | 将网页或者内容分享给他人 
+动作        | 在其他app环境下操作或者查看内容
+图片编辑    | 通过图片aoo编辑图片或者视频
+文档提供者  | 连接并管理一个文件仓库
+自定义键盘  | 使用自定义的键盘代替iOS系统键盘
+
+下面的指南对所有类型的app扩展都适用；对于每种app扩展类型各自的指南，查看下面的章节。（查看App Extension Programming Guide学习如何开发、调试和发布一个扩展。）
+
+`完成简单的任务。`app扩展不是你app的迷你版本。相反，扩展执行用户大目标下的一个小任务。比如说，一个动作扩展也许会给用户一个不同的方式去查看他们当前的内容。
+
+`保持用户交互有限且直接。`最好的app扩展让用户只通过很少的点击来执行任务，这样他们就可以尽可能快地回到之前的环境。比如说，一个分享扩展也许会让人们通过一次简单的点击就发布一张图片。
+
+`将你包容性app的名字包含到每一个它提供的扩展的名字中去。`即使包容性app中的多个扩展都应该有唯一的名字，你也希望确保用户理解你的扩展和你的app的关系。人们会在很多不同的环境遇到扩展，并且他们不会信任他们不能识别的而扩展。
+
+`在绝大多数情况下，使用包容性app的图标。`使用一个熟悉的图片是另一种扩展获取用户信任的方式。注意对于动作扩展，要创建一个单色版的app图标（查看[Share and Action Extensions](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/AppExtensions.html#//apple_ref/doc/uid/TP40006556-CH67-SW3)获取细节）。
+
+`重点`  
+当你设计图标和图片时，不要复制iOS的图片或图片，也不要创建苹果产品和设计相关的图片。
+
+`不要在扩展的顶层显示modal视图。`很多扩展默认以modal视图来显示，最好避免绘制modal视图。即使有些例子中用户会在扩展的顶层看到一个警告框视图，也要避免设计一个需要modal视图的扩展工作流。
+
+#### “今天”小部件
+人们在通知中心的“今天”区域查看“今天”小部件。因为人们会设置今天区域，所以这里显示的是他们最关心的信息，以在用户最重要的条目中占领一席之地为目标设计你的小部件。
 
 
 
