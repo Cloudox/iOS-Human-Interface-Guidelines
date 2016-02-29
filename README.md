@@ -28,6 +28,7 @@
   * [Research Apps](#Research Apps)
   * [App Extensions](#App Extensions)
   * [HomeKit](#HomeKit)
+  * [Multitasking](#Multitasking)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -1340,6 +1341,10 @@ iOS会自动在你自定义的小部件上方显示你app的图标和标题（�
 * `让用户知道如何在他们设置的时候使用Siri来控制一个操作集。`比如说，当确认“电影”操作集被设置的时候，显示一个用户可以对Siri说的建议的语句，如“你可以通过说‘Siri，将房屋转为电影模式’来使用Siri执行这一操作集”。注意用户也可以简单地说出操作集的名称来告诉Siri执行一个操作集。Siri识别至少设置了一个动作的预定义的和用户定义的操作集。
 
 `帮助用户设置触发器。`在iOS 9中，HomeKit支持触发器，这是一种基于如时间、位置和其他家居的行为的关系条件来执行动作的方式。比如说，用户也许会设置一个触发器在车库门打开并且太阳落山后时打开厨房的灯。设置包含多个条目的关系条件会变得混乱，所以使设置UI尽可能的简单很重要。比如说，在一个反应人们所说的内容的命令中显示条目、属性和逻辑操作会帮助用户理解情况。
+
+### <a name="Multitasking"/>Multitasking
+#### 多任务处理
+多任务处理让人们在屏幕上（以及合适的iPad模式）查看多个app，并且在最近使用的app中快速地切换。在iOS 9中，人们可以使用多任务处理UI（如下所示）来选择一个最近使用的app。
 
 
 
