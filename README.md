@@ -29,6 +29,7 @@
   * [App Extensions](#App Extensions)
   * [HomeKit](#HomeKit)
   * [Multitasking](#Multitasking)
+  * [Notifications](#Notifications)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -1368,6 +1369,13 @@ iOS会自动在你自定义的小部件上方显示你app的图标和标题（�
 
 `合适的时候结束后台用户发起的任务。`当人们发起一个任务，他们通常期望它即使在切换离开app时也能结束。如果你的app正在执行一个用户发起的不需要用户额外交互的任务，你应该在挂起前在后台完成它。
 
+### <a name="Notifications"/>Notifications
+#### 通知
+通知给予人们当前重要的信息和功能。人们可以从很多环境下得到通知，比如锁屏上、使用app时以及浏览通知中心时。
+
+通知中心有两个视图：今天和通知。
+
+今天视图显示一个可编辑的小部件列表。今天小部件是一个显示由用户关心的app提供的少量即时的、高价值的信息或功能的app扩展。比如说，日历小部件只显示今天的事件。在日历小部件中点击一个事件会在日历app中打开此事件，从而允许用户编辑此事件以及管理其他事件。查看App Extensions学习更多关于设计今天小部件的内容。
 
 
 
