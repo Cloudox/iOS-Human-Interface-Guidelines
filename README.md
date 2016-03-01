@@ -29,6 +29,7 @@
   * [App Extensions](#App Extensions)
   * [HomeKit](#HomeKit)
   * [Multitasking](#Multitasking)
+  * [Notifications](#Notifications)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -1345,6 +1346,37 @@ iOS会自动在你自定义的小部件上方显示你app的图标和标题（�
 ### <a name="Multitasking"/>Multitasking
 #### 多任务处理
 多任务处理让人们在屏幕上（以及合适的iPad模式）查看多个app，并且在最近使用的app中快速地切换。在iOS 9中，人们可以使用多任务处理UI（如下所示）来选择一个最近使用的app。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Multitasking/1.jpeg)
+
+在多任务处理环境中的成功取决于与设备上其他app的和谐共处。在高层面上，这意味着app应该：
+* 用心地优化资源的使用来避免使用过多的CPU、内存、屏幕控件和其他资源
+* 优雅地处理其他app的干扰和声音
+* 停止和重新开始——即过渡到后台或从后台过渡——快速而平滑
+* 当没有在前台时对行为负责
+
+下面的特有的指南会帮助你的app在多任务处理环境中专注于app切换获取成功。查看[Adopting Multitasking Enhancements on iPad](https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/AdoptingMultitaskingOniPad/index.html#//apple_ref/doc/uid/TP40015145)获取更多关于在iPad多任务处理环境下运行的信息。
+
+`准备好被打断和继续。`多任务增加了后台app打断你的app的可能性。其他的特性例如推送广告和快速app切换也会导致更高频率的打断。你越快越准确地保存你app当前的状态，人们就能越快地重新启动并继续他们离开时的工作。为了给予用户一种无缝重启的体验，利用UIKist的保存和恢复功能（查看[Preserving Your App’s Visual Appearance Across Launches](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/StrategiesforImplementingYourApp/StrategiesforImplementingYourApp.html#//apple_ref/doc/uid/TP40007072-CH5-SW2)获取更多信息）。
+
+`确保你的UI能够处理两层高度的状态栏。`两层高度状态栏在例如进程中来电、语音录制和共享数据。在没准备的app中状态栏额外的高度会导致布局的问题。比如说，UI会变低或者被覆盖住。在多任务处理环境中，能够处理两层高度的状态栏尤其重要，因为有更多的app会导致其出现。
+
+`准备好暂停需要人们关注或者参与的活动。`比如说，如果你的app是一个游戏或者播放视频的app，确保用户切换离开你的app时不会错过任何内容或事件。当人们切换回一个游戏或者视频播放器，他们想要像从没离开过一样继续体验。
+
+`确保你的声音表现得体。`多任务处理使得你的app在运行时更有可能发生别的多媒体活动。因此你的声音也更有可能不得不暂停和重新开始来处理中断。查看[Sound](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Sound.html#//apple_ref/doc/uid/TP40006556-CH44-SW1)来获取指南帮助你确保你的声音符合人们的预期并且和设备上的其他声音和谐共存。
+
+`有节制地使用本地通知。`一个app可以安排在特定的时间发送本地通知，无论这个app是挂起、在后台运行还是没有运行。为了达到最好的用户体验，避免用过多的通知纠缠人们，并且遵循[Notifications](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/NotificationCenter.html#//apple_ref/doc/uid/TP40006556-CH39-SW1)中描述的创建通知内容的指南。
+
+`合适的时候结束后台用户发起的任务。`当人们发起一个任务，他们通常期望它即使在切换离开app时也能结束。如果你的app正在执行一个用户发起的不需要用户额外交互的任务，你应该在挂起前在后台完成它。
+
+### <a name="Notifications"/>Notifications
+#### 通知
+通知给予人们当前重要的信息和功能。人们可以从很多环境下得到通知，比如锁屏上、使用app时以及浏览通知中心时。
+
+通知中心有两个视图：今天和通知。
+
+今天视图显示一个可编辑的小部件列表。今天小部件是一个显示由用户关心的app提供的少量即时的、高价值的信息或功能的app扩展。比如说，日历小部件只显示今天的事件。在日历小部件中点击一个事件会在日历app中打开此事件，从而允许用户编辑此事件以及管理其他事件。查看App Extensions学习更多关于设计今天小部件的内容。
+
 
 
 
