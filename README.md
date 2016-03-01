@@ -1377,6 +1377,84 @@ iOS会自动在你自定义的小部件上方显示你app的图标和标题（�
 
 今天视图显示一个可编辑的小部件列表。今天小部件是一个显示由用户关心的app提供的少量即时的、高价值的信息或功能的app扩展。比如说，日历小部件只显示今天的事件。在日历小部件中点击一个事件会在日历app中打开此事件，从而允许用户编辑此事件以及管理其他事件。查看App Extensions学习更多关于设计今天小部件的内容。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Notifications/1.jpeg)
+
+通知视图显示用户感兴趣的app的最近的通知信息。用户可以在设置中的app区域指定是否允许app的通知显示在通知中心。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Notifications/2.jpeg)
+
+iOS app可以使用通知在有兴趣的事情发生时让人们知晓，比如：
+* 收到一个信息
+* 一个事件即将发生
+* 新数据可以下载
+* 某事的状态更改了
+
+在iOS 8以及之后的版本中，app可以定义用户与通知交互的动作。比如说，一个to-do app的通知可以让用户不比打开app就可以标记一个条目为done。
+
+iOS定义了两种通知类型。
+* 本地通知是在同一个设备上由app预定，由iOS发送的，无论app当前是否在前台运行。比如说，一个日历或to-do app可以预定一个本地通知来提示人们一个即将到来的会面或者到期时间。
+* 远程通知（也称推送通知）是由app的远程服务器推送到苹果的推送通知服务的，会将通知推送到所有安装了app的设备上。比如说，一个用户可以与远程对手对战的游戏会更新所有玩家最近的移动。
+
+`NOTE`
+app扩展也许会要求远程通知发送到它的包容性app中去。在这个情况下，包容性app一般会在后台启动来处理通知。查看App Extensions来学习更多关于app扩展的内容。
+
+为了确保用户可以自定义他们的通知体验，你应该尽可能多地支持下面这些通知种类：
+* 横幅
+* 警告
+* 标记
+* 声音
+
+`NOTE`  
+在iOS 8以及之后的版本中，你必须注册你想要发送给用户的通知类别。你第一次执行注册动作时，用户会得到一个警告来决定他们是否要允许你的app发送通知。无论他们选择什么，用户都可以查看你app的设置来更改这个特性或者指定他们想要接收的通知类型。
+
+横幅是一个小的半透明视图，会在屏幕上显示然后几秒后消失。用户也可以在锁屏界面和通知中心的通知视图看到横幅的其他版本。在横幅中，iOS显示你的通知信息和小的app图标（查看[App Icon](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/AppIcons.html#//apple_ref/doc/uid/TP40006556-CH19-SW1)学习更多关于小图标的内容）。用户点击横幅来清除它并跳转到发送通知的app。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Notifications/3.jpeg)
+
+除了默认的点击横幅动作，你还可以定义两个当用户滑动横幅时显示的动作。点击通知动作按钮消除横幅并启动你的app（可能在后台）来处理动作。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Notifications/4.jpeg)
+
+通知警告框是一个标准的显示在屏幕上且需要用户交互才能消除的警告视图。你可以提供通知信息以及一个默认的动作或者最多四个在用户点击Options按钮时显示的特殊动作。你无法控制警告框的背景样式。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Notifications/5.jpeg)
+
+当用户点击警告框上默认的或者自定义的按钮时，iOS会同时消除警告框并启动你的app（可能在后台）。点击Close或OK按钮会消除警告框而不打开你的app。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Notifications/6.jpeg)
+
+标记是一个小红圆，上面显示待查看的通知条目数量（标记显示在app图标的右上角）。你无法控制标记的尺寸以及颜色。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Notifications/7.jpeg)
+
+自定义的或系统提供的声音可以伴随任意其他三种通知类型出现。
+
+`在使用通知中的干扰动作时要三思。`你要确保用户有足够的环境避免意外的影响。为了帮助用户区分你特定的破坏性动作，iOS会用红色显示它。在一些情况下，你的app在执行破坏性的动作前要求用户确认是个好主意。比如说，如果你提供一个显示在锁屏上的横幅中的破坏性动作，你会想要确保只有设备的拥有者可以执行动作（你要在代码中实现这个需求）。
+
+`为每一个动作按钮提供一个自定义的标题。`创建一个简单的标题来清晰地描述发生的动作。比如说，一个游戏也许会使用标题“Play”来表明点击按钮会打开app进入一个地方让用户开始他们的历程。确保标题：
+* 使用大写风格的标题
+* 足够短来适应按钮而不被截断（确保测试国际化标题的长度）
+
+`不要为同一个事件发送多个通知。`用户在选择通知条目的时候需要专心查看；直到用户以某种方式处理通知条目时它们才会消失。如果你对同一个事件发送多个通知，你会填满通知中心，而且用户可能会关闭你app的通知。
+
+`不要在通知信息中包含你的app名称。`你自定义的信息会在警告框和横幅以及通知中心的通知视图中显示。因为iOS会自动在你的信息中显示你的app名称，所以你不会想在自定义的信息中包含你的app名称。
+
+为了实用，一个本地或远程通知信息应该：
+* 专注于信息，而不是用户的动作。不要告诉用户点击哪个警告按钮或者如何打开你的app。
+* 足够短到再一两行内显示。长信息对用户来说很难快速阅读，并且这会强制警告框滚动。
+* 使用句子风格的大写并且使用合适的标点符号来结束。可能的话，使用一个完整的句子。
+
+`NOTE`  
+必要的话iOS会截断你的信息来适应每个通知风格；为了最好的结果，你不应该截断你的信息。
+
+`保持标记的内容更新。`当用户查看新信息后更新标记非常重要，这样他们就不会认为收到了新的通知。注意设置标记内容为0时也会移除通知中心中相关的通知条目。
+
+`IMPORTANT`  
+不要以通知以外的目的使用标记。记住用户可以关闭你app的标记，所以你不能确保他们会查看标记的内容。
+
+`提供一个用户可选的收到通知时的声音。`声音可以在人们没有查看设备屏幕时吸引他们的注意。比如说，一个日历app也许会播放一个声音和一个警告框来提醒人们一个即将到来的事件。或者，一个协作任务管理app也许会播放一个声音和一个标记来表示一个远方的同事完成了一个任务。
+
+你可以提供一个自定义的声音，或者你可以使用内置的警告声音。如果你创建自定义的声音，确保它简短、有区分性且为专业产品。（查看[Preparing Custom Alert Sounds](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/IPhoneOSClientImp.html#//apple_ref/doc/uid/TP40008194-CH103-SW6)来学习这个声音需要的技术。）注意你不能程序上设置通知到达时使设备震动，因为用户会控制警告是否会伴随震动。
 
 
 
