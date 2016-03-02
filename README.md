@@ -30,6 +30,7 @@
   * [HomeKit](#HomeKit)
   * [Multitasking](#Multitasking)
   * [Notifications](#Notifications)
+  * [Social Media](#Social Media)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -1455,6 +1456,12 @@ app扩展也许会要求远程通知发送到它的包容性app中去。在这�
 `提供一个用户可选的收到通知时的声音。`声音可以在人们没有查看设备屏幕时吸引他们的注意。比如说，一个日历app也许会播放一个声音和一个警告框来提醒人们一个即将到来的事件。或者，一个协作任务管理app也许会播放一个声音和一个标记来表示一个远方的同事完成了一个任务。
 
 你可以提供一个自定义的声音，或者你可以使用内置的警告声音。如果你创建自定义的声音，确保它简短、有区分性且为专业产品。（查看[Preparing Custom Alert Sounds](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/IPhoneOSClientImp.html#//apple_ref/doc/uid/TP40008194-CH103-SW6)来学习这个声音需要的技术。）注意你不能程序上设置通知到达时使设备震动，因为用户会控制警告是否会伴随震动。
+
+### <a name="Social Media"/>Social Media
+#### 社交媒体
+人们期待无论他们当前在什么环境下都可以链接到他们最喜欢的社交媒体账户。iOS使以人们赞赏的方式整合社交媒体的交互到你的app中变得简单。
+
+
 
 
 
