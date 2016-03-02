@@ -1461,7 +1461,15 @@ app扩展也许会要求远程通知发送到它的包容性app中去。在这�
 #### 社交媒体
 人们期待无论他们当前在什么环境下都可以链接到他们最喜欢的社交媒体账户。iOS使以人们赞赏的方式整合社交媒体的交互到你的app中变得简单。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Social%20Media/1.jpeg)
 
+`NOTE`
+当用户点击动作按钮时，他们会获取到一个类似这里展示的活动视图控制器。查看[Activity View Controller](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/ContentViews.html#//apple_ref/doc/uid/TP40006556-CH13-SW121)学习更多关于这个视图控制器的内容。
+活动视图控制器列表的中间行显示了用户允许的分享app扩展以及系统提供的分享服务。查看[Share and Action Extensions](http://blog.csdn.net/cloudox_/article/details/50392075)学习更多关于设计分享扩展的内容。
+
+`考虑给予用户一个便利的方式来用你的app发布内容。`用户会允许分享扩展来便于在任何地方发布内容，但你也可以使用系统提供的写作视图控制器来给用户一个可以编辑发布内容的视图。你可以选择在你给用户编辑之前预先填充自定义的内容（当你展示给用户编辑视图之后，只有用户可以编辑内容）。查看[Social Framework Reference](https://developer.apple.com/library/ios/documentation/Social/Reference/Social_Framework/index.html#//apple_ref/doc/uid/TP40012233)学习关于社交框架的变成接口——包括[SLComposeViewController](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Reference/SLComposeViewController_Class/index.html#//apple_ref/occ/cl/SLComposeViewController)。
+
+`可能的话，不要要求用户登录一个社交媒体账户。`社交框架回合账号框架协同工作来支持单次登录，所以你可以获得链接到用户的账户的授权。如果用户当前没有登录账户，你可以展示UI让他们去登录。
 
 
 
