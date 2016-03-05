@@ -27,6 +27,11 @@
   * [Apple Pay](#Apple Pay)
   * [Research Apps](#Research Apps)
   * [App Extensions](#App Extensions)
+  * [HomeKit](#HomeKit)
+  * [Multitasking](#Multitasking)
+  * [Notifications](#Notifications)
+  * [Social Media](#Social Media)
+  * [iCloud](#iCloud)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -1233,6 +1238,242 @@ app扩展类型 | 人们使用扩展来
 
 #### “今天”小部件
 人们在通知中心的“今天”区域查看“今天”小部件。因为人们会设置今天区域，所以这里显示的是他们最关心的信息，以在用户最重要的条目中占领一席之地为目标设计你的小部件。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/App%20Extensions/1.jpeg)
+
+`设计看起来与通知中心相协调的外观。`当你使用通知中心提供的默认的边界和背景样式时，你的今天小部件就会给用户一种一致的体验。为了获得最好的结果，集中精力于绘制你的内容而不是背景或别的什么。尤其避免绘制一个立体的背景。
+
+`NOTE`  
+iOS会自动在你自定义的小部件上方显示你app的图标和标题（图标会显示在前缘空白）。
+
+`使内容与小部件标题对齐。`当你的小部件与你的标题对齐时，人们可以简单地浏览他们想要的小部件的今天视图。遵循今天视图的边界，并且约束你显示在小部件内容区域的内容。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/App%20Extensions/2.jpeg)
+
+`一般来说，使用白色的系统字体来显示文字。`白色文字在通知中心的默认背景下显示的很好。对于次级文本，使用系统提供的活力外观（查看[notificationCenterVibrancyEffect](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIVibrancyEffect/index.html#//apple_ref/occ/clm/UIVibrancyEffect/notificationCenterVibrancyEffect)学习关于这种外观的更多内容）。
+
+`提供通知中心的体验。`人们访问通知中心来获取简单的更新或者执行一个非常简单的任务，所以你的今天小部件最好显示正确数量的信息以及有限的交互，尤其是：
+* 不要让用户滚动或者垂直转移视图来查看你的今天小部件的所有信息。小部件可以垂直扩展来显示更多信息，但小部件的高度超过通知中心的高度并不是一个好的体验，因为这使得查看其它今天小部件被滚动干扰了。
+* 不要实现水平的点击或者拖拽，因为这和通知中心区域的导航冲突了。
+* 尽可能地让用户通过一次点击就可以执行任务或者打开你的app（注意键盘在今天小部件是不能获取的）。
+* 优化性能使用户可以立即获取有用的信息。缓存信息到本地是个好主意，这样你就可以在你更新的时候显示最近的信息。人们期待在今天视图中花费非常少的时间，而且iOS会终止那些不经常使用内存的今天小部件。
+
+如果合适的话，让人们点击你的今天小部件去打开你的app。因为你的今天小部件提供了一个紧致的集中体验，引导人们进入你的app获取更多信息和功能会很好。提供一个“打开App”的按钮不是个好主意，所以一个解决方法是让你的整个今天小部件可点击。或者你也可以让用户点击一个小部件内合适的UI部件来打开你的app并进入到关于那个部件的视图。比如说，日历小部件显示今天的事件；如果用户想要关于一个事件的更多信息，他们可以在小部件中点击事件进入日历app查看它。
+
+`NOTE`  
+让用户可以从你的今天小部件打开你的app是很好的，但在小部件中提供有用的，时效性的信息也是必要的。人们不会喜欢唯一功能就是启动一个app的今天小部件。
+
+`必要的话，让人们知道他们需要登录来在你的今天小部件中获取有用的信息。`如果你的今天小部件需要人们登录来查看信息，显示一条信息鼓励他们去登录并解释他们登录后什么内容会显示。比如说，如果你的今天小部件在用户登录后显示即将到来的预定，你可以询问人们去“登录我的app来查看即将到来的预定。”
+
+`不要创建一个启动其他app的今天小部件。`一个模仿iOS主屏幕行为的今天小部件不会提供对你用户有用的功能。
+
+#### 分享和动作扩展
+人们通过在一个app中点击动作按钮获取分享和动作扩展。在动作按钮显示的动作视图控制器内，动作扩展会在底部行内列出，分享扩展会在他们上面列出。人么你可以使用更多按钮来管理显示在这个动作视图控制器中的分享和动作扩展。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/App%20Extensions/3.jpeg)
+
+分享和动作扩展通常使用用户当前环境的内容作为输入。比如在Safari中阅读一篇文章时，用户也许会点击动作按钮并使用分享扩展来将文章发布到一个分享网站或者使用动作扩展来查看文章的翻译。
+
+`NOTE`  
+在动作视图控制器中，iOS只会列出支持当前内容类型的动作扩展。比如说当用户当前的内容是一个视频时，iOS不会列出只支持文本的动作扩展。
+
+`尽可能地在分享扩展中使用系统提供的UI。`系统提供的组合视图控制器给予用户一致的体验并且会自动支持一般的任务，例如预览和确认标准内容、同步内容和查看动画以及设置一个发布。查看[App Extension Programming Guide](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214)中的[Share](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/ShareSheet.html#//apple_ref/doc/uid/TP40014214-CH12)学习更多关于系统提供的组合视图控制器的使用。
+
+`考虑在一个分享扩展的包容性app中显示一个长上传的进度。`即使分享内容很大，人们也期望在点击一个扩展的发布或分享按钮后能够立即返回到他们原先的环境。你需要让进度是可更新的，但人们不想在每次上传完成时都获得一个通知，而且也没有办法用程序重新启动一个扩展。在这种情况下，在包容性app中显示上传进度就可以了，它能够在后台处理任务，并在有问题的时候发送一个通知。
+
+`为动作扩展使用单色版的app图标。`（相反，分享扩展使用其包容性app的全色图标。）为了创建一个动作扩展的图标，你也许会从创建一个app图标的模板开始。如果必要的话，简化设计并专注于使你的app独一无二的元素。
+
+如果你在你的包容性app中提供多个动作扩展，为他们创建一系列的图标会比较好。确保每一个图标看起来都和app本身的图标相关。
+
+#### 图片编辑扩展
+当人们在照片app中浏览照片或者视频时可以使用图片编辑扩展。一般来说，图片编辑扩展帮助用户对一个图片或者视频添加滤镜或者其他编辑。在用户完成更改之后，编辑后的内容可以在照片app中看到。
+
+照片app提供了一个modal视图来显示你的图片编辑扩展的自定义UI。照片app也可以在用户对照片或者视频编辑之后选择取消按钮时显示一个确认视图（你可以在代码中决定是否有这种行为）。
+
+`不要在你的图片编辑扩展中使用导航栏。`正如你在这里看到的一样，封装了你的扩展视图的modal视图已经包含了导航栏；再添加一个导航栏会占据你UI的空间，而且会让你的用户感到困惑。（默认情况下，照片app会以全屏高度显示你的视图，所以你的内容会在内置的导航栏下面。）
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/App%20Extensions/4.jpeg)
+
+#### 文档提供扩展
+文档提供扩展帮助人们连接你的app管理的包括其他app范围的文档。在许多app中，文档选取视图控制器显示你的扩展提供的UI（查看[UIDocumentPickerViewController Class Reference](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDocumentPickerViewController_Class/index.html#//apple_ref/doc/uid/TP40014342)学习更多关于文档选取视图控制器的内容）。
+
+`NOTE`  
+一个文档提供扩展可以由两个部分组成：一个文档选取视图控制器扩展和一个文件提供扩展。文档选取视图控制器扩展包含了你自定义的UI；而文件提供扩展实现对文件的连接。简单地说，这个章节使用“文档提供扩展”来表示文档选取视图控制器部分提供的UI和体验。
+
+`不要在你的文档提供扩展中使用导航栏。`iOS在文档选取视图控制器内置的导航栏中显示你的扩展自定义的UI。在内置的导航栏下面显示第二个导航栏会让用户感到困惑并且会占据你内容的控件。（默认情况下，文档选取视图控制器使用满屏高度显示你的UI，所以你的内容会在内置的导航栏下方显示。）
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/App%20Extensions/5.jpeg)
+
+#### 自定义键盘
+人们使用键盘扩展来在全系统使用自定义的键盘代替iOS键盘。在使用键盘扩展后，除了安全文本输入区域（如密码区域）和手机号输入区域（如联系人中的手机号区域）外，人们会在他们点击任何文本输入区域时获取自定义的键盘。
+
+`提供一个明显的方式让用户切换到下一个键盘。`人们对iOS的地球按键很熟悉，并且他们也希望在你的键盘上获得相似的体验。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/App%20Extensions/6.jpeg)
+
+合适的话，在你的包容性app中加入一个教程。必要的话，使用你的自定义键盘的包容性app来给用户一个如何使用你的键盘的说明。不要直接将信息放在键盘内，因为这也许会使人们在尝试使用键盘时感到困惑。
+
+### <a name="HomeKit"/>HomeKit
+#### HomeKit智能家居平台
+智能家居平台使人们可以方便地在他们的iOS设备上使用家庭自动化app来控制或者设置他们房屋连接的家居，无论配件是哪个厂家的。最好的房屋自动化app整合HomeKit和iOS来帮助用户：
+* 建立房屋、房间和空间
+* 添加、寻找和移除家居，例如灯泡或恒温控制器
+* 定义适用于多个家居的行为
+* 管理用户
+* 使用Siri来控制他们的房屋
+
+阅读[HomeKit Developer Guide]()https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/HomeKitDeveloperGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40015050来学习如何在你的app中使用HomeKit。下面的指南能够帮助你创建一个简单并且乐于使用的房屋自动化app。
+
+`不要假设你的家具是用户安装的第一个家居。`你的app应该让用户创建房屋、房间和空间变得简单，但同样要让用户可以方便地将你的家居安置到已设置好的空间中去。
+
+`让添加新家居变得简单。`不要在用户能够添加家居之前强制用户创建一个账号。你的app最好能偶自动搜索新家居并将它们显著地推送到UI界面中。确保显示关于每个家居足够的信息让用户能够简单地识别它们。
+
+`帮助用户识别他们正在调整的家具。`提供一个帮助用户物理识别家居的控制；比如说，你也许会让用户闪一下灯泡来确认他们是否正在调整他们想要调整的那个灯泡。
+
+`给予用户不同的方式来找到家居。`日期、季节以及用户当前的位置都会影响在给定情况下哪个家居是重要的，所以你的app应该提供一个根据类别、名称或者在房屋中的位置来寻找家居的方式。
+
+`基于在房屋中安装家居的建议操作集。`操作集让用户定义多个家居的独特行为。比如一个“离开”操作集也许会降低房屋的温度、关灯以及锁上所有的门。你的app可以建议预定义的操作集或者让用户创建他们自己的操作集。如果用户能够创建他们自己的操作集，最好让用户从你建议的、基于选择的房间或空间的家具中选择。
+
+使用友好的、会话的语言来使你的app亲切且易于使用。房屋自动化会让用户觉得畏惧。不要使用他们可能不理解的缩略词或者技术术语。尤其HomeKit是一个关于API的技术术语，所以不应该在你的app中使用它。
+
+`NOTE`
+如果你是一个方案提供商，浏览方案门户网站获取关于家居包装命名和发送消息的指南。
+
+`整合Siri。`Siri可以使通过简单的语言完成复杂的操作变得简单。Siri能够识别操作集、房屋、房间和空间的名字并且能够理解像“Siri，锁上前门”，“Siri，关掉楼上的灯”以及“Siri，让媒体室暖和一点”的语句。下面的指南可以帮助你给予用户一个非常棒的用户Siri控制他们的家居的体验。
+* `使用服务名——而不是家居名——这样Siri就能够识别它。`一个家居可以有多种服务，比如一个有着光服务和风扇服务的吊扇，所以帮助用户区分他们很重要。最好的结果是，让用户从一个有限的名称列表中选择，其不包括公司名、模式数字并且确保让用户在之后编辑名称。你建议的名称应该是描述服务的标准的、易于理解的单词或短语，并且视情况可以包含在房屋中的位置，比如“客厅的灯”或者“车库的门”。你也可以让用户指定输出和开关的服务类型，这样通用的命令如“Siri，关灯”就可以控制所有的灯、照明器具和其他光家居。
+* `让用户知道如何在他们设置的时候使用Siri来控制一个操作集。`比如说，当确认“电影”操作集被设置的时候，显示一个用户可以对Siri说的建议的语句，如“你可以通过说‘Siri，将房屋转为电影模式’来使用Siri执行这一操作集”。注意用户也可以简单地说出操作集的名称来告诉Siri执行一个操作集。Siri识别至少设置了一个动作的预定义的和用户定义的操作集。
+
+`帮助用户设置触发器。`在iOS 9中，HomeKit支持触发器，这是一种基于如时间、位置和其他家居的行为的关系条件来执行动作的方式。比如说，用户也许会设置一个触发器在车库门打开并且太阳落山后时打开厨房的灯。设置包含多个条目的关系条件会变得混乱，所以使设置UI尽可能的简单很重要。比如说，在一个反应人们所说的内容的命令中显示条目、属性和逻辑操作会帮助用户理解情况。
+
+### <a name="Multitasking"/>Multitasking
+#### 多任务处理
+多任务处理让人们在屏幕上（以及合适的iPad模式）查看多个app，并且在最近使用的app中快速地切换。在iOS 9中，人们可以使用多任务处理UI（如下所示）来选择一个最近使用的app。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Multitasking/1.jpeg)
+
+在多任务处理环境中的成功取决于与设备上其他app的和谐共处。在高层面上，这意味着app应该：
+* 用心地优化资源的使用来避免使用过多的CPU、内存、屏幕控件和其他资源
+* 优雅地处理其他app的干扰和声音
+* 停止和重新开始——即过渡到后台或从后台过渡——快速而平滑
+* 当没有在前台时对行为负责
+
+下面的特有的指南会帮助你的app在多任务处理环境中专注于app切换获取成功。查看[Adopting Multitasking Enhancements on iPad](https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/AdoptingMultitaskingOniPad/index.html#//apple_ref/doc/uid/TP40015145)获取更多关于在iPad多任务处理环境下运行的信息。
+
+`准备好被打断和继续。`多任务增加了后台app打断你的app的可能性。其他的特性例如推送广告和快速app切换也会导致更高频率的打断。你越快越准确地保存你app当前的状态，人们就能越快地重新启动并继续他们离开时的工作。为了给予用户一种无缝重启的体验，利用UIKist的保存和恢复功能（查看[Preserving Your App’s Visual Appearance Across Launches](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/StrategiesforImplementingYourApp/StrategiesforImplementingYourApp.html#//apple_ref/doc/uid/TP40007072-CH5-SW2)获取更多信息）。
+
+`确保你的UI能够处理两层高度的状态栏。`两层高度状态栏在例如进程中来电、语音录制和共享数据。在没准备的app中状态栏额外的高度会导致布局的问题。比如说，UI会变低或者被覆盖住。在多任务处理环境中，能够处理两层高度的状态栏尤其重要，因为有更多的app会导致其出现。
+
+`准备好暂停需要人们关注或者参与的活动。`比如说，如果你的app是一个游戏或者播放视频的app，确保用户切换离开你的app时不会错过任何内容或事件。当人们切换回一个游戏或者视频播放器，他们想要像从没离开过一样继续体验。
+
+`确保你的声音表现得体。`多任务处理使得你的app在运行时更有可能发生别的多媒体活动。因此你的声音也更有可能不得不暂停和重新开始来处理中断。查看[Sound](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Sound.html#//apple_ref/doc/uid/TP40006556-CH44-SW1)来获取指南帮助你确保你的声音符合人们的预期并且和设备上的其他声音和谐共存。
+
+`有节制地使用本地通知。`一个app可以安排在特定的时间发送本地通知，无论这个app是挂起、在后台运行还是没有运行。为了达到最好的用户体验，避免用过多的通知纠缠人们，并且遵循[Notifications](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/NotificationCenter.html#//apple_ref/doc/uid/TP40006556-CH39-SW1)中描述的创建通知内容的指南。
+
+`合适的时候结束后台用户发起的任务。`当人们发起一个任务，他们通常期望它即使在切换离开app时也能结束。如果你的app正在执行一个用户发起的不需要用户额外交互的任务，你应该在挂起前在后台完成它。
+
+### <a name="Notifications"/>Notifications
+#### 通知
+通知给予人们当前重要的信息和功能。人们可以从很多环境下得到通知，比如锁屏上、使用app时以及浏览通知中心时。
+
+通知中心有两个视图：今天和通知。
+
+今天视图显示一个可编辑的小部件列表。今天小部件是一个显示由用户关心的app提供的少量即时的、高价值的信息或功能的app扩展。比如说，日历小部件只显示今天的事件。在日历小部件中点击一个事件会在日历app中打开此事件，从而允许用户编辑此事件以及管理其他事件。查看App Extensions学习更多关于设计今天小部件的内容。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Notifications/1.jpeg)
+
+通知视图显示用户感兴趣的app的最近的通知信息。用户可以在设置中的app区域指定是否允许app的通知显示在通知中心。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Notifications/2.jpeg)
+
+iOS app可以使用通知在有兴趣的事情发生时让人们知晓，比如：
+* 收到一个信息
+* 一个事件即将发生
+* 新数据可以下载
+* 某事的状态更改了
+
+在iOS 8以及之后的版本中，app可以定义用户与通知交互的动作。比如说，一个to-do app的通知可以让用户不比打开app就可以标记一个条目为done。
+
+iOS定义了两种通知类型。
+* 本地通知是在同一个设备上由app预定，由iOS发送的，无论app当前是否在前台运行。比如说，一个日历或to-do app可以预定一个本地通知来提示人们一个即将到来的会面或者到期时间。
+* 远程通知（也称推送通知）是由app的远程服务器推送到苹果的推送通知服务的，会将通知推送到所有安装了app的设备上。比如说，一个用户可以与远程对手对战的游戏会更新所有玩家最近的移动。
+
+`NOTE`
+app扩展也许会要求远程通知发送到它的包容性app中去。在这个情况下，包容性app一般会在后台启动来处理通知。查看App Extensions来学习更多关于app扩展的内容。
+
+为了确保用户可以自定义他们的通知体验，你应该尽可能多地支持下面这些通知种类：
+* 横幅
+* 警告
+* 标记
+* 声音
+
+`NOTE`  
+在iOS 8以及之后的版本中，你必须注册你想要发送给用户的通知类别。你第一次执行注册动作时，用户会得到一个警告来决定他们是否要允许你的app发送通知。无论他们选择什么，用户都可以查看你app的设置来更改这个特性或者指定他们想要接收的通知类型。
+
+横幅是一个小的半透明视图，会在屏幕上显示然后几秒后消失。用户也可以在锁屏界面和通知中心的通知视图看到横幅的其他版本。在横幅中，iOS显示你的通知信息和小的app图标（查看[App Icon](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/AppIcons.html#//apple_ref/doc/uid/TP40006556-CH19-SW1)学习更多关于小图标的内容）。用户点击横幅来清除它并跳转到发送通知的app。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Notifications/3.jpeg)
+
+除了默认的点击横幅动作，你还可以定义两个当用户滑动横幅时显示的动作。点击通知动作按钮消除横幅并启动你的app（可能在后台）来处理动作。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Notifications/4.jpeg)
+
+通知警告框是一个标准的显示在屏幕上且需要用户交互才能消除的警告视图。你可以提供通知信息以及一个默认的动作或者最多四个在用户点击Options按钮时显示的特殊动作。你无法控制警告框的背景样式。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Notifications/5.jpeg)
+
+当用户点击警告框上默认的或者自定义的按钮时，iOS会同时消除警告框并启动你的app（可能在后台）。点击Close或OK按钮会消除警告框而不打开你的app。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Notifications/6.jpeg)
+
+标记是一个小红圆，上面显示待查看的通知条目数量（标记显示在app图标的右上角）。你无法控制标记的尺寸以及颜色。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Notifications/7.jpeg)
+
+自定义的或系统提供的声音可以伴随任意其他三种通知类型出现。
+
+`在使用通知中的干扰动作时要三思。`你要确保用户有足够的环境避免意外的影响。为了帮助用户区分你特定的破坏性动作，iOS会用红色显示它。在一些情况下，你的app在执行破坏性的动作前要求用户确认是个好主意。比如说，如果你提供一个显示在锁屏上的横幅中的破坏性动作，你会想要确保只有设备的拥有者可以执行动作（你要在代码中实现这个需求）。
+
+`为每一个动作按钮提供一个自定义的标题。`创建一个简单的标题来清晰地描述发生的动作。比如说，一个游戏也许会使用标题“Play”来表明点击按钮会打开app进入一个地方让用户开始他们的历程。确保标题：
+* 使用大写风格的标题
+* 足够短来适应按钮而不被截断（确保测试国际化标题的长度）
+
+`不要为同一个事件发送多个通知。`用户在选择通知条目的时候需要专心查看；直到用户以某种方式处理通知条目时它们才会消失。如果你对同一个事件发送多个通知，你会填满通知中心，而且用户可能会关闭你app的通知。
+
+`不要在通知信息中包含你的app名称。`你自定义的信息会在警告框和横幅以及通知中心的通知视图中显示。因为iOS会自动在你的信息中显示你的app名称，所以你不会想在自定义的信息中包含你的app名称。
+
+为了实用，一个本地或远程通知信息应该：
+* 专注于信息，而不是用户的动作。不要告诉用户点击哪个警告按钮或者如何打开你的app。
+* 足够短到再一两行内显示。长信息对用户来说很难快速阅读，并且这会强制警告框滚动。
+* 使用句子风格的大写并且使用合适的标点符号来结束。可能的话，使用一个完整的句子。
+
+`NOTE`  
+必要的话iOS会截断你的信息来适应每个通知风格；为了最好的结果，你不应该截断你的信息。
+
+`保持标记的内容更新。`当用户查看新信息后更新标记非常重要，这样他们就不会认为收到了新的通知。注意设置标记内容为0时也会移除通知中心中相关的通知条目。
+
+`IMPORTANT`  
+不要以通知以外的目的使用标记。记住用户可以关闭你app的标记，所以你不能确保他们会查看标记的内容。
+
+`提供一个用户可选的收到通知时的声音。`声音可以在人们没有查看设备屏幕时吸引他们的注意。比如说，一个日历app也许会播放一个声音和一个警告框来提醒人们一个即将到来的事件。或者，一个协作任务管理app也许会播放一个声音和一个标记来表示一个远方的同事完成了一个任务。
+
+你可以提供一个自定义的声音，或者你可以使用内置的警告声音。如果你创建自定义的声音，确保它简短、有区分性且为专业产品。（查看[Preparing Custom Alert Sounds](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/IPhoneOSClientImp.html#//apple_ref/doc/uid/TP40008194-CH103-SW6)来学习这个声音需要的技术。）注意你不能程序上设置通知到达时使设备震动，因为用户会控制警告是否会伴随震动。
+
+### <a name="Social Media"/>Social Media
+#### 社交媒体
+人们期待无论他们当前在什么环境下都可以链接到他们最喜欢的社交媒体账户。iOS使以人们赞赏的方式整合社交媒体的交互到你的app中变得简单。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Social%20Media/1.jpeg)
+
+`NOTE`
+当用户点击动作按钮时，他们会获取到一个类似这里展示的活动视图控制器。查看[Activity View Controller](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/ContentViews.html#//apple_ref/doc/uid/TP40006556-CH13-SW121)学习更多关于这个视图控制器的内容。
+活动视图控制器列表的中间行显示了用户允许的分享app扩展以及系统提供的分享服务。查看[Share and Action Extensions](http://blog.csdn.net/cloudox_/article/details/50392075)学习更多关于设计分享扩展的内容。
+
+`考虑给予用户一个便利的方式来用你的app发布内容。`用户会允许分享扩展来便于在任何地方发布内容，但你也可以使用系统提供的写作视图控制器来给用户一个可以编辑发布内容的视图。你可以选择在你给用户编辑之前预先填充自定义的内容（当你展示给用户编辑视图之后，只有用户可以编辑内容）。查看[Social Framework Reference](https://developer.apple.com/library/ios/documentation/Social/Reference/Social_Framework/index.html#//apple_ref/doc/uid/TP40012233)学习关于社交框架的变成接口——包括[SLComposeViewController](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Reference/SLComposeViewController_Class/index.html#//apple_ref/occ/cl/SLComposeViewController)。
+
+`可能的话，不要要求用户登录一个社交媒体账户。`社交框架回合账号框架协同工作来支持单次登录，所以你可以获得链接到用户的账户的授权。如果用户当前没有登录账户，你可以展示UI让他们去登录。
+
+### <a name="iCloud"/>iCloud
+iCloud让人们无论当前使用的是哪个设备都能连接到他们关心的内容。当你整合iCloud到你的app中时，用户就可以使用不同设备上你的app实例来查看和编辑他们的个人内容而不用执行显式的同步。
 
 
 
