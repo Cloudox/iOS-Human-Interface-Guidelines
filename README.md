@@ -32,6 +32,7 @@
   * [Notifications](#Notifications)
   * [Social Media](#Social Media)
   * [iCloud](#iCloud)
+  * [HealthKit](#HealthKit)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -1500,6 +1501,19 @@ iCloud用户体验中一个很基本的方面是透明度：理念上，用户�
 `尽快地告知用户冲突，但只在必要的时候告知。`使用iCloud编程接口，你应该能够解决一个文档不同版本之间的大部分冲突而不影响用户。如果有不能解决的，确保你尽快地发现冲突这样就可以帮助用户避免浪费时间在错误的内容版本上。你需要设计一个不唐突的方式来告诉用户存在一个冲突；然后让用户能够简单地区分版本并且做出决定。
 
 `确保在搜索时包含用户iCloud的内容。`使用iCloud账户的用户倾向于认为他们的内容是一个可获取的整体，并且他们希望搜索结果可以反映这一观点。如果你的app允许用户搜索他们的内容，确保你使用合适的API来扩展搜索到他们iCloud的账户
+
+### <a name="HealthKit"/>HealthKit
+在iOS 8以及之后的系统中，整合HealthKit的app可以从健康app中获取数据来提供更加强大和全面的健康和健身服务。获取用户许可后，app可以从健康app（用户健康相关数据的存储中心）获取HealthKit的读写数据权限。
+
+比如说，用户可以允许一个营养app获取他们存储在健康app的体重和活动数据，这样营养app就可以推荐每日的卡路里消耗量来达到某个明确的目标。这个营养app也可以使用HealthKit来更新健康app中实际消耗的卡路里量，这样用户可以更简单地跟踪他们的进度，查看[HealthKit Framework Reference](https://developer.apple.com/library/ios/documentation/HealthKit/Reference/HealthKit_Framework/index.html#//apple_ref/doc/uid/TP40014707)学习如何整合HealthKit到你的app。
+
+下面的指南可以帮助你创建一个人们信任并享受使用的健康和健身app。
+
+`只在你有迫不得已的原因时去请求获取健康数据。`HealthKit是设计为专注于健康和健身服务的app使用的。如果一个app要求获取不相关的健康信息，用户不太可能信任使用他们私有数据的app。所以你要确保用户理解你的app需要链接到他们某些私人健康数据并从分享数据中获益。
+
+`不要在用户有机会理解健康数据用来做什么时请求健康数据。`人们倾向于在他们看到他们当前的任务和你请求数据之间的关联时给予他们健康数据的链接。比如说，当用户填写一个减肥app的基本信息时，请求获取他们存储在健康app中的体重数据就有意义。但如果这个减肥app在app启动时立马请求链接体重数据，用户可能不太愿意分享他们的私人信息。
+
+`使用系统提供的UI来请求获取用户的数据。`用户期待在他们需要授予链接他们数据的许可时立马看到如下所示系统提供的许可表单。为了提供一个好的用户体验，不要再你app的其他界面重复许可表单的信息。相反，你可以在许可表单中添加自定义的信息来解释为什么你的app需要链接某些数据（查看[HKHealthStore Class Reference](https://developer.apple.com/library/ios/documentation/HealthKit/Reference/HKHealthStore_Class/index.html#//apple_ref/doc/uid/TP40014708)获取更多信息）。保持这些信息简洁，但确保它们清晰地传达了你的app如何使用健康数据以及分享数据的好处。
 
 
 
