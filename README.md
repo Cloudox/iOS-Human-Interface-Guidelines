@@ -1515,6 +1515,15 @@ iCloud用户体验中一个很基本的方面是透明度：理念上，用户�
 
 `使用系统提供的UI来请求获取用户的数据。`用户期待在他们需要授予链接他们数据的许可时立马看到如下所示系统提供的许可表单。为了提供一个好的用户体验，不要再你app的其他界面重复许可表单的信息。相反，你可以在许可表单中添加自定义的信息来解释为什么你的app需要链接某些数据（查看[HKHealthStore Class Reference](https://developer.apple.com/library/ios/documentation/HealthKit/Reference/HKHealthStore_Class/index.html#//apple_ref/doc/uid/TP40014708)获取更多信息）。保持这些信息简洁，但确保它们清晰地传达了你的app如何使用健康数据以及分享数据的好处。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/HealthKit/1.jpeg)
+
+`NOTE`
+如果用户决定停止分享数据到你的app，他们会在设置中做出这个修改。不需要在你app的UI中添加这个功能。
+
+`不要在你的UI中使用健康app图标、图片或者截屏。`对于所有的苹果设计，这些图片都是有版权的并且不应该被显示在你的app中。
+
+`不要在你的UI中使用“HealthKit”的术语。`HealthKit是一个开发术语，表示你链接存储在健康app中的数据的技术框架。如果你需要涉及你的app与存储在健康app中的数据协同工作的方式，使用术语“健康app”。比如说，你可以说你的app“存储信息到健康app中”或“使用从健康app中获取的数据”。
+
 
 
 未完待续...
