@@ -31,6 +31,8 @@
   * [Multitasking](#Multitasking)
   * [Notifications](#Notifications)
   * [Social Media](#Social Media)
+  * [iCloud](#iCloud)
+  * [HealthKit](#HealthKit)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -1461,7 +1463,57 @@ app扩展也许会要求远程通知发送到它的包容性app中去。在这�
 #### 社交媒体
 人们期待无论他们当前在什么环境下都可以链接到他们最喜欢的社交媒体账户。iOS使以人们赞赏的方式整合社交媒体的交互到你的app中变得简单。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Social%20Media/1.jpeg)
 
+`NOTE`
+当用户点击动作按钮时，他们会获取到一个类似这里展示的活动视图控制器。查看[Activity View Controller](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/ContentViews.html#//apple_ref/doc/uid/TP40006556-CH13-SW121)学习更多关于这个视图控制器的内容。
+活动视图控制器列表的中间行显示了用户允许的分享app扩展以及系统提供的分享服务。查看[Share and Action Extensions](http://blog.csdn.net/cloudox_/article/details/50392075)学习更多关于设计分享扩展的内容。
+
+`考虑给予用户一个便利的方式来用你的app发布内容。`用户会允许分享扩展来便于在任何地方发布内容，但你也可以使用系统提供的写作视图控制器来给用户一个可以编辑发布内容的视图。你可以选择在你给用户编辑之前预先填充自定义的内容（当你展示给用户编辑视图之后，只有用户可以编辑内容）。查看[Social Framework Reference](https://developer.apple.com/library/ios/documentation/Social/Reference/Social_Framework/index.html#//apple_ref/doc/uid/TP40012233)学习关于社交框架的变成接口——包括[SLComposeViewController](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Reference/SLComposeViewController_Class/index.html#//apple_ref/occ/cl/SLComposeViewController)。
+
+`可能的话，不要要求用户登录一个社交媒体账户。`社交框架回合账号框架协同工作来支持单次登录，所以你可以获得链接到用户的账户的授权。如果用户当前没有登录账户，你可以展示UI让他们去登录。
+
+### <a name="iCloud"/>iCloud
+iCloud让人们无论当前使用的是哪个设备都能连接到他们关心的内容。当你整合iCloud到你的app中时，用户就可以使用不同设备上你的app实例来查看和编辑他们的个人内容而不用执行显式的同步。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/iCloud/1.jpeg)
+
+为了提供这个用户体验，很可能你需要重新审核你存储、连接和退信信息的方式——特别是用户创造的内容——在你的app中。查看[iCloud Design Guide](https://developer.apple.com/library/ios/documentation/General/Conceptual/iCloudDesignGuide/Chapters/Introduction.html#//apple_ref/doc/uid/TP40012094)学习如何在你的app中使用iCloud。
+
+iCloud用户体验中一个很基本的方面是透明度：理念上，用户不需要知道他们的内容在何处，并且他们应该很少需要思考他们正在看的是哪个版本的内容。下面的指南可以帮助你给用户他们期待的iCloud体验。
+
+`合适的话，让用户允许你的app使用iCloud变得简单。`在他们的iOS设备上，用户在iCloud设置中登录他们的iCloud账户，而且在大部分情况下，他们希望他们的app自动与iCloud协作。但如果你觉得用户也许会想要选择是否对你的app使用iCloud，你可以在用户第一次打开你的app的时候提供一个简单的选项。在大部分情况下，这个选项应该提供一个关于是否对用户连接的app的所有内容使用iCloud的选择。
+
+`尊重用户的iCloud空间。`记住iCloud是用户购买的有限资源很重要。你应该使用iCloud存储用户创建和理解的信息，而要避免使用它来存储你可以重新生成的app资源和内容。同样，注意当用户的iCloud账户是活动的时，iCloud会自动支持你app文档文件夹的内容。为了避免使用太多用户的空间，你最好对放置在文档文件夹中的内容进行筛选。
+
+`决定存储在iCloud中的信息类型。`为了存储用户创建的文件和其他内容，你也可以存储少量的数据比如用户当前在你app中的状态或者他们的偏好。使用iCloud键值对仓库存储这种类型的信息。比如说，如果人们使用你的app来阅读一本杂志，你也许会使用iCloud键值对存储他们最新阅读的页面，这样当他们在一个不同的设备上再次打开时，他们可以从他们离开的地方继续阅读。
+
+如果你使用iCloud键值对仓库存储偏好，确保这个偏好是用户想要在所有他们的设备上使用的。比如说，有些偏好在工作环境下比在家庭环境下更加有用。在一些情况下，将偏好存储在你app的服务器上而不是用户的iCloud账户上会更有意义，这样无论iCloud是否被使用，偏好都会起作用。
+
+`确保你的app在iCloud不被使用时行为合理。`比如说，如果用户注销了他们的iCloud账户，就关闭iCloud在你app中的使用，或者进入飞行模式时，iCloud也会变得无法使用。在这些情况下，用户执行一个关闭连接iCloud的动作，所以你的app不需要告诉他们这件事。不过，告诉用户他们做出的更改知道他们重新连接到iCloud之前不会在他们的其他设备上显示会比较好。
+
+`不要给予用户选项来创建本地文件。`无论你是否在你的app中支持iCloud，你都不应该鼓励用户去思考一个设备独有的文件系统。相反，你想要用户专注于通过iCloud使他们的内容具有普遍可用性。
+
+`合适的话，自动更新内容。`最好不需要用户做任何事就可以确保他们获取到了你app中最新的内容。不过你需要平衡这个体验和用户的设备空间与带宽限制。如果你的用户工作处理非常大的文档，给予他们一个关于是否从iCloud下载更新的控制会比较好。如果你需要这样做，设计一个方式来表示在iCloud中有一个最近的文档版本可以获取。当用户选择更新文档时，如果下载花费很多时间，确保提供一个反馈。
+
+`警告用户删除一个文档的后果。`当用户在一个使用iCloud的app中删除一个文档时，文档会在用户的iCloud账户和所有其他设备中移除。在执行删除之前显示一个警告框来描述这个结果并获取确认会比较好。
+
+`尽快地告知用户冲突，但只在必要的时候告知。`使用iCloud编程接口，你应该能够解决一个文档不同版本之间的大部分冲突而不影响用户。如果有不能解决的，确保你尽快地发现冲突这样就可以帮助用户避免浪费时间在错误的内容版本上。你需要设计一个不唐突的方式来告诉用户存在一个冲突；然后让用户能够简单地区分版本并且做出决定。
+
+`确保在搜索时包含用户iCloud的内容。`使用iCloud账户的用户倾向于认为他们的内容是一个可获取的整体，并且他们希望搜索结果可以反映这一观点。如果你的app允许用户搜索他们的内容，确保你使用合适的API来扩展搜索到他们iCloud的账户
+
+### <a name="HealthKit"/>HealthKit
+在iOS 8以及之后的系统中，整合HealthKit的app可以从健康app中获取数据来提供更加强大和全面的健康和健身服务。获取用户许可后，app可以从健康app（用户健康相关数据的存储中心）获取HealthKit的读写数据权限。
+
+比如说，用户可以允许一个营养app获取他们存储在健康app的体重和活动数据，这样营养app就可以推荐每日的卡路里消耗量来达到某个明确的目标。这个营养app也可以使用HealthKit来更新健康app中实际消耗的卡路里量，这样用户可以更简单地跟踪他们的进度，查看[HealthKit Framework Reference](https://developer.apple.com/library/ios/documentation/HealthKit/Reference/HealthKit_Framework/index.html#//apple_ref/doc/uid/TP40014707)学习如何整合HealthKit到你的app。
+
+下面的指南可以帮助你创建一个人们信任并享受使用的健康和健身app。
+
+`只在你有迫不得已的原因时去请求获取健康数据。`HealthKit是设计为专注于健康和健身服务的app使用的。如果一个app要求获取不相关的健康信息，用户不太可能信任使用他们私有数据的app。所以你要确保用户理解你的app需要链接到他们某些私人健康数据并从分享数据中获益。
+
+`不要在用户有机会理解健康数据用来做什么时请求健康数据。`人们倾向于在他们看到他们当前的任务和你请求数据之间的关联时给予他们健康数据的链接。比如说，当用户填写一个减肥app的基本信息时，请求获取他们存储在健康app中的体重数据就有意义。但如果这个减肥app在app启动时立马请求链接体重数据，用户可能不太愿意分享他们的私人信息。
+
+`使用系统提供的UI来请求获取用户的数据。`用户期待在他们需要授予链接他们数据的许可时立马看到如下所示系统提供的许可表单。为了提供一个好的用户体验，不要再你app的其他界面重复许可表单的信息。相反，你可以在许可表单中添加自定义的信息来解释为什么你的app需要链接某些数据（查看[HKHealthStore Class Reference](https://developer.apple.com/library/ios/documentation/HealthKit/Reference/HKHealthStore_Class/index.html#//apple_ref/doc/uid/TP40014708)获取更多信息）。保持这些信息简洁，但确保它们清晰地传达了你的app如何使用健康数据以及分享数据的好处。
 
 
 
