@@ -33,6 +33,7 @@
   * [Social Media](#Social Media)
   * [iCloud](#iCloud)
   * [HealthKit](#HealthKit)
+  * [In-App Purchase](#In-App Purchase)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -1523,6 +1524,10 @@ iCloud用户体验中一个很基本的方面是透明度：理念上，用户�
 `不要在你的UI中使用健康app图标、图片或者截屏。`对于所有的苹果设计，这些图片都是有版权的并且不应该被显示在你的app中。
 
 `不要在你的UI中使用“HealthKit”的术语。`HealthKit是一个开发术语，表示你链接存储在健康app中的数据的技术框架。如果你需要涉及你的app与存储在健康app中的数据协同工作的方式，使用术语“健康app”。比如说，你可以说你的app“存储信息到健康app中”或“使用从健康app中获取的数据”。
+
+### <a name="In-App Purchase"/>In-App Purchase
+#### app内购买
+app内购买让人们在你的app中你设计的商店购买数字产品。
 
 
 
