@@ -34,6 +34,7 @@
   * [iCloud](#iCloud)
   * [HealthKit](#HealthKit)
   * [In-App Purchase](#In-App Purchase)
+  * [Game Center](#Game Center)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -1550,6 +1551,10 @@ app内购买只汇集支付——你要提供额外的功能，比如将你的�
 `使用简洁的标题和描述。`最好人们可以浏览一系列条目然后快速地找到他们感兴趣的内容。当你使用简单直观而不冗杂的语言和标题时，人们就可以简单地理解你提供的商品。
 
 `不要更改默认的确认警告框。`当用户购买一个商品时，StoreKit会显示一个确认警告框（如上所示）。你不应该修改这个警告框，因为它可以帮助用户避免意外的购买。
+
+### <a name="Game Center"/>Game Center
+#### 游戏中心
+游戏中心可以让人们玩游戏、组织在线多人游戏以及其他功能。玩家使用内置的游戏中心app来登录一个账号、发现新游戏、添加新朋友、浏览排行榜和成就。
 
 
 
