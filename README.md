@@ -34,6 +34,7 @@
   * [iCloud](#iCloud)
   * [HealthKit](#HealthKit)
   * [In-App Purchase](#In-App Purchase)
+  * [Game Center](#Game Center)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -1528,6 +1529,32 @@ iCloud用户体验中一个很基本的方面是透明度：理念上，用户�
 ### <a name="In-App Purchase"/>In-App Purchase
 #### app内购买
 app内购买让人们在你的app中你设计的商店购买数字产品。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/In-App%20Purchase/1.jpeg)
+
+比如说，用户也许会：
+* 从一个基本版app升级到一个付费版
+* 为新的每月内容续费
+* 购买虚拟条目，比如一个游戏中的新等级或武器
+* 购买和下载新的书籍
+
+使用StoreKit框架来将商店嵌入到你的app中并支持app内购买。当一个用户做出一次购买时，StoreKit连接App Store来安全地执行支付，然后通知你的app，这样就可以提供购买条目。
+
+`IMPORTANT`
+app内购买只汇集支付——你要提供额外的功能，比如将你的商店展现给用户，解锁内置的特性，以及从你的服务器下载内容。还有，所有你通过app内购买销售的产品都必须在App Store注册。
+查看[In-App Purchase Programming Guide](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Introduction.html#//apple_ref/doc/uid/TP40008267)学习添加商店到你的app的技术需求。查看[App Store Resource Center](https://developer.apple.com/app-store/)获取更多使用app内购买的商务需求的信息。你也应该阅读关于你可能销售的和你如何在app中提供这些产品的明确的许可协议信息。
+
+下面的指南可以帮助你设计一个用户喜欢的购买体验。
+
+`优雅地整合商店体验到你的app中。`当展示商品和处理用户的事务时，在你的app中创建一种宾至如归的体验。你不会希望当用户浏览你的商店时感觉进入到了一个不同的app。
+
+`使用简洁的标题和描述。`最好人们可以浏览一系列条目然后快速地找到他们感兴趣的内容。当你使用简单直观而不冗杂的语言和标题时，人们就可以简单地理解你提供的商品。
+
+`不要更改默认的确认警告框。`当用户购买一个商品时，StoreKit会显示一个确认警告框（如上所示）。你不应该修改这个警告框，因为它可以帮助用户避免意外的购买。
+
+### <a name="Game Center"/>Game Center
+#### 游戏中心
+游戏中心可以让人们玩游戏、组织在线多人游戏以及其他功能。玩家使用内置的游戏中心app来登录一个账号、发现新游戏、添加新朋友、浏览排行榜和成就。
 
 
 
