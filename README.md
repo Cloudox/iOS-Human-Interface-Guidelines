@@ -1573,6 +1573,65 @@ app内购买只汇集支付——你要提供额外的功能，比如将你的�
 #### iAd富媒体广告
 当你允许广告在你的app中出现时，用户查看或与它们交互时你可以得到收入。（这里你可以看到一个简单的工程中iAd横幅的占位符。）
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/iAd%20Rich%20Media%20Ads/1.jpeg)
+
+你在你UI的一个特定的视图中展示一个iAd网络服务的广告。首先，这个视图可以包含广告的横幅，用来进入完整的iAd体验。当人们点击横幅时，广告执行一个事先确定的动作，比如播放一个视频、显示交互内容、或者启动Safari来打开一个网页。这个动作可以覆盖你的UI来显示内容，或者让你的app切换到后台。
+
+有三种类型的横幅可以用来显示在你的app中：标准型、中型矩形和全屏型。所有类型的横幅服务于同一个目标——即引导用户进入广告——但他们在表现形式和行为上不同。
+
+标准横幅占用屏幕的一小块区域，并且往往会始终存在屏幕中。你可以选择应该显示标准横幅的app界面并且在布局中留出放置横幅视图的空间。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/iAd%20Rich%20Media%20Ads/2.jpeg)
+
+所有的iOS app都可以显示标准横幅。使用[ADBannerView](https://developer.apple.com/library/ios/documentation/UserExperience/Reference/ADBannerView_Ref/index.html#//apple_ref/occ/cl/ADBannerView)类提供的视图去在你的app中包含标准横幅。
+
+中型矩形横幅和标准横幅的行为类似，你选择应该在何处放置中型矩形横幅。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/iAd%20Rich%20Media%20Ads/3.jpeg)
+
+中型矩形横幅只能在iPad app中使用。使用[ADBannerView](https://developer.apple.com/library/ios/documentation/UserExperience/Reference/ADBannerView_Ref/index.html#//apple_ref/occ/cl/ADBannerView)类提供的视图在你的app中包含中型矩形横幅。
+
+全屏横幅占用大部分或全部的屏幕，并且通常在特定的位置特定的时间出现。你可以选择是模态地显示横幅还是在一个可滚动内容的分开的页面显示。（在这里显示的例子中，app提供一个杂志阅读体验并且让用户可以在全屏横幅上翻页。）
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/iAd%20Rich%20Media%20Ads/4.jpeg)
+
+使用[ADInterstitialAd](https://developer.apple.com/library/ios/documentation/iAd/Reference/ADInterstitialAd_Ref/index.html#//apple_ref/occ/cl/ADInterstitialAd)类提供的视图来在你的app中包含全屏横幅。
+
+所有的横幅都在iAd框架中显示，会在右下角显示iAd的标识。iAd框架被设计成固定在你的app屏幕底部边缘时最好看的样子。
+
+为了确保和横幅广告的无缝交互并提供最好的用户体验，请遵循下面的指南。
+
+`将标准横幅放置在屏幕的底部或者靠近底部。`这个位置略有不同，取决于在屏幕底部是否有栏以及是什么类型的栏。
+
+栏 | 标准横幅视图的位置
+---|---
+在屏幕底部没有栏 | 放置在屏幕底部
+在屏幕的任何位置都没有栏 | 放置在屏幕底部
+工具栏或者标签栏 | 放置在在底部栏的上方
+
+`在不会干扰到用户内容的地方放置中型矩形横幅视图。`和标准视图一样，中型横幅同样在屏幕的底部或靠近底部是最好的。将横幅放置在靠近屏幕底部的地方也可以增加不影响用户的可能性。
+
+`当在用户体验中有穿插的时候模态地展示全屏横幅。`如果在你app的流程中有自然的中断和环境改变，模态展示风格是比较好的。当你模态地展示全屏横幅时（通过使用[presentFromViewController:](https://developer.apple.com/library/ios/documentation/iAd/Reference/ADInterstitialAd_Ref/index.html#//apple_ref/occ/instm/ADInterstitialAd/presentFromViewController:)），用户一定会进入广告或者消除它。由于这个理由，当用户期待体验的改变时使用模态展示风格是个好主意，比如在他们完成一个任务之后。
+
+`当用户在app视图间过渡时非模态地展示全屏横幅。`如果用户频繁地过渡屏幕来体验你的app，比如在一个杂志中翻页或者轻拂一系列条目，非模态的展示风格会比较好。当你非模态地展示一个全屏横幅时（通过使用[presentInView:](https://developer.apple.com/library/ios/documentation/iAd/Reference/ADInterstitialAd_Ref/index.html#//apple_ref/occ/instm/ADInterstitialAd/presentInView:)），你可以保存你UI中的栏，这样用户就可以使用app的控制来跳过或者回到广告。和所有横幅一样，当用户点击全屏横幅时会启动一个iAd体验，但你的app可以在合适的情况下响应横幅区域上的其他手势（比如拖拽或者滑动）。
+
+确保使用合适的动画来显示和隐藏非模态的全屏横幅视图。比如说，一个杂志阅读app可能会用显示其他内容页面的翻页动画来显示一个横幅。
+
+`确保所有横幅在你app中有意义的时间和地方显示。`人们倾向于在不觉得干扰了他们工作流的时候进入一个iAd体验。在沉浸式app比如游戏中这一点尤其重要：你不会想要在会与玩游戏相冲突的地方放置横幅视图。
+
+`不要在用户只想短暂地查看的界面显示横幅。`如果你的app包含那些用户为了进入到他们关心的内容而快速跳转的界面，最好不要在这些界面显示横幅。用户倾向于在停留于界面超过一两秒时点击横幅。
+
+`尽可能地在各个方向显示横幅。`用户最好不需要在改变设备方向时从使用你的app和查看广告之间切换。同样的，支持各个方向会让你能接受更大范围的广告。查看[iAd Programming Guide](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/iAd_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40009881)学习如何确保横幅视图响应方向的更改。
+
+`不要让标准横幅和中型矩形横幅滚动出屏幕。`如果你的app在屏幕上显示滚动内容，确保横幅视图保持固定在其位置。
+
+`当人们查看或与广告交互时，暂停需要他们关注和交互的活动。`当用户选择查看一个广告时，他们不想觉得他们错过了你app的事件，并且他们不希望你的app打断广告的体验。好的做法是停止那些当你的app过渡到后台时停止的活动。
+
+`不要停止一个广告，在罕见的情况下除外。`一般来说，在用户查看和与广告交互时，你的app会持续运行和接收事件，所有可能有的事件会发生并且急需他们立即关注。然而很少有情况需要停止一个进行中的广告。一种可能性是一个提供网络电话（VoIP）的app。在这种app中，当一个电话打过来时取消一个运行的广告可能是有意义的。
+
+`NOTE`
+取消一个广告可能对你的app能够接收的广告和你的收入带来不利的影响。
+
 
 
 未完待续...
