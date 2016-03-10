@@ -35,6 +35,7 @@
   * [HealthKit](#HealthKit)
   * [In-App Purchase](#In-App Purchase)
   * [Game Center](#Game Center)
+  * [iAd Rich Media Ads](#iAd Rich Media Ads)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -1555,6 +1556,22 @@ app内购买只汇集支付——你要提供额外的功能，比如将你的�
 ### <a name="Game Center"/>Game Center
 #### 游戏中心
 游戏中心可以让人们玩游戏、组织在线多人游戏以及其他功能。玩家使用内置的游戏中心app来登录一个账号、发现新游戏、添加新朋友、浏览排行榜和成就。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Game%20Center/1.jpeg)
+
+作为一个游戏开发者，你使用GameKit API来传递分数和成就到游戏中心服务、在游戏的UI中显示排行榜、以及帮助用户找到其他的玩家。查看[Game Center Programming Guide](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/GameKit_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40008304)来学习如何整合游戏中心到你的app中去。
+
+下面的指南可以帮助你在你的app中给用户一个好的游戏中心体验。
+
+`不要创建自定义的UI提示用户从游戏中心登录。`当人们启动你的允许使用游戏中心的app时——并且他们没有在他们设备上的游戏中心登录——系统会自动提示他们登录。显示自定义的UI是不必要的，而且可能导致用户迷惑。
+
+`一般来说，使用标准的游戏中心UI。`很少情况下，自定义游戏中心的UI会有意义，但这么做会迷惑人们。标准的游戏中心UI——iOS和OS X的用户都很熟悉——会提升属于一个大的游戏社区的感觉。
+
+`让用户可以关闭语音聊天。`一些用户在开始游戏时可能不会想要自动打开语音聊天，并且大部分用户会感激在特定情况下关闭语音聊天的能力。
+
+### <a name="iAd Rich Media Ads"/>iAd Rich Media Ads
+#### iAd富媒体广告
+当你允许广告在你的app中出现时，用户查看或与它们交互时你可以得到收入。（这里你可以看到一个简单的工程中iAd横幅的占位符。）
 
 
 
