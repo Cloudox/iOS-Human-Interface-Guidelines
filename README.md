@@ -35,6 +35,7 @@
   * [HealthKit](#HealthKit)
   * [In-App Purchase](#In-App Purchase)
   * [Game Center](#Game Center)
+  * [iAd Rich Media Ads](#iAd Rich Media Ads)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -1567,6 +1568,10 @@ app内购买只汇集支付——你要提供额外的功能，比如将你的�
 `一般来说，使用标准的游戏中心UI。`很少情况下，自定义游戏中心的UI会有意义，但这么做会迷惑人们。标准的游戏中心UI——iOS和OS X的用户都很熟悉——会提升属于一个大的游戏社区的感觉。
 
 `让用户可以关闭语音聊天。`一些用户在开始游戏时可能不会想要自动打开语音聊天，并且大部分用户会感激在特定情况下关闭语音聊天的能力。
+
+### <a name="iAd Rich Media Ads"/>iAd Rich Media Ads
+#### iAd富媒体广告
+当你允许广告在你的app中出现时，用户查看或与它们交互时你可以得到收入。（这里你可以看到一个简单的工程中iAd横幅的占位符。）
 
 
 
