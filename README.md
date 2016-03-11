@@ -1637,6 +1637,24 @@ app内购买只汇集支付——你要提供额外的功能，比如将你的�
 #### 无线打印
 使用AirPrint无线打印，人们可以从你的app无线地打印内容并使用打印中心app来检查打印工作。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/AirPrint/1.jpeg)
+
+你可以得益于内置的对打印图片和PDF内容的支持，或者你可以使用打印编程接口自定义格式和渲染。iOS会处理打印机的发现和所选择的打印机的打印工作的调度与执行。
+
+一般来说，当用户想要打印一些东西的时候会点击你app中的标准动作按钮。当他们在显示的视图上选择打印条目后，他们可以选择一个打印机，设置打印选项，并点击打印按钮来开始打印。
+
+用户可以在打印中心app检查他们请求的打印工作，这是一个只有在有打印工作在进程中时才可以获取的后台系统app。在打印中心中，用户可以查看当前的打印队列，获取一个特定打印工作的详情以及取消工作。
+
+你可以在你的app中添加相对少量的代码来支持基本的打印（查看[Drawing and Printing Guide for iOS](https://developer.apple.com/library/ios/documentation/2DDrawing/Conceptual/DrawingPrintingiOS/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010156)学习关于在你的代码中添加打印支持的内容）。为了确保用户喜欢你app的打印体验，遵循下面的指南：
+
+`使用系统提供的动作按钮。`用户对这个按钮的意义和行为很熟悉，所以可能的话使用它是一个好主意。除非你的app不包含工具栏或者导航栏。在这种情况下，你需要设计一个自定义的打印按钮显示在你app的主UI中，因为这个动作按钮只能在工具栏和导航栏使用。
+
+`当打印是当前环境的主要功能时显示打印条目。`如果打印对当前环境不合适，或者如果用户不想要打印，不要在动作按钮显示的视图中包含打印条目。
+
+`合适的话，提供额外的打印选项给用户。`比如说，你可能会允许用户来选择一个页面范围或者要求打印多份。
+
+`如果用户无法打印，不要显示打印细节。`在你显示可以选择打印的UI前，确保用户的设备是否支持打印。查看[UIPrintInteractionController Class Reference](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIPrintInteractionController_Class/index.html#//apple_ref/doc/uid/TP40010141)学习如何在你的代码中这样做。
+
 
 
 未完待续...
