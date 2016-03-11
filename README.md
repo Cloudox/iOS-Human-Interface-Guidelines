@@ -36,6 +36,7 @@
   * [In-App Purchase](#In-App Purchase)
   * [Game Center](#Game Center)
   * [iAd Rich Media Ads](#iAd Rich Media Ads)
+  * [AirPrint](#AirPrint)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -1631,6 +1632,10 @@ app内购买只汇集支付——你要提供额外的功能，比如将你的�
 
 `NOTE`
 取消一个广告可能对你的app能够接收的广告和你的收入带来不利的影响。
+
+### <a name="AirPrint"/>AirPrint
+#### 无线打印
+使用AirPrint无线打印，人们可以从你的app无线地打印内容并使用打印中心app来检查打印工作。
 
 
 
