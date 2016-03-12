@@ -37,6 +37,7 @@
   * [Game Center](#Game Center)
   * [iAd Rich Media Ads](#iAd Rich Media Ads)
   * [AirPrint](#AirPrint)
+  * [Accessing User Data](#Accessing User Data)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -1654,6 +1655,10 @@ app内购买只汇集支付——你要提供额外的功能，比如将你的�
 `合适的话，提供额外的打印选项给用户。`比如说，你可能会允许用户来选择一个页面范围或者要求打印多份。
 
 `如果用户无法打印，不要显示打印细节。`在你显示可以选择打印的UI前，确保用户的设备是否支持打印。查看[UIPrintInteractionController Class Reference](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIPrintInteractionController_Class/index.html#//apple_ref/doc/uid/TP40010141)学习如何在你的代码中这样做。
+
+### <a name="Accessing User Data"/>Accessing User Data
+#### 访问用户数据
+定位服务允许app来确定人们大致的地理位置、他们设备指向的方向以及他们移动的方向。其他系统服务——诸如联系人、日历、提醒以及相册——也允许app去访问用户存储在其中的数据。
 
 
 
