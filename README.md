@@ -1688,6 +1688,22 @@ app内购买只汇集支付——你要提供额外的功能，比如将你的�
 #### 快速浏览
 使用快速浏览，即使你的app不能打开文档，用户也可以通过你的app预览一个文档。比如说，你也许会允许用户预览他们从网页下载或者从其他资源获取的文档。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Quick%20Look/1.jpeg)
+
+查看[Document Interaction Programming Topics for iOS](https://developer.apple.com/library/ios/documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010403)学习更多关于如何在你的app支持快速浏览文档预览的内容。
+
+在用户从你的app预览一个文档之前，他们可以在你创建的自定义视图查看文档的信息。比如说，用户下载了一封邮件附件的文档之后，邮件会在自定义的视图显示一个文档的图标、标题和大小。用户可以点击这个视图来预览文档。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Quick%20Look/2.jpeg)
+
+你可以在你的app中显示一个新视图来展示文档，或者在一个全屏的模态视图中展示。展示的方法取决于你app运行的设备。
+
+`在iPad上，模态地显示一个文档预览。`iPad的大屏幕很适合在一个沉浸式的环境中显示一个文档预览让用户可以很容易地离开。空间过渡尤其适合显示预览。
+
+`在iPhone上，在一个专门的视图上，导航视图更好，来显示文档预览。`这样做让用户可以不丢失你app的上下文来导航到文档预览或者从文档预览导航出去。虽然也可以在iPhone app中模态地显示文档预览，但并不推荐这样做。（注意空间过渡并不适用于iPhone.）
+
+还有要注意，在导航视图显示文档预览让快速浏览可以在导航栏上放置预览导航控件。（如果你的视图已经包含工具栏，快速浏览会在工具栏放置预览导航控件。）
+
 
 
 未完待续...
