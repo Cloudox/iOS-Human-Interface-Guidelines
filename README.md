@@ -38,6 +38,7 @@
   * [iAd Rich Media Ads](#iAd Rich Media Ads)
   * [AirPrint](#AirPrint)
   * [Accessing User Data](#Accessing User Data)
+  * [Quick Look](#Quick Look)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -1682,6 +1683,10 @@ app内购买只汇集支付——你要提供额外的功能，比如将你的�
 不要在用户选择需要数据的特性之前编程触发警告框。这样，你就可以避免在用户做不需要数据的事情时让他们纳闷为什么你的app想要他们的私人数据。（注意检查用户的定位服务偏好不会出发警告框。）
 
 `对于位置数据，检查定位服务的偏好避免不必要地触发警告框。`你可以使用Core Location编程接口获取这个设置（查看[Core Location Framework Reference](https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CoreLocation_Framework/index.html#//apple_ref/doc/uid/TP40007123)学习如何做）。有了这个知识，你就可以尽可能地在请求位置信息时触发警告框，或者可能完全不要警告框。
+
+### <a name="Quick Look"/>Quick Look
+#### 快速浏览
+使用快速浏览，即使你的app不能打开文档，用户也可以通过你的app预览一个文档。比如说，你也许会允许用户预览他们从网页下载或者从其他资源获取的文档。
 
 
 
