@@ -1745,7 +1745,7 @@ app内购买只汇集支付——你要提供额外的功能，比如将你的�
 
 `如果你的app只产生对功能不是必须的UI音效，那么就使用系统声音服务。`系统声音服务时一个产生警告框、UI音效和震动的iOS技术；它不适用于任何其他目的。当你使用系统声音服务来产生声音时，你不能影响你的声音与设备上的声音的交互方式，以及它被设备配置打断和更改时的响应。查看[Audio UI Sounds (SysSound)](https://developer.apple.com/library/ios/samplecode/SysSound/Introduction/Intro.html#//apple_ref/doc/uid/DTS40008018)获取示范使用这个技术的简单工程。
 
-`如果声音在你的app中扮演了很重要的角色，使用音频会话服务或者[AVAudioSession](https://developer.apple.com/library/ios/documentation/AVFoundation/Reference/AVAudioSession_ClassReference/index.html#//apple_ref/occ/cl/AVAudioSession)类。`这些编程接口不产生声音；它们帮助你表达你的声音和设备上的声音应有的交互方式以及对设备配置打断和更改的响应。
+`如果声音在你的app中扮演了很重要的角色，使用音频会话服务或者AVAudioSession类。`这些编程接口不产生声音；它们帮助你表达你的声音和设备上的声音应有的交互方式以及对设备配置打断和更改的响应。
 
 `IPHONE`
 无论你使用何种技术产生声音或者定义它的行为，手机都可以中断当前运行的app。这是因为没有app应该保护人们免于收到来电。
