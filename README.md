@@ -40,6 +40,7 @@
   * [Accessing User Data](#Accessing User Data)
   * [Quick Look](#Quick Look)
   * [Sound](#Sound)
+  * [VoiceOver](#VoiceOver)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -1874,6 +1875,10 @@ app可以发送视频给支持AirPlay的硬件——比如Apple TV——并且�
 `尽可能地使用系统提供的控件来提供AirPlay支持。`当你使用[MPMoviePlayerController](https://developer.apple.com/library/ios/documentation/MediaPlayer/Reference/MPMoviePlayerController_Class/index.html#//apple_ref/occ/cl/MPMoviePlayerController)类来支持AirPlay播放时，你可以从允许用户选择当前范围内的AirPlay设备的标准控制中获益。或者你可以使用[MPVolumeView](https://developer.apple.com/library/ios/documentation/MediaPlayer/Reference/MPVolumeView_Class/index.html#//apple_ref/occ/cl/MPVolumeView)类来显示用户可以选择的支持AirPlay音频或视频的设备。用户习惯这些标准控件的表现和行为，所以他们知道如何在你的app中使用它们。
 
 `不要重新改变事件的目的，即使事件在你的app中没有意义。`用户期待iOS媒体控件和配件控件在所有app中的功能一致。你不用处理你app不需要的事件，但你处理的事件必须产生用户期待的体验。如果你重新定义一个事件的意义，你会迷惑用户并且可能导致他们进入一个无知的状态。
+
+### <a name="VoiceOver"/>VoiceOver
+#### 旁白
+VoiceOver增加对盲人、低视力和有学习挑战的用户的亲近度。
 
 
 
