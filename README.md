@@ -41,6 +41,7 @@
   * [Quick Look](#Quick Look)
   * [Sound](#Sound)
   * [VoiceOver](#VoiceOver)
+  * [Routing](#Routing)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -1887,6 +1888,10 @@ VoiceOver增加对盲人、低视力和有学习挑战的用户的亲近度。
 当你通过完全标准的方式使用标准UI元素的时候，你就几乎不需要做额外的工作。你的UI越定制化，你就需要提供越多的定制信息使VoiceOver可以准确地描述你的app。
 
 让你的iOS app亲近VoiceOver用户可以增加你的用户基础和帮助你进入新市场。支持VoiceOver也可以帮助你解决由不同管理部门创建的亲近指南。
+
+### <a name="Routing"/>Routing
+#### 线路选择
+地图可以显示大量可供选择的到达用户目的地的线路：
 
 
 
