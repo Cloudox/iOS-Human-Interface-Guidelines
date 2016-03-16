@@ -41,6 +41,7 @@
   * [Quick Look](#Quick Look)
   * [Sound](#Sound)
   * [VoiceOver](#VoiceOver)
+  * [Routing](#Routing)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -1879,6 +1880,18 @@ app可以发送视频给支持AirPlay的硬件——比如Apple TV——并且�
 ### <a name="VoiceOver"/>VoiceOver
 #### 旁白
 VoiceOver增加对盲人、低视力和有学习挑战的用户的亲近度。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/VoiceOver/1.jpeg)
+
+为了确保VoiceOver用户可以使用你的app，你也许需要在你的用户界面提供一些对视图和控件的描述信息。支持VoiceOver不需要你改变任何你的UI视觉设计。
+
+当你通过完全标准的方式使用标准UI元素的时候，你就几乎不需要做额外的工作。你的UI越定制化，你就需要提供越多的定制信息使VoiceOver可以准确地描述你的app。
+
+让你的iOS app亲近VoiceOver用户可以增加你的用户基础和帮助你进入新市场。支持VoiceOver也可以帮助你解决由不同管理部门创建的亲近指南。
+
+### <a name="Routing"/>Routing
+#### 线路选择
+地图可以显示大量可供选择的到达用户目的地的线路：
 
 
 
