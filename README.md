@@ -1992,6 +1992,26 @@ VoiceOver增加对盲人、低视力和有学习挑战的用户的亲近度。
 * 重新输入以前未完成的输入
 * 取消撤销操作
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Undo%20and%20Redo/1.jpeg)
+
+你可以在你的app中以一种更一般的方式来支持撤销操作，通过说明：
+* 用户可以撤销或重做的动作
+* 在何种情况下你的app应该将一个摇动事件看做一个撤销手势
+* 支持何种程度的撤销
+
+查看[Undo Architecture](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/UndoArchitecture/UndoArchitecture.html#//apple_ref/doc/uid/10000010i)学习如何在代码中实现这个行为。如果你的app支持撤销与重做，遵循下面的指南来提供一个好的用户体验。
+
+`提供简短的描述短语来精确地告知用户他们正在撤销或重做的是什么。`iOS会自动为撤销警告框的按钮标题提供“撤销”和“重做”短语（包括在短语后的一个空格），但是你需要提供一或两个词语来描述用户可以撤销或重做的动作。比如说，你可能提供词语“名字”或“地址更改”，来创建一个类似“撤销名字”或“重做地址更改”的按钮标题。（注意警告框的取消按钮不可以被更改或移除。）
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Undo%20and%20Redo/2.jpeg)
+
+`不要提供太长的文本。`太长的按钮标题会被截断而且用户会很难辨识。并且因为这是一个按钮标题，使用标题风格的大写且不要添加标点符号。
+
+`不要过载摇动手势。`即使你可以编程设置何时将一个摇动事件视为撤销操作，如果他们同时在使用摇动来执行一个不同的动作，会使用户迷惑。分析你app中用户的交互并且不要造成用户不能理解摇动手势的结果的情况。
+
+`只在撤销和重做是你app的功能时使用系统提供的撤销和重做按钮。`记住摇动手势是用户请求撤销和重做的主要方式，并且提供两种不同的方式来执行同样的任务会变得迷惑。如果你认为提供明确的、专用的撤销和重做控件很重要，你可以将系统提供的按钮放在导航栏。（查看[Toolbar and Navigation Bar Buttons](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Bars.html#//apple_ref/doc/uid/TP40006556-CH12-SW33)学习更多关于这些按钮的内容。）
+
+`清晰地将撤销和重做的功能关联到用户当前的环境，而不是早先的环境。`考虑你允许撤销和重做的环境。一般来说，用户期望他们的更改和操作可以立即生效。
 
 
 
