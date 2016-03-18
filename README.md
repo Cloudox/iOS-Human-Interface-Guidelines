@@ -43,6 +43,7 @@
   * [VoiceOver](#VoiceOver)
   * [Routing](#Routing)
   * [Edit Menu](#Edit Menu)
+  * [Undo and Redo](#Undo and Redo)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -1983,6 +1984,14 @@ VoiceOver增加对盲人、低视力和有学习挑战的用户的亲近度。
 `保持自定义菜单条目的数量合理。`你不想要过多的选项淹没你的用户。
 
 `为你的自定义菜单条目使用简洁的名字并确保名字精确地描述了命令的功能。`一般来说，条目名应该是描述执行的动作的动词。虽然你通常应该使用一个单一的大写单词作为条目名，如果你一定要使用短语的话，使用标题风格的大写。（简短地说，标题风格的大写意味着大写每个单词，除了文章、并列连词和四个字母或以下的介词。）
+
+### <a name="Undo and Redo"/>Undo and Redo
+#### 撤销与重做
+用户通过摇动设备来发起一个撤销操作，这会显示一个警告框来让他们：
+* 撤销他们刚刚输入的内容
+* 重新输入以前未完成的输入
+* 取消撤销操作
+
 
 
 
