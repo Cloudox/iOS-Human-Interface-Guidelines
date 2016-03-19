@@ -44,6 +44,7 @@
   * [Routing](#Routing)
   * [Edit Menu](#Edit Menu)
   * [Undo and Redo](#Undo and Redo)
+  * [Keyboards and Input Views](#Keyboards and Input Views)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -2012,6 +2013,12 @@ VoiceOver增加对盲人、低视力和有学习挑战的用户的亲近度。
 `只在撤销和重做是你app的功能时使用系统提供的撤销和重做按钮。`记住摇动手势是用户请求撤销和重做的主要方式，并且提供两种不同的方式来执行同样的任务会变得迷惑。如果你认为提供明确的、专用的撤销和重做控件很重要，你可以将系统提供的按钮放在导航栏。（查看[Toolbar and Navigation Bar Buttons](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Bars.html#//apple_ref/doc/uid/TP40006556-CH12-SW33)学习更多关于这些按钮的内容。）
 
 `清晰地将撤销和重做的功能关联到用户当前的环境，而不是早先的环境。`考虑你允许撤销和重做的环境。一般来说，用户期望他们的更改和操作可以立即生效。
+
+### <a name="Keyboards and Input Views"/>Keyboards and Input Views
+#### 键盘和输入视图
+在iOS 8及以后的系统中，你可以创建一个自定义的键盘扩展让人们在大部分地方都可以使用它，而不是系统提供的键盘。查看[App Extensions](http://blog.csdn.net/cloudox_/article/details/50392075)学习更多关于管理包括键盘在内的app扩展的指南；查看[Custom Keyboard](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/Keyboard.html#//apple_ref/doc/uid/TP40014214-CH16)学习如果开发自定义键盘扩展。
+
+合适的话，你也可以在你的app中设计一个自定义的输入视图来代替系统提供的键盘。比如说，Numbers提供了多种输入视图来使输入账户、日期和其他值变得简单和高效。
 
 
 
