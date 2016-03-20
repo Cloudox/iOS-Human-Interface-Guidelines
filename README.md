@@ -46,6 +46,7 @@
   * [Undo and Redo](#Undo and Redo)
   * [Keyboards and Input Views](#Keyboards and Input Views)
 * [UI Elements](#UI Elements)
+  * [Bars](#Bars)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -2035,6 +2036,11 @@ VoiceOver增加对盲人、低视力和有学习挑战的用户的亲近度。
 标准点击音只对当前在屏幕上的自定义输入视图起作用。人们可以关闭所有的键盘点击音——包括来自你自定义输入视图的点击音——在设置 > 声音中。
 
 ## <a name="UI Elements"/>UI Elements
+### <a name="Bars"/>Bars
+#### 状态栏
+状态栏显示了关于设备和当前环境的重要信息（像iPhone上那样）。
+
+
 
 
 
