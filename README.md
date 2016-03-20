@@ -2040,6 +2040,31 @@ VoiceOver增加对盲人、低视力和有学习挑战的用户的亲近度。
 #### 状态栏
 状态栏显示了关于设备和当前环境的重要信息（像iPhone上那样）。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Bars/1.jpeg)
+
+状态栏：
+* 是透明的
+* 当呈现的时候，总是出现在屏幕的顶部边缘
+
+`API NOTE`  
+你可以对整个app全局设置状态栏风格或者对单独的视图控制器设置状态栏风格。你可以查看[UIApplication Class Reference](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/doc/uid/TP40006728)获取关于[UIStatusBarStyle](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/c/tdef/UIStatusBarStyle)常量的信息，查看[UIViewController Class Reference](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIViewController_Class/index.html#//apple_ref/doc/uid/TP40006926)获取关于[preferredStatusBarStyle](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIViewController_Class/index.html#//apple_ref/occ/instm/UIViewController/preferredStatusBarStyle)属性的信息。
+
+`不要创建自定义的状态栏。`用户依赖一致的系统提供的状态栏。即使你可能在你的app中隐藏状态栏，在它的位置创建自定义的UI也是不合适的。
+
+`防止滚动内容在状态栏显示。`当用户滚动时，你不想他们在状态栏区域看到一个app内容和状态栏元素混淆的内容。为了给用户一种宽敞的印象并保持最大的可读性，确保状态栏有一个下方模糊的内容组成的背景。这里是一些保持滚动内容不显示在状态栏的方式：
+* 使用导航控制器来显示内容。导航控制器自动显示一个状态栏背景并且确保它的内容视图不会在状态栏的后面显示。（查看[Navigation Controllers](https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Chapters/NavigationControllers.html#//apple_ref/doc/uid/TP40011313-CH2)学习更多关于导航控制器的内容。）
+* 创建一个不干扰的自定义图片——例如渐变的——并且在状态栏后面显示它。为了确保图片保持在状态栏后面，你可以使用一个视图控制器来保持图片在滚动视图的上方，或者使用一个滚动视图来保持它置顶。
+* 定位内容从而避免出现在状态栏区域（也就是说，由app的[statusBarFrame](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/instp/UIApplication/statusBarFrame)属性定义区域）。如果你这样做，你应该使用窗口的背景色来在状态栏后方提供一个实心的颜色。
+
+`不要在状态栏后面放置有干扰性的内容。`尤其是，你不会想暗示用户点击状态栏来连接你app的内容或操作你app的控件。
+
+`永久地隐藏状态栏之前要三思。`因为状态栏是透明的，通常不需要隐藏它。长久地隐藏状态栏意味着用户必须切换出你的app来查看时间或者确认他们是否连上了WiFi。
+
+`考虑隐藏状态栏——和所有其他app的UI——当用户正在观看全屏视频时。`如果你隐藏状态栏，确保让人们能通过一个简单的触摸回复它（和合适的被隐藏的appUI）。除非你有不得已的愿意去做，否则不要定义一个自定义的手势来重新显示状态栏，因为用户不太可能发现它和记住它。
+
+`选择和你的app协调的状态栏内容色。`默认的外观显示深色的内容，这在浅色的app内容上方会看上去很好。而浅色状态栏内容会在深色app内容上方看上去很好。
+
+`合适的话，显示网络活动指示器。`网络活动指示器会在状态栏显示来告诉用户漫长的网络连接正在发生。查看[Network Activity Indicator](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Controls.html#//apple_ref/doc/uid/TP40006556-CH15-SW44)来学习如何在你的代码中实现这个指示器。
 
 
 
