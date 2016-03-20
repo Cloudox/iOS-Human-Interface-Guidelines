@@ -45,6 +45,8 @@
   * [Edit Menu](#Edit Menu)
   * [Undo and Redo](#Undo and Redo)
   * [Keyboards and Input Views](#Keyboards and Input Views)
+* [UI Elements](#UI Elements)
+  * [Bars](#Bars)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -2019,6 +2021,26 @@ VoiceOver增加对盲人、低视力和有学习挑战的用户的亲近度。
 在iOS 8及以后的系统中，你可以创建一个自定义的键盘扩展让人们在大部分地方都可以使用它，而不是系统提供的键盘。查看[App Extensions](http://blog.csdn.net/cloudox_/article/details/50392075)学习更多关于管理包括键盘在内的app扩展的指南；查看[Custom Keyboard](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/Keyboard.html#//apple_ref/doc/uid/TP40014214-CH16)学习如果开发自定义键盘扩展。
 
 合适的话，你也可以在你的app中设计一个自定义的输入视图来代替系统提供的键盘。比如说，Numbers提供了多种输入视图来使输入账户、日期和其他值变得简单和高效。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Keyboards%20and%20Input%20Views/1.jpeg)
+
+如果你提供一个自定义的输入视图，确保它的功能对用户来说是明显的。
+
+你也可以提供一个自定义的位于键盘（或者你的自定义输入视图）上方的输入附属视图。比如说，在一些环境下，Numbers显示一个输入附属视图来帮助用户执行标准的或自定义的表格数据计算。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/iOS%20Technologies/Keyboards%20and%20Input%20Views/2.jpeg)
+
+当人们点击你的输入视图上的自定义控件时使用标准键盘点击音来提供可以听到的反馈。查看UIDevice Class Reference中的playInputClick文档来学习如果在你的代码中添加这个声音。
+
+`NOTE`  
+标准点击音只对当前在屏幕上的自定义输入视图起作用。人们可以关闭所有的键盘点击音——包括来自你自定义输入视图的点击音——在设置 > 声音中。
+
+## <a name="UI Elements"/>UI Elements
+### <a name="Bars"/>Bars
+#### 状态栏
+状态栏显示了关于设备和当前环境的重要信息（像iPhone上那样）。
+
+
 
 
 
