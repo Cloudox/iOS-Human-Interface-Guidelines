@@ -2066,6 +2066,11 @@ VoiceOver增加对盲人、低视力和有学习挑战的用户的亲近度。
 
 `合适的话，显示网络活动指示器。`网络活动指示器会在状态栏显示来告诉用户漫长的网络连接正在发生。查看[Network Activity Indicator](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Controls.html#//apple_ref/doc/uid/TP40006556-CH15-SW44)来学习如何在你的代码中实现这个指示器。
 
+#### 导航栏
+导航栏可以给信息层级导航，并且可以选择管理屏幕内容。
+
+
+
 
 
 
