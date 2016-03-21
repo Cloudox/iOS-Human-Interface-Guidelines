@@ -2069,7 +2069,50 @@ VoiceOver增加对盲人、低视力和有学习挑战的用户的亲近度。
 #### 导航栏
 导航栏可以给信息层级导航，并且可以选择管理屏幕内容。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Bars/2.jpeg)
 
+导航栏：
+* 是透明的
+* 一般显示在app屏幕的顶部，状态栏的下方。在水平方向、常规的环境下，导航栏也可以通过一个不贯穿屏幕的视图来显示，比如一个分裂视图控制器的一个面板。
+* 可以在再键盘出现时、用户做出一个手势时或者当一个包含视图控制器过渡到一个垂直方向的紧致环境时隐藏
+* 可以上色。（使用[tintColor](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIBarButtonItem_Class/index.html#//apple_ref/occ/instp/UIBarButtonItem/tintColor)给导航栏按钮上色；使用[barTintColor](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UINavigationBar_Class/index.html#//apple_ref/occ/instp/UINavigationBar/barTintColor)给导航栏背景上色。）
+
+`API NOTE`  
+导航栏被包含在导航控制器中，是一个用来管理一系列有层次的自定义视图的显示的规划性的对象。查看[Navigation Controllers](https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Chapters/NavigationControllers.html#//apple_ref/doc/uid/TP40011313-CH2)、[UINavigationController Class Reference](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UINavigationController_Class/index.html#//apple_ref/doc/uid/TP40006934)和[UINavigationBar Class Reference](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UINavigationBar_Class/index.html#//apple_ref/doc/uid/TP40006887)学习更多关于在你的代码中定义导航栏的内容。
+
+使用导航栏来导航不同的视图，并且——合适的话——提供一个控件来管理一个视图中的元素。如果你需要提供大量的控件并且不需要导航，考虑使用工具栏来代替（查看[Toolbar](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Bars.html#//apple_ref/doc/uid/TP40006556-CH12-SW4)来学习更多）。
+
+当用户去往导航层级的新一级时，有两件事情会发生：
+* 合适的话，导航栏标题应该改成新一级的标题。
+* 在导航栏的左边应该有一个返回按钮；如果有价值的话返回按钮的标题可以使上一级的标题。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Bars/3.jpeg)
+
+`有价值的时候，使用当前视图的标题作为导航栏的标题。`如果给导航栏写标题看起来多余，你可以让它空着。比如说，便签没有给当前的笔记上标题，因为第一行的内容就提供了用户需要的所有内容。
+
+`考虑放置一些分隔控件在app顶层的导航栏中。`如果这样做可以平缓你的信息层级、让用户更加容易找到他们寻找的内容，那就尤为有用。如果你在导航栏使用了分隔控件，确保选择准确的返回按钮标题。（查看[Segmented Control](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Bars.html#//apple_ref/doc/uid/TP40006556-CH12-SW4)获取使用指南。）
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Bars/4.jpeg)
+
+`必要的话，使用提示阐述在当前屏幕用户可以做什么。`提示是一个出现在靠近导航栏顶部的简短的句子。比如说，股票使用了一个提示来确保用户理解如何找到他们想要的信息。  
+如果你需要使用提示，写一个简明的、单行的以及有合适的结尾标点符合的句子。
+
+`避免使导航栏中的控件太过拥挤，即使看起来有足够的空间。`一般来说，一个导航栏只应该包含当前视图的标题、返回按钮和一个管理视图内容的按钮。如果你在导航栏使用了分隔控件，导航栏就不该显示标题，并且除了分隔控件以外不该再包含任何其他控件。
+
+`确保文本标题的按钮之间有足够的空间。`如果在导航栏的多个左按钮或右按钮之间没有足够的空间，文本标题会显示到一起去，让用户难以区分他们。如果你的导航栏中的按钮标题看起来太紧凑，使用`UIBarButtonSystemItemFixedSpace`来在它们之间添加合适的空间。（查看[UIBarButtonItem Class Reference](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIBarButtonItem_Class/index.html#//apple_ref/doc/uid/TP40007519)学习更多关于常量的内容。）
+
+`尽可能地确保自定义的导航栏和你app协调一致。`比如说，不要将不透明的导航栏和半透明的工具栏组合起来。同样，最好不要改变同一个方向不同界面导航栏的图像、颜色或透明度。
+
+`确保自定义的返回按钮的外观和行为和系统的返回按钮一致。`用户知道标准的返回按钮允许他们在层级信息中回顾他们的步骤。如果你决定用自定义的图片代替系统提供的V字图，确保也提供一个自定义的掩模图。iOS使用掩模图来让按钮标题在过渡的时候从V图出现。
+
+`IMPORTANT`  
+不要创建多节返回按钮。返回按钮总是会将用户待到当前界面的父界面。如果你觉得不提供显示痕迹的多节返回按钮用户可能迷失，这往往意味着你应该简化信息层级。
+
+`当用户想要专注于内容时考虑隐藏导航栏。`如果你这样做，确保让用户通过简单的手势回复导航栏，比如一个点击。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Bars/5.jpeg)
+
+#### 工具栏
 
 
 
