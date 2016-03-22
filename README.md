@@ -2113,6 +2113,9 @@ VoiceOver增加对盲人、低视力和有学习挑战的用户的亲近度。
 ![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Bars/5.jpeg)
 
 #### 工具栏
+工具栏包含了执行与屏幕视图中的对象相关的操作的控件。
+
+
 
 
 
