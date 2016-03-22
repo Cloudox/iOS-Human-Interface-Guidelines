@@ -2115,6 +2115,45 @@ VoiceOver增加对盲人、低视力和有学习挑战的用户的亲近度。
 #### 工具栏
 工具栏包含了执行与屏幕视图中的对象相关的操作的控件。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Bars/6.jpeg)
+
+一个工具栏：
+* 是半透明的
+* 在iPhone上永远出现在屏幕视图的底部边缘。在iPad上也可以出现在屏幕视图的顶部边缘。
+* 可以在键盘出现时、用户做一个手势时或者抱哈你的视图控制器过渡成水平紧凑环境时隐藏。
+
+`API NOTE`  
+工具栏一般包含在导航控制器（管理一系列层级的自定义视图显示的对象）内。查看[Displaying a Navigation Toolbar](https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Chapters/NavigationControllers.html#//apple_ref/doc/uid/TP40011313-CH2-SW4)和[UIToolbar Class Reference](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIToolbar_Class/index.html#//apple_ref/doc/uid/TP40006927)来学习更多关于在你的代码中定义工具栏的内容。
+
+使用工具栏来提供一系列用户可以在当前环境执行的动作。
+
+`包括在当前环境有意义的用的最多的命令。`尽可能地不要使用工具栏提供只偶尔用到的命令。
+
+`考虑使用分栏控件（Segmented Control）来提供到当前环境不同构面或模式连接。`在工具栏使用分栏控件来显示app层级的任务或模式不是好主意，因为工具栏是特殊对应当前屏幕视图的。如果你需要给用户到你app中基本任务、视图或模式的链接，使用标签栏（Tab Bar）来代替。查看[Segmented Control](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Controls.html#//apple_ref/doc/uid/TP40006556-CH15-SW27)来学习关于分栏控件的内容；查看[Tab Bar](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Bars.html#//apple_ref/doc/uid/TP40006556-CH12-SW52)来学习关于标签栏的内容。
+
+`如果你需要在工具栏放置超过三个元素的话，使用图标。`因为文本标题的按钮一般使用比图片更多的空间，会很难让这些标题不挤到一起去。
+
+`确保文本标题的按钮之间有足够的空间。`如果在工具栏的两个或更多按钮之间没有足够的空间，文本标题会挤到一起去并且用户会很难区分它们。如果按钮标题在你的工具栏中看起来太紧凑，使用`UIBarButtonSystemItemFixedSpace`来增加它们之间合适的空间。（查看[UIBarButtonItem Class Reference](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIBarButtonItem_Class/index.html#//apple_ref/doc/uid/TP40007519)学习更多关于这个常量的内容。）
+
+#### 工具栏和导航栏按钮
+iOS提供了很多使用在内置app中的标准工具栏和导航栏按钮。查看[Bar Button Icons](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/BarIcons.html#//apple_ref/doc/uid/TP40006556-CH21-SW1)学习如何设计自定义的图标。工具栏和导航栏中的元素可以使用[tintColor](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIBarButtonItem_Class/index.html#//apple_ref/occ/instp/UIBarButtonItem/tintColor)属性来上色。
+
+在表41-1中找到符号名称对应的按钮描述，在[UIBarButtonItem Class Reference](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIBarButtonItem_Class/index.html#//apple_ref/doc/uid/TP40007519)中查看[UIBarButtonSystemItem](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIBarButtonItem_Class/index.html#//apple_ref/c/tdef/UIBarButtonSystemItem)的文档。
+
+`IMPORTANT`  
+对于所有标准按钮和图标，基于其意义而不是外观来使用按钮是必要的。这会帮助你的app的UI即使在某个意义的按钮改变了其外观时依然有意义。
+
+表41-1 工具栏和导航栏可使用的标准按钮  
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Bars/7.jpeg)
+
+除了表41-1显示的按钮之外，你也可以使用系统提供的编辑、取消、保存、完成、重做和撤销按钮来在你的app中支持编辑或其他类型的内容操作。这每个按钮的外观都由其文本标题提供。查看[UIBarButtonItem Class Reference](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIBarButtonItem_Class/index.html#//apple_ref/doc/uid/TP40007519)中查看[UIBarButtonSystemItem](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIBarButtonItem_Class/index.html#//apple_ref/c/tdef/UIBarButtonSystemItem)的文档来找到这些按钮的符号名称。
+
+最后，你也可以在工具栏中使用系统提供的信息按钮：
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Bars/8.jpeg)
+
+#### 标签栏
+
 
 
 
