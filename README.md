@@ -2153,7 +2153,7 @@ iOS提供了很多使用在内置app中的标准工具栏和导航栏按钮。�
 ![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Bars/8.jpeg)
 
 #### 标签栏
-
+标签栏让人们可以在一个app不同的子任务、视图或模式之间切换。
 
 
 
