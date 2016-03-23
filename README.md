@@ -2155,6 +2155,46 @@ iOS提供了很多使用在内置app中的标准工具栏和导航栏按钮。�
 #### 标签栏
 标签栏让人们可以在一个app不同的子任务、视图或模式之间切换。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Bars/9.jpeg)
+
+`API NOTE`  
+标签栏包含在标签栏控制器（管理一系列自定义视图的显示）内。查看[Tab Bar Controllers](https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Chapters/TabBarControllers.html#//apple_ref/doc/uid/TP40011313-CH3)和[UITabBar](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITabBar_Class/index.html#//apple_ref/occ/cl/UITabBar)来学习更多关于在你的代码中定义标签栏的内容。
+
+一个标签栏：
+* 是半透明的
+* 总是出现在屏幕的底部边缘
+* 在垂直紧凑环境下一次最多显示五个标签（如果有更多的标签，标签栏会显示其中四个，并添加一个“更多”标签，来在一个列表中显示其余的标签）
+* 在所有方向保持同样的高度
+* 可以在标签上显示一个标记来传达app特有的信息（标记是一个红色的椭圆包含白色的文本或数字或感叹号）
+
+使用标签栏给用户到同一个数据的不同构面或与app总功能有关的不同子任务的链接。
+
+`一般来说，使用标签栏来管理app层面的信息。`标签栏很适合用在app的主视图中，因为这是一个很好方式来减少你的信息层级以及提供同时到不同的对等层次的信息类别或模式的链接。
+
+`不要使用标签栏给用户操作当前屏幕的元素或app模式的控件。`如果你需要提供控件，包括显示模态视图的控件，请使用工具栏（查看Toolbar获取使用指南）。
+
+`不要在标签功能不可用的时候移除标签。`如果你在某些情况下移除标签而其他情况不移除，回导致你的appUI不稳定和不可预知。最好的解决方案是确保所有的标签是可选的，但要解释为什么一个标签的内容不可获取。比如说，如果用户在iOS设备内没有任何歌曲，音乐app的歌曲标签会显示一个界面解释如何下载歌曲。
+
+`在垂直常规环境下，你可能会在弹出视图或分隔视图的第二界面使用一个标签栏。`如果标签会切换或过滤那个视图的内容则这样做。然而，在弹出界面和分隔界面使用分栏控件往往会更好，因为分栏控件的外观与这些UI元素的外观整合的更好。（查看[Segmented Control](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Controls.html#//apple_ref/doc/uid/TP40006556-CH15-SW27)来获取更多使用分栏控件的信息。）
+
+`避免太多标签栏导致拥挤。`在标签栏放置太多标签会人们很难点击到他们想要的那个。而且随着你每多显示一个标签，你都增加了你app的复杂度。
+
+`在垂直常规环境下，避免创建一个“更多”标签。`在垂直常规环境下运行的app，屏幕专门显示一个额外的标签列表是一种可怜的空间使用。
+
+`尽可能的，在每个方向都显示同样的标签。`最好能通过在各个方向提供同样的标签来给用户一种视觉统一的感觉。在垂直常规环境下，你可能需要居中显示在垂直紧凑环境下同样的标签。
+
+#### 标签栏图标
+iOS提供了如表41-2描述的在标签栏中使用的标准的图标。查看[Bar Button Icons](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/BarIcons.html#//apple_ref/doc/uid/TP40006556-CH21-SW1)学习如何设计自定义的标签栏图标。标签栏图标可以通过[tintColor](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIView_Class/index.html#//apple_ref/occ/instp/UIView/tintColor)属性上色。
+
+在[UIBarButtonItem Class Reference](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIBarButtonItem_Class/index.html#//apple_ref/doc/uid/TP40007519)中查看[UIBarButtonSystemItem](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIBarButtonItem_Class/index.html#//apple_ref/c/tdef/UIBarButtonSystemItem)的文档找到符号名称对应的按钮描述。
+
+`IMPORTANT`  
+对于所有标准按钮和图标，基于其意义而不是外观来使用按钮是必要的。这会帮助你的app的UI即使在某个意义的按钮改变了其外观时依然有意义。
+
+表41-2 标签栏可使用的标准按钮  
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Bars/10.jpeg)
+
+#### 搜索栏
 
 
 
