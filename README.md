@@ -2197,6 +2197,47 @@ iOS提供了如表41-2描述的在标签栏中使用的标准的图标。查看[
 #### 搜索栏
 搜索栏接收用户输入用于搜索的文本（如下，带有占位文本）。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Bars/11.jpeg)
+
+`API NOTE`  
+查看[UISearchBar](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UISearchBar_Class/index.html#//apple_ref/occ/cl/UISearchBar)学习如何在你的代码中定义搜索栏。查看[UISearchDisplayController](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UISearchDisplayController_Class/index.html#//apple_ref/occ/cl/UISearchDisplayController)学习更多关于显示搜索栏的内容。
+
+搜索栏可以显示一些可选的元素，例如：
+* 占位文本。这个文本可能陈述了控件的功能（比如上面显示的“搜索”）或提醒用户他们在何种环境搜索（比如“Goodle”）。
+* 书签按钮。这个按钮可以提供一个访问用户想要方便再次找到的信息的捷径。比如说，地图搜索模式的书签按钮可以标记位置、最近的搜索和接触。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Bars/12.jpeg)
+
+书签按钮只在搜索栏中没有用户提供的或非占位符文本时显示。当搜索栏包含这些文本时，清除按钮会出现，这样用户就可以清除文本。
+
+* 清除按钮。大多数搜索栏包含清除按钮来让用户通过一次点击清除搜索栏的内容。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Bars/13.jpeg)
+
+当搜索栏包含非占位符文本时，清除按钮就会出现，这样用户就可以清除文本。如果搜索栏没有用户提供的或非占位符文本，清除按钮就要隐藏。
+
+* 结果列表图标。这个图标暗示了搜索结果的存在。当用户点击结果列表图标时，app可以显示他们最近搜索的结果。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Bars/14.jpeg)
+
+* 一个提示。一个描述性的标题，称为提示，可以被放置在搜索栏上方。提示是一个简短的、完整的句子，提供搜索栏的介绍或者app独特的环境。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Bars/15.jpeg)
+
+使用搜索栏来在你的app中提供搜索。不用使用输入框来提供搜索，因为它没有用户期待的标准搜索栏表现。
+
+在iOS 8及以后的系统中，使用[UISearchController](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UISearchController/index.html#//apple_ref/occ/cl/UISearchController)来方便地在导航栏中放置搜索栏。注意当搜索控制器的视图控制器被包含在一个导航控制器中时——像邮件中一样——当用户发起搜索时搜索栏会自动过渡成导航栏。
+
+`选择会在你的app中补充搜索的重要性的搜索栏风格。`如果搜索时你app的主要功能，你可能会想用突出的风格；如果用户不经常需要搜索，你可能会想用最小的风格。
+
+突出的搜索栏风格（邮件中显示的）：  
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Bars/16.jpeg)
+
+最小的搜索栏风格（音乐中显示的）：  
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Bars/17.jpeg)
+
+#### 范围栏
+
 
 
 
