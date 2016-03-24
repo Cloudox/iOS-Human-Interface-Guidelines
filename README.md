@@ -2195,6 +2195,7 @@ iOS提供了如表41-2描述的在标签栏中使用的标准的图标。查看[
 ![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Bars/10.jpeg)
 
 #### 搜索栏
+搜索栏接收用户输入用于搜索的文本（如下，带有占位文本）。
 
 
 
