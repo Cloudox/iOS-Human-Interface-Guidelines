@@ -2237,6 +2237,7 @@ iOS提供了如表41-2描述的在标签栏中使用的标准的图标。查看[
 ![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Bars/17.jpeg)
 
 #### 范围栏
+范围栏——只在和搜索栏结合时可用——帮助用户定义搜索的范围。
 
 
 
