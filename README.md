@@ -2253,6 +2253,50 @@ iOS提供了如表41-2描述的在标签栏中使用的标准的图标。查看[
 #### 活动
 活动表示系统提供的或自定义的任务——通过一个活动视图控制器来实现——其可以和当前的内容互动。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Content%20Views/1.jpeg)
+
+`API NOTE`  
+查看[UIActivity Class Reference](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIActivity_Class/index.html#//apple_ref/doc/uid/TP40011974)学习更多关于在你的代码中定义活动的内容；查看[Activity View Controller](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/ContentViews.html#//apple_ref/doc/uid/TP40006556-CH13-SW121)学习如何整合活动视图控制器到你的app中。
+操作和分享扩展也会在活动视图控制器中显示。查看[Share and Action Extensions](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/AppExtensions.html#//apple_ref/doc/uid/TP40006556-CH67-SW3)学习更多关于这些扩展的内容。
+
+一个活动：
+* 是一个自定义的展现当用户在app中的时候app可以执行的任务的对象
+* 由看起来像栏目按钮图标的图标代表的
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Content%20Views/2.jpeg)
+
+用户通过在活动视图控制器中点击活动图标来初始化活动。作为回应，无论活动时可以立即执行，还是比较复杂，都会在执行任务之前反馈更多信息。
+
+`创建一个精简的模板图片来表示你的任务。`精简的图片是iOS用来作为创建用户看到的最终图标的覆盖图的。为了创建在最终图标中看起来不错的模板图片，要遵循下面的指南：
+* 使用合适透明度的黑色或白色图片。
+* 不要包含阴影。
+* 使用反锯齿。
+
+活动模板图片应该在70*70pixels（高分辨率）的区域中居中。
+
+`创建简洁地描述你的任务的活动标题。`标题会在活动视图控制器中显示在活动图标的下方。短标题是最好的，因为它在屏幕上看起来更好而且易于本地化。当标题太长时，iOS首先会收缩文本，然后——如果标题依然太长的话——截断它。一般来说，不要在活动标题中包含你的公司或产品的名字。
+
+#### 活动视图控制器
+活动视图控制器显示一个临时的视图来列出特定内容可操作的系统提供的或自定义的任务。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Content%20Views/3.jpeg)
+
+`API NOTE`  
+查看[UIActivityViewController Class Reference](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIActivityViewController_Class/index.html#//apple_ref/doc/uid/TP40011976)学习更多关于在你的代码中定义活动视图控制器的内容；查看[Activity](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/ContentViews.html#//apple_ref/doc/uid/TP40006556-CH13-SW122)学习如何设计一个提供了自定义任务的活动。
+
+一个活动视图控制器：
+* 显示一个可配置的用户可以对特定内容执行的任务列表
+* 可以在表单或弹层内显示，取决于环境
+
+使用活动视图控制器给人们一个在某些方式下可以对内容执行的任务清单。这些任务可以是系统提供的——比如复制、Twitter和打印——或者是自定义的。一个常见的使用活动视图控制器的方式是允许用户发送选中的内容到社交媒体账号。
+
+`不要创建一个显示活动视图控制器的自定义按钮。`人们习惯于在点击动作按钮时获取系统提供的任务。你会想要得益于这个被学会的行为并且避免提供一个做相同事情的替换的方式来使用户疑惑。
+
+`确保清单中的任务是适用于当前的环境的。`你可以通过排除系统提供的任务或包含自定义的任务来改变活动视图控制器的任务清单。比如说，为了防止用户打印图片，你可以从活动视图控制器中排除打印活动。
+
+`NOTE`  
+你不能改变活动视图控制器中系统提供的任务的顺序。还有，所有的系统提供的任务都显示在自定义的任务上方。
+
 
 
 
