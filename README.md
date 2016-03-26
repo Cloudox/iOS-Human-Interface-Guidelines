@@ -47,6 +47,7 @@
   * [Keyboards and Input Views](#Keyboards and Input Views)
 * [UI Elements](#UI Elements)
   * [Bars](#Bars)
+  * [Content Views](#Content Views)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -2247,6 +2248,10 @@ iOS提供了如表41-2描述的在标签栏中使用的标准的图标。查看[
 当搜索栏出现时，范围栏可以显示在附近的位置。范围栏采用你给搜索栏定义的同样的外观。
 
 当用户想要搜索有清晰的定义或典型的分类的内容时显示范围栏会很有用。不过，更好的是增强搜索结果这样用户就不需要自己定义他们的搜索范围了。
+
+### <a name="Content Views"/>Content Views
+#### 活动
+活动表示系统提供的或自定义的任务——通过一个活动视图控制器来实现——其可以和当前的内容互动。
 
 
 
