@@ -2320,6 +2320,24 @@ iOS提供了如表41-2描述的在标签栏中使用的标准的图标。查看[
 
 `如果你作出了动态的布局改变要使用警告。`集合视图允许你在用户查看和交互条目的时候改变它们的布局。如果你决定动态地调整集合视图的布局，确保更改是有意义的且易于用户跟踪。没有明显原因的改变集合视图的布局会给人们一种你的app不可预知且难以使用的印象。而且如果在动态改变布局时当前的焦点或环境丢失了，用户会觉得他们失去了对你app的控制。
 
+#### 容器视图控制器
+容器视图控制器管理和展示它的子视图集合——或者子控制器集合——以一种自定义的方式。系统定义的容器视图控制器的例子有标签栏视图控制器、导航栏视图控制器和分栏视图控制器（查看[Tab Bar](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Bars.html#//apple_ref/doc/uid/TP40006556-CH12-SW52)、[Navigation Bar](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Bars.html#//apple_ref/doc/uid/TP40006556-CH12-SW3)和[Split View Controller](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/ContentViews.html#//apple_ref/doc/uid/TP40006556-CH13-SW51)来学习更多关于这些元素的内容）。
+
+`API NOTE`  
+查看[UIViewController Class Reference](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIViewController_Class/index.html#//apple_ref/doc/uid/TP40006926)学习关于在你的代码中定义自定义的容器视图控制器的内容。
+
+容器视图控制器没有预定义的外观和行为。
+
+使用容器视图控制器通过自定义的方式来导航展示内容。
+
+`询问自己一个自定义的容器视图控制器是否是真的必须的。`用户习惯于标准容器视图控制器的外观和行为，比如分栏视图控制器和标签栏视图控制器。你需要确保你自定义的容器视图的潜在优势大于用户可能发现不了或立即知道它如何工作的事实。
+
+`确保你的自定义容器视图控制器在各个方向都可以工作。`设计在垂直和水平方向都能给用户一致的体验的容器视图控制器很重要。
+
+`一般来说，避免绚丽的视图过渡。`当你使用故事版设计自定义的视图控制器时，定义自定义的视图间过渡动画很容易。但在大部分情况下，绚丽的视图过渡会将人们从他们的任务转移过来并且经常会降低你app的显示美感。
+
+#### 图片视图
+
 
 
 
