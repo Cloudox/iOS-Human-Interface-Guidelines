@@ -2353,6 +2353,25 @@ iOS提供了如表41-2描述的在标签栏中使用的标准的图标。查看[
 #### 地图视图
 地图视图展示地理数据并支持内置的地图app提供的大部分功能（如下图所示）。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Content%20Views/5.png)
+
+`API NOTE`  
+查看[MapKit Framework Reference](https://developer.apple.com/library/ios/documentation/MapKit/Reference/MapKit_Framework_Reference/index.html#//apple_ref/doc/uid/TP40008210)学习更多关于在你的代码中定义地图视图的内容。
+
+一个地图视图：
+* 使用标准地图数据、卫星图或两者结合来显示地理区域
+* 可以显示标记（标记简单的点）和覆盖物（描绘路径或者平面区域）
+* 支持程序和用户控制的拉伸和拖动
+
+使用地图视图来给用户一个地理区域的交互视图。如果你在开发一个路径app，就使用地图视图来显示用户的路线（查看Routing来获取更多创建路径app的信息）。
+
+`一般来说，让用户和地图交互。`人们习惯于和内置的地图app交互，并且他们希望能和你的地图以类似的方式交互。
+
+`以统一的方式使用标准的大头钉颜色。`地图大头钉会显示你地图中感兴趣的位置点。人们习惯于内置地图app的大头钉颜色，所以最好不要在你的app中重新定义这些颜色的意义。当你使用标准大头钉颜色时，确保以下面的方式使用它们：
+* 使用红色表示目的地
+* 使用绿色表示出发点
+* 使用紫色表示用户指定的点
+
 
 
 
