@@ -2375,6 +2375,21 @@ iOS提供了如表41-2描述的在标签栏中使用的标准的图标。查看[
 #### 页面视图控制器
 页面视图控制器使用两种风格中的一种来管理多页面内容间的过渡——滚动或者翻页。这个是iOS模拟器中翻页的样子：
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Content%20Views/6.jpeg)
+
+`API NOTE`  
+查看[Page View Controllers](https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Chapters/PageViewControllers.html#//apple_ref/doc/uid/TP40011313-CH4)来学习更多关于在你的代码中定义页面视图控制器的内容。
+
+一个页面视图控制器：
+* 对滚动风格没有默认外观
+ * 对于翻页风格，页面视图控制器可以添加页面间的书脊外观。
+* 根据特定的风格，为页面间的过渡添加动画
+ * 对于滚动风格，当前页面滚动到下一页；对于翻页风格，当前页会表现地像书或笔记本的翻页一样。
+
+使用页面视图控制器展示用户流线型获取的（比如一个故事的文本）或自然地进入版块中的（比如日历）内容。
+
+`必要的话，创建一种自定义的方式让用户非线性地获取内容。`页面视图控制器让用户从一个页面移动到下一页或上一页；它没有给用户提供跨页面跳转的方法。如果你想要使用页面视图控制器来显示用户可能非线性获取的内容——比如一个字典或者一本书的目录——你必须实现一种自定义的方式来让用户移动到内容的不同区域。
+
 
 
 
