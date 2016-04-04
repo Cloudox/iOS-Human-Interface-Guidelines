@@ -2503,6 +2503,34 @@ iOS提供了如表41-2描述的在标签栏中使用的标准的图标。查看[
 #### 表视图
 表视图在一个由多行组成的滚动单列清单中显示数据。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Content%20Views/10.jpeg)
+
+`API NOTE`  
+查看[Table View Programming Guide for iOS](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/TableView_iPhone/AboutTableViewsiPhone/AboutTableViewsiPhone.html#//apple_ref/doc/uid/TP40007451)和[UITableView](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITableView_Class/index.html#//apple_ref/occ/cl/UITableView)来学习更多关于在你的代码中定义表视图的内容。
+
+一个表视图：
+* 在可以分章节或分组的行中显示数据
+* 提供让用户添加或移除行、选择多个行、查看关于一行条目的更多信息或显示另一个表视图的控件
+
+iOS定义了两种风格的表视图：
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Content%20Views/11.jpeg)
+
+`简单风格。`在简单风格中，行可以被分到有标题的章节中，并且在视图的右边界可以显示一个可选的垂直索引。在章节的第一个条目之前可以显示页眉，在最后一个条目之后可以显示页脚。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Content%20Views/12.jpeg)
+
+`分组风格。`在分组风格中，行是显示在分组中的，其可以有页眉和页脚。一个分组的表视图总是最少包含一个条目清单分组——每一行一个列表项——并且每个分组总是最少包含一个条目。分组表视图不包含索引。
+
+在两种风格中，表行会在用户点击选中时简短地高亮。如果一行的选择导致导航到一个新的界面，选中的行会高亮并且伴随着新的界面滑动进来。当用户导航回前一个界面时，之前选中的行会再次简短地高亮来提醒用户之前的选择（它不会持续高亮）。
+
+iOS包含一些可以扩展表视图功能的表视图元素。除非特别注明，这些元素只适合用在表视图中。
+
+表视图元素|名称|意义
+----------|----|----
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Content%20Views/13.jpeg)|勾选符号|表示行已经选中了。
+
+
 
 
 
