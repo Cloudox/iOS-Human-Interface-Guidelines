@@ -2529,6 +2529,73 @@ iOS包含一些可以扩展表视图功能的表视图元素。除非特别注�
 表视图元素|名称|意义
 ----------|----|----
 ![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Content%20Views/13.jpeg)|勾选符号|表示行已经选中了。
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Content%20Views/14.jpeg)|扩展指示器|显示另一个与行有关的表
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Content%20Views/15.jpeg)|详情指示器按钮|在一个新视图中显示与行有关的额外的细节（查看[Popover](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/ContentViews.html#//apple_ref/doc/uid/TP40006556-CH13-SW19)如何在表以外的地方使用这个元素的信息）。
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Content%20Views/16.jpeg)|行重排序|表示行可以拖拽到表中的另一个地方。
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Content%20Views/17.jpeg)|插入行|向表中添加一个新行。
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Content%20Views/18.jpeg)|删除按钮控件|在编辑环境下，显示和隐藏行的删除按钮。
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Content%20Views/19.jpeg)|删除按钮|删除行。
+
+除了上面列出的表特有的元素，iOS还定义了刷新控件，让用户可以刷新表的内容。查看[Refresh Control](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Controls.html#//apple_ref/doc/uid/TP40006556-CH15-SW131)来学习更多关于在你的app中使用表的刷新控件的内容。
+
+iOS定义了四中表单元格风格，实现了简单和分组风格下表中行的大部分常规布局。每种单元格风格都最好地适应了不同类型信息的显示。
+
+`NOTE`  
+编程上，这些风格用于表视图的单元格，这是一种告诉表如何绘制行的对象。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Content%20Views/20.jpeg)
+
+`Default`（[UITableViewCellStyleDefault](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITableViewCell_Class/index.html#//apple_ref/c/econst/UITableViewCellStyleDefault)）。默认单元格风格包含一个在行左边界可选的图片和跟随的左对齐标题。
+
+默认风格适用于显示不需要通过补充信息来区分的列表条目。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Content%20Views/21.jpeg)
+
+`Subtitle`（[UITableViewCellStyleSubtitle](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITableViewCell_Class/index.html#//apple_ref/c/econst/UITableViewCellStyleSubtitle)）。子标题风格包含一个在行左边界可选的图片，跟随的左对齐标题和在其下方的左对齐子标题。
+
+左对齐的文本布局让列表更加易于浏览。这种表单元格风格在列表条目看起来相似时会工作地很好，因为用户可以使用详细文本中的额外信息来区分标题文本条目。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Content%20Views/22.jpeg)
+
+`Value 1`（[UITableViewCellStyleValue1](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITableViewCell_Class/index.html#//apple_ref/c/econst/UITableViewCellStyleValue1)）。Value 1风格显示一个左对齐的标题和同一行中右对齐的较轻字体的子标题。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Content%20Views/23.jpeg)
+
+`Value 2`（[UITableViewCellStyleValue2](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITableViewCell_Class/index.html#//apple_ref/c/econst/UITableViewCellStyleValue2)）。Value 2风格以蓝色字体显示右对齐的标题，紧跟着同一行显示左对齐的黑色字体子标题。图片在这种风格中不太适合。
+
+在Value 2的布局中，文本间清爽的垂直边缘帮助用户专注于详细文本的第一个单词。
+
+`NOTE`  
+所有四个标准表单元格风格都允许额外的表视图元素，比如勾选符号和扩展指示器。添加这些元素会减少标题和子标题可使用的单元格宽度。
+
+清晰而有效地使用表视图来显示大量或少量的信息。比如说：
+* `提供用户可以选择的选项清单。`你可以使用勾选符号来告诉用户当前列表中选中的项。
+使用简单或分组表视图来显示用户点击表中一行条目时的选项清单。使用简单表视图来显示用户点击一个按钮或其他不在表的行中的UI元素时的选项清单。
+* `显示层级信息。`简单表风格很适合显示层级信息。每个列表条目都可以导向另一个列表中的不同子集信息。用户通过在连续的列表中选择条目来跟踪路径。扩展指示器告诉用户点击行的任何地方都会在新列表中显示子集信息。
+* 显示概念上的分组信息。两种表视图风格都允许你通过信息章节间的页眉和页脚视图来提供上下文。
+
+你也可以使用页眉页脚视图——一种1UITableViewHeaderFooterView1实例——来在页眉或者页脚显示文本或者自定义的视图。查看[UITableViewHeaderFooterView Class Reference](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITableViewHeaderFooterView_class/index.html#//apple_ref/doc/uid/TP40012241)来学习如何在你的代码中使用页眉页脚视图。
+
+当你使用表视图时遵循下面的指南：
+
+`当用户选择列表条目时永远要提供反馈。`用户期待当他们点击列表条目时表中的行能简短地高亮一下。在点击之后，用户期待一个新视图的出现（或者行显示一个勾选符号）来表示条目被选中了。
+
+`如果表内容是冗长的或复杂的，不要等到所有数据都获取之后再显示。`而是立即用文本数据填成屏幕上的行然后当复杂的数据获取之后——比如图片——再显示它们。这个技术可以立马给用户有用的信息并且提高了你app的响应能力。
+
+`在等待新数据到达时考虑显示旧数据。`即使这个技术不推荐用户那些频繁处理数据变更的app，它仍然可以帮助更多静态app立即给用户一些静态信息。当你决定这样做之前，计量数据改变的有多频繁以及有多少用户依赖于快速看到新数据。
+
+`如果数据加载的很慢或很复杂，告诉用户处理仍在继续。`如果一个表只包含复杂数据，也许很难立即显示有用的数据。在这种情况下，避免显示空行很重要，因为空行表示你的app停止了。表应该在屏幕中间显示一个旋转的活动指示器，伴随着信息文本（比如“加载中...”）。这个行为可以使用户安心。
+
+`合适的话，给删除按钮使用一个自定义的标题。`如果这有助于用户更好地理解你的app的工作方式，你可以创建一个标题来代替系统提供的删除标题。
+
+`尽可能地使用简洁的文本来避免截断。`截断的单词和短语会让用户很难浏览和理解。文本截断在所有表单元格风格中都是自动的，但是根据你使用的单元格风格和截断发生的位置会造成不同的问题。
+
+`不要将索引和显示在表右边界的表视图元素结合在一起。`显示在表右边界的表视图元素——比如扩展指示器——会干扰到索引。
+
+`如果你想要用非标准的方式布局你的表单元格，创建自定义的单元格风格。`创建自定义的表单元格风格会比标准的要更好。查看Customizing Cells来学习如何创建你自己的单元格。
+
+#### 文本视图
+文本视图接受并显示多行文本属性。
 
 
 
