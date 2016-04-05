@@ -2597,6 +2597,25 @@ iOS定义了四中表单元格风格，实现了简单和分组风格下表中�
 #### 文本视图
 文本视图接受并显示多行文本属性。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Content%20Views/24.png)
+
+`API NOTE`  
+查看[UITextView](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITextView_Class/index.html#//apple_ref/occ/cl/UITextView)学习更多关于在你的代码中定义文本视图的内容。
+
+一个文本视图：
+* 是一个任意高度的矩形
+* 当内容大到超出其边界时支持滚动
+* 支持自定义的字体、颜色和对齐方式（默认情况下，文本视图显示左对齐的系统黑色字体）
+* 可以支持编辑，当用户点击文本视图内部区域时会出现一个键盘（键盘输入方法和布局取决于用户的语言设置）
+
+`总是确保文本易于阅读。`即使你可以使用属性字符串来以有创意的方式组合多种字体、颜色和对齐方式，维持文本的可读性也是必要的。支持动态类型和使用[UIFont](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIFont_Class/index.html#//apple_ref/occ/cl/UIFont)方法`preferredFontForTextStyle`来获取显示在文本视图中的文本。查看[Text Should Always Be Legible](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/ColorImagesText.html#//apple_ref/doc/uid/TP40006556-CH58-SW3)获取支持动态类型的指南；查看[Text Styles](https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/CustomTextProcessing/CustomTextProcessing.html#//apple_ref/doc/uid/TP40009542-CH4-SW65)获取编程信息。
+
+`为你期待用户输入的不同类型的内容提供不同类型的键盘。`比如说，你可能会想要让用户输入URL、PIN或者电话号码变得简单。但是要注意，你无法控制键盘的输入方法和布局，这取决于用户的语言设置。
+
+iOS提供了很多种键盘类型，每一个都为不同类型的输入设计。查看[UIKeyboardType](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITextInputTraits_Protocol/index.html#//apple_ref/c/tdef/UIKeyboardType)文档学习可以使用的键盘类型。阅读[Managing the Keyboard](https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html#//apple_ref/doc/uid/TP40009542-CH5)学习更多关于管理你app键盘的内容。
+
+#### Web视图
+
 
 
 
