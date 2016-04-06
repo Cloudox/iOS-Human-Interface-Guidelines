@@ -2615,6 +2615,7 @@ iOS定义了四中表单元格风格，实现了简单和分组风格下表中�
 iOS提供了很多种键盘类型，每一个都为不同类型的输入设计。查看[UIKeyboardType](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITextInputTraits_Protocol/index.html#//apple_ref/c/tdef/UIKeyboardType)文档学习可以使用的键盘类型。阅读[Managing the Keyboard](https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html#//apple_ref/doc/uid/TP40009542-CH5)学习更多关于管理你app键盘的内容。
 
 #### Web视图
+web视图是一个可以显示丰富的HTML内容的区域（如下iPhone上邮件app中导航栏和工具栏中间所显示的）。
 
 
 
