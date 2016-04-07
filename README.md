@@ -2635,6 +2635,25 @@ web视图是一个可以显示丰富的HTML内容的区域（如下iPhone上邮�
 #### 活动指示器
 活动指示器显示一个任务或者进程正在进行（如下文本标签所示）。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Content%20Views/26.jpeg)
+
+`API NOTE`  
+查看[UIActivityIndicatorView Class Reference](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIActivityIndicatorView_Class/index.html#//apple_ref/doc/uid/TP40006830)学习如何在你的代码中定义一个活动指示器。
+
+一个活动指示器：
+* 当任务在进行时旋转而任务完成后消失
+* 不允许用户交互
+
+在工具栏或者主界面使用活动指示器来显示进程正在发生，而当其结束时不提示。
+
+`不要使用静止的活动指示器。`用户会把静止的活动指示器当成进程陷入僵局了。
+
+`使用活动指示器来安抚用户他们的任务或进程没有僵死。`有时候当进程快结束时简单地安抚用户比提示用户要重要。
+
+`自定义一个活动指示器来和其所在的视图和谐一致。`合适的话，整合活动指示器的尺寸和颜色来适应其所在的背景视图。
+
+#### 新增联系人按钮
+
 
 
 
