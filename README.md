@@ -48,6 +48,7 @@
 * [UI Elements](#UI Elements)
   * [Bars](#Bars)
   * [Content Views](#Content Views)
+  * [Controls](#Controls)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -2617,6 +2618,22 @@ iOS提供了很多种键盘类型，每一个都为不同类型的输入设计�
 #### Web视图
 web视图是一个可以显示丰富的HTML内容的区域（如下iPhone上邮件app中导航栏和工具栏中间所显示的）。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Content%20Views/25.png)
+
+`API NOTE`  
+查看[UIWebView](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWebView_Class/index.html#//apple_ref/occ/cl/UIWebView)来学习更多关于在你的代码中定义web视图的内容。
+
+一个web视图：
+* 显示web内容
+* 执行一些对web内容的自动处理，比如将一个电话号码转化成拨打电话
+
+如果你有一个网页或者web app，你可能决定使用web视图来实现一个简单的为你的网页和web app提供外皮的iOS app。如果你计划使用web视图来链接你控制的web内容，一定要阅读[Safari Web Content Guide](https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/Introduction/Introduction.html#//apple_ref/doc/uid/TP40002051)。
+
+`不要使用web视图来创建外观和行为类似小型web浏览器的app。`人们期待使用iOS上的Safari来浏览web内容，所以在你的app中复制这个宽泛的功能是不推荐的。
+
+### <a name="Controls"/>Controls
+#### 活动指示器
+活动指示器显示一个任务或者进程正在进行（如下文本标签所示）。
 
 
 
