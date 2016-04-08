@@ -2655,6 +2655,21 @@ web视图是一个可以显示丰富的HTML内容的区域（如下iPhone上邮�
 #### 新增联系人按钮
 新增联系人按钮让用户新增一个额外的联系人到文本框或其他基于文本的视图。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Content%20Views/27.jpeg)
+
+`API NOTE`  
+查看[UIButton](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIButton_Class/index.html#//apple_ref/occ/cl/UIButton)来学习如何在你的代码中定义一个新增联系人按钮。
+
+一个新增联系人按钮：
+* 显示一个用户的联系人列表
+* 帮助用户添加联系人到包含新增联系人按钮的视图中
+
+使用新增联系人按钮来给你用户一个简单的方式在不适用键盘的情况下获取联系人。比如说，用户在邮件的写信界面可以在“To”文本框点击新增联系人按钮来取代输入收信人的名字。
+
+因为新增联系人按钮是作为输入联系人信息的替换功能的，所以在不能获取到键盘输入的界面使用这个按钮不是很合适。
+
+#### 日期选取器
+
 
 
 
