@@ -2695,6 +2695,19 @@ web视图是一个可以显示丰富的HTML内容的区域（如下iPhone上邮�
 #### 详情展开按钮
 详情展开按钮显示与条目有关的额外的细节或功能。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Controls/1.jpeg)
+
+`API NOTE`  
+查看[UITableViewCell Class Reference](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITableViewCell_Class/index.html#//apple_ref/doc/uid/TP40006938)和[UIButton](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIButton_Class/index.html#//apple_ref/occ/cl/UIButton)学习如何在你的代码中定义详情展开按钮。
+
+详情展开按钮显示一个包含了与特定条目相关的额外信息或功能的单独的视图。
+
+当详情展开按钮出现在列表行中时，点击行的别处不会出发详情展开按钮；而是选中行或者导致app特定的行为。
+
+典型的情景是，你在一个表视图中使用详情展开按钮来给用户一个查看与列表条目相关的更多细节或功能的方式。不过，你也可以在其他类型的视图中使用这个元素来给用户一个查看与那个视图中条目相关的更多信息与功能的方式。
+
+#### 信息按钮
+
 
 
 
