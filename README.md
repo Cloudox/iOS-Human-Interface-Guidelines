@@ -2709,6 +2709,17 @@ web视图是一个可以显示丰富的HTML内容的区域（如下iPhone上邮�
 #### 信息按钮
 信息按钮显示关于一个app的配置信息，有时会在当前界面显示。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Controls/2.jpeg)
+
+`API NOTE`  
+查看[UIButton](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIButton_Class/index.html#//apple_ref/occ/cl/UIButton)学习更多关于在你的代码定义信息按钮的内容。
+
+iOS包含两种风格的信息按钮：一个在浅色内容上看起来比较好的深色按钮和一个在深色内容上看起来比较好的浅色按钮。
+
+使用信息按钮来显示关于一个app的配置信息和选项。你可以使用与你的app UI结合最好的信息按钮风格。
+
+#### 标签
+
 
 
 
