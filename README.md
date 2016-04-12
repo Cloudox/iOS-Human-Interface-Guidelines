@@ -2721,6 +2721,21 @@ iOS包含两种风格的信息按钮：一个在浅色内容上看起来比较�
 #### 标签
 标签显示固定的文本。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Controls/3.jpeg)
+
+`API NOTE`  
+查看[UILabel Class Reference](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UILabel_Class/index.html#//apple_ref/doc/uid/TP40006797)学习更多关于在你的代码中定义标签的内容。
+
+一个标签：
+* 显示任意数量的固定文本
+* 除了可能的复制文本外不允许用户和文本交互
+
+使用标签来命名和描述你UI的某些部分或者提供短信息给用户。标签很适合显示少量的文本。
+
+注意保持你的标签清晰。最好支持动态类型并使用[UIFont](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIFont_Class/index.html#//apple_ref/occ/cl/UIFont)的`preferredFontForTextStyle`方法来获取文本显示到标签中。如果你选择使用自定义字体，不要为了花哨的字体和艳丽的颜色牺牲清晰度。（查看[Color and Typography](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/ColorImagesText.html#//apple_ref/doc/uid/TP40006556-CH58-SW1)获取在app中使用文本的指南；查看[Text Styles](https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/CustomTextProcessing/CustomTextProcessing.html#//apple_ref/doc/uid/TP40009542-CH4-SW65)学习更多关于动态类型的内容。）
+
+#### 网络活动指示器
+
 
 
 
