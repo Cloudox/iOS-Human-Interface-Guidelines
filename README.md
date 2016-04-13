@@ -2737,6 +2737,19 @@ iOS包含两种风格的信息按钮：一个在浅色内容上看起来比较�
 #### 网络活动指示器
 网络活动指示器出现在状态栏并且表示网络请求正在发生。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Controls/4.jpeg)
+
+`API NOTE`  
+在你的代码中，使用`UIApplication`的方法[networkActivityIndicatorVisible](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/instm/UIApplication/isNetworkActivityIndicatorVisible)来控制指示器的可见性。
+
+网络活动指示器：
+* 当网络活动进行时在状态栏中旋转，并且当网络活动结束时消失
+* 不允许用户交互
+
+当你的app连接网络超过几秒时显示网络活动指示器来提供反馈。如果操作结束的比那快，你不需要显示网络活动指示器，因为指示器可能在用户注意到之前就消失了。
+
+#### 页面控制器
+
 
 
 
