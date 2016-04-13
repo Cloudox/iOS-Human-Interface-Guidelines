@@ -2735,6 +2735,7 @@ iOS包含两种风格的信息按钮：一个在浅色内容上看起来比较�
 注意保持你的标签清晰。最好支持动态类型并使用[UIFont](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIFont_Class/index.html#//apple_ref/occ/cl/UIFont)的`preferredFontForTextStyle`方法来获取文本显示到标签中。如果你选择使用自定义字体，不要为了花哨的字体和艳丽的颜色牺牲清晰度。（查看[Color and Typography](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/ColorImagesText.html#//apple_ref/doc/uid/TP40006556-CH58-SW1)获取在app中使用文本的指南；查看[Text Styles](https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/CustomTextProcessing/CustomTextProcessing.html#//apple_ref/doc/uid/TP40009542-CH4-SW65)学习更多关于动态类型的内容。）
 
 #### 网络活动指示器
+网络活动指示器出现在状态栏并且表示网络请求正在发生。
 
 
 
