@@ -2774,6 +2774,27 @@ iOS包含两种风格的信息按钮：一个在浅色内容上看起来比较�
 #### 选取器
 选取器显示一系列值，用户可以从中选取一个。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Controls/6.png)
+
+`API NOTE`  
+查看[UIPickerView Class Reference](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIPickerView_Class/index.html#//apple_ref/doc/uid/TP40006842)学习关于在你的代码中定义一个选取器的内容。
+
+一个选取器：
+* 是日期选取器的通用版本（查看[Date Picker](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Controls.html#//apple_ref/doc/uid/TP40006556-CH15-SW3)获取关于日期选取器的更多信息）
+* 显示一个或多个滚轮，每个都包含了一系列值
+* 使用深色文本来在视图的中间显示当前值
+* 不能调整尺寸（选取器的尺寸和iPhone的键盘一样大）
+
+使用选取器来让人们从一系列值中做选择变得简单。
+
+`一般来说，当人们对整个系列值都熟悉时使用选取器。`因为当滚轮是固定的时候很多值是隐藏的，用户能预知那些值是什么是最好的。如果你需要提供大量的用户不了解的选项，选取器可能不是合适的控件。
+
+`尽可能地显示嵌在界面中的选取器。`用户不用导航到另一个界面去使用选取器是最好的。
+
+`如果你需要显示非常大量的值，考虑使用表视图而不是选取器。`这是因为更大高度的表视图可以让滚动更快一些。
+
+#### 进度视图
+
 
 
 
