@@ -2796,6 +2796,27 @@ iOS包含两种风格的信息按钮：一个在浅色内容上看起来比较�
 #### 进度视图
 进度视图显示一个任务的进度或者一个知道持续时间的进程（如下所示是邮件中的工具栏）。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Controls/7.jpeg)
+
+`API NOTE`  
+查看[UIProgressView Class Reference](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIProgressView_Class/index.html#//apple_ref/doc/uid/TP40006782)学习更多关于在你的代码中定义进度视图的内容。
+
+一个进度视图：
+* 由一个随着任务或进程的进度从左向右填充的轨迹构成
+* 不允许用户交互
+
+iOS定义了两种风格的进度视图：
+* 默认风格。默认风格包含了一个未填充的轨迹外观，这样它就可以独立于内容区域。
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Controls/8.jpeg)
+* 栏风格。栏风格不包含未填充的轨迹外观，因为它意在和栏一起显示，比如导航栏或工具栏。
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Controls/9.jpeg)
+
+使用进度视图来给有着明确定义持续时间的任务一个反馈，尤其是当要显示任务大约还要耗费多长时间时很重要。
+
+`合适的话，协调进度视图的外观和你app的风格保持一致。`通过自定义一个进度视图，你可以特定比如进度视图的轨迹和填充的自定义的色调或图片。
+
+#### 刷新控件
+
 
 
 
