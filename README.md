@@ -2818,6 +2818,24 @@ iOS定义了两种风格的进度视图：
 #### 刷新控件
 刷新控件执行一个用户发起的内容刷新——一般是在列表中（如下显示在邮箱列表上方）。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Controls/10.jpeg)
+
+`API NOTE`  
+查看[UIRefreshControl Class Reference](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIRefreshControl_class/index.html#//apple_ref/doc/uid/TP40012250)学习更多关于在你的代码中定义一个刷新控件的内容。
+
+一个刷新控件：
+* 看起来很像一个活动指示器
+* 可以显示一个标题
+* 默认是隐藏的，直到用户通过下拉列表的顶部来发起一个刷新动作
+
+使用刷新控件来给用户一个统一的方式告知列表或其他视图立即更新它的内容，而不是等到下一次自动更新。
+
+`不要因为你提供了刷新控件而停止执行自动更新内容。`即使用户喜欢能够请求立即执行一次更新，他们也希望内容可以自动刷新。如果你依赖于用户去发起所有的刷新，没有意识到刷新控件的用户就会奇怪为什么你的app始终显示静止的数据。一般来说，你想要给用户立即刷新内容的选项；但不想让用户负责每次更新。
+
+`只有添加了内容时提供一个简短的标题。`尤其是不要使用标题来描述如何使用刷新控件。
+
+#### 分段控件
+
 
 
 
