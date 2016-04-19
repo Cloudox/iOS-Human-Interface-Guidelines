@@ -2837,6 +2837,28 @@ iOS定义了两种风格的进度视图：
 #### 分段控件
 分段控件是一组线性段，每个按钮对应的功能可以显示一个不同的视图。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Controls/11.jpeg)
+
+`API NOTE`  
+查看[UISegmentedControl](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UISegmentedControl_Class/index.html#//apple_ref/occ/cl/UISegmentedControl)来学习更多关于在你的代码中定义一个分段控件的内容。
+
+一个分段控件：
+* 组合两个或更多的分段，其宽度是基于分段总数按比例分的
+* 可以显示文本或图片
+
+使用分段控件来提供紧密相关而又互斥的选项。
+
+`确保每个分段都易于点击。`给每个分段维持44*44的舒适的点击区域，限制分段的数量。在iPhone上，分段控件的分段数应该小于等于5.
+
+`尽可能地使每个分段的内容尺寸一致。`因为分段控件中的每个分段都有着同样的宽度，如果内容填充了一些分段，而其他的不能完全填充，看起来就不好。
+
+`不要在一个分段控件中混用文本和图片。`分段控件可以包含文本和图片。单个的分段可以包含文本或图片，但不能都包含。一般来说，最好不要在一个分段控件中将文本放在某些分段里而将图片放在另一些分段里。
+
+必要的话，调整自定义分段控件中的内容位置。如果你自定义分段控件的背景，确保控件内容的自动居中依然看起来不错。使用栏度量API来调整分段控件中的内容位置（查看[UISegmentedControl](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UISegmentedControl_Class/index.html#//apple_ref/occ/cl/UISegmentedControl)中的外观定制API来学习更多关于定制栏度量的内容）。
+
+#### 滑动条
+滑动条让用户对一个值或者进程在允许的范围内进行调整（如下所示左边右边都有自定义图片）。
+
 
 
 
