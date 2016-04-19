@@ -2857,6 +2857,7 @@ iOS定义了两种风格的进度视图：
 必要的话，调整自定义分段控件中的内容位置。如果你自定义分段控件的背景，确保控件内容的自动居中依然看起来不错。使用栏度量API来调整分段控件中的内容位置（查看[UISegmentedControl](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UISegmentedControl_Class/index.html#//apple_ref/occ/cl/UISegmentedControl)中的外观定制API来学习更多关于定制栏度量的内容）。
 
 #### 滑动条
+滑动条让用户对一个值或者进程在允许的范围内进行调整（如下所示左边右边都有自定义图片）。
 
 
 
