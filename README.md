@@ -2880,6 +2880,7 @@ iOS定义了两种风格的进度视图：
 `不要使用滑动条来显示音量控件。`如果你需要显示一个音量滑动条，当你使用[MPVolumeView](https://developer.apple.com/library/ios/documentation/MediaPlayer/Reference/MPVolumeView_Class/index.html#//apple_ref/occ/cl/MPVolumeView)的时候可以使用系统提供的音量滑动条。注意如果当前输出音频的设备不支持音量控件，则音量滑动条会由合适的设备名代替。
 
 #### 步进控件
+步进控件增加或减少一个固定数量的值。
 
 
 
