@@ -2882,6 +2882,24 @@ iOS定义了两种风格的进度视图：
 #### 步进控件
 步进控件增加或减少一个固定数量的值。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Controls/12.jpeg)
+
+`API NOTE`  
+查看[UIStepper](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIStepper_Class/index.html#//apple_ref/occ/cl/UIStepper)学习更多关于在你的代码中定义步进控件的内容。
+
+一个步进控件：
+* 是一个两栏的控件，默认一栏显示加号一栏显示减号
+* 支持自定义图片
+* 不显示用户更改的图片
+
+当用户需要对值进行小的调整的时候使用步进控件。
+
+`不要在用户可能对值进行大更改时使用步进控件。`在打印机选项表单中使用步进控件来设置分数是有意义的，因为用户很少大范围地改变这个值。另一方面，使用步进控件来帮助用户选择页面范围是没有意义的，因为即使一个合理的页面范围也需要很多次点击。
+
+`显著地表明步进控件影响的值。`步进控件本身不显示任何值，所以你需要让用户知道他们使用步进控件时改变的是哪个值。
+
+#### 开关
+
 
 
 
