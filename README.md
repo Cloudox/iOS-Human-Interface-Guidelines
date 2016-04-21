@@ -1,9 +1,9 @@
 # iOS-Human-Interface-Guidelines
 翻译自苹果官方文档《iOS Human Interface Guidelines》
 
-长期致力于iOS英文资料翻译
-觉得有帮助的可以打赏支持一下小弟~
-![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/something/payCode.JPG)
+长期致力于iOS英文资料翻译  
+觉得有帮助的可以打赏支持一下小弟~  
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/something/pay.jpg)
 
 ## <a name="Catalogue"/>目录
 * [UI Design Basics](#UI Design Basics)
