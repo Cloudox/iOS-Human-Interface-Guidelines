@@ -2859,6 +2859,47 @@ iOS定义了两种风格的进度视图：
 #### 滑动条
 滑动条让用户对一个值或者进程在允许的范围内进行调整（如下所示左边右边都有自定义图片）。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Controls/12.jpeg)
+
+`API NOTE`  
+查看[UISlider](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UISlider_Class/index.html#//apple_ref/occ/cl/UISlider)学习更多关于在你的代码中定义滑动条的内容。
+
+一个滑动条：
+* 由一个水平的轨迹和一个滑动点（一个用户可以滑动的圆形控件）组成
+* 可以包含传达左边与右边值的意义的图片
+* 在最小值（一般在左边）和滑动点之间的轨迹部分填充颜色
+
+使用滑动条来给用户对他们可选值的细粒度控制或者当前进程的操作。
+
+如果它增加了值，为滑动条创建自定义的外观。比如说，你可以：
+* 定义滑动点的外观，这样用户可以一眼看出滑动条是否是活动的
+* 在滑动条的两端提供图片来帮助用户理解滑动条的功能
+一般来说，这些自定义的图片相当于滑动条控件值范围的最小和最大值。比如一个控制图片尺寸的滑动条，可以在最小值那边显示一个非常小的图片，在最大值那边显示一个非常大的图片。
+* 为滑动点定义一个不同的外观，这依赖于滑动点在哪一边以及控件在什么状态
+
+`不要使用滑动条来显示音量控件。`如果你需要显示一个音量滑动条，当你使用[MPVolumeView](https://developer.apple.com/library/ios/documentation/MediaPlayer/Reference/MPVolumeView_Class/index.html#//apple_ref/occ/cl/MPVolumeView)的时候可以使用系统提供的音量滑动条。注意如果当前输出音频的设备不支持音量控件，则音量滑动条会由合适的设备名代替。
+
+#### 步进控件
+步进控件增加或减少一个固定数量的值。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Controls/12.jpeg)
+
+`API NOTE`  
+查看[UIStepper](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIStepper_Class/index.html#//apple_ref/occ/cl/UIStepper)学习更多关于在你的代码中定义步进控件的内容。
+
+一个步进控件：
+* 是一个两栏的控件，默认一栏显示加号一栏显示减号
+* 支持自定义图片
+* 不显示用户更改的图片
+
+当用户需要对值进行小的调整的时候使用步进控件。
+
+`不要在用户可能对值进行大更改时使用步进控件。`在打印机选项表单中使用步进控件来设置分数是有意义的，因为用户很少大范围地改变这个值。另一方面，使用步进控件来帮助用户选择页面范围是没有意义的，因为即使一个合理的页面范围也需要很多次点击。
+
+`显著地表明步进控件影响的值。`步进控件本身不显示任何值，所以你需要让用户知道他们使用步进控件时改变的是哪个值。
+
+#### 开关
+
 
 
 
