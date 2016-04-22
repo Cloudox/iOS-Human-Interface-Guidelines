@@ -2905,6 +2905,21 @@ iOS定义了两种风格的进度视图：
 #### 开关
 开关显示两个互斥的选项或状态。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Controls/14.jpeg)
+
+`API NOTE`  
+查看[UISwitch](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UISwitch_Class/index.html#//apple_ref/occ/cl/UISwitch)学习更多关于在你的代码中定义开关的内容。
+
+一个开关：
+* 显示一个条目的二元状态
+* 只用于表视图
+
+在列表行中使用开关来给用户从两个选项中选择一个的方式，比如是/否或者开/关，来管理一个条目的状态。
+
+你可以使用一个开关控件来改变视图中其他UI元素的状态。根据用户做出的选择新的列表条目可能会出现或者消失，或者变得活跃或者不活跃。
+
+#### 系统按钮
+
 
 
 
