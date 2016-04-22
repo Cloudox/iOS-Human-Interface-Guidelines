@@ -1,9 +1,9 @@
 # iOS-Human-Interface-Guidelines
 翻译自苹果官方文档《iOS Human Interface Guidelines》
 
-长期致力于iOS英文资料翻译
-觉得有帮助的可以打赏支持一下小弟~
-![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/something/payCode.JPG)
+长期致力于iOS英文资料翻译  
+觉得有帮助的可以打赏支持一下小弟~  
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/something/pay.jpg)
 
 ## <a name="Catalogue"/>目录
 * [UI Design Basics](#UI Design Basics)
@@ -2903,6 +2903,8 @@ iOS定义了两种风格的进度视图：
 `显著地表明步进控件影响的值。`步进控件本身不显示任何值，所以你需要让用户知道他们使用步进控件时改变的是哪个值。
 
 #### 开关
+开关显示两个互斥的选项或状态。
+
 
 
 
