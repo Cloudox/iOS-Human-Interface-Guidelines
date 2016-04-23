@@ -2921,6 +2921,29 @@ iOS定义了两种风格的进度视图：
 #### 系统按钮
 系统按钮执行一个app特定的动作。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Controls/15.jpeg)
+
+`API NOTE`  
+在iOS 7中，`UIButtonTypeRoundedRect`被重新定义成`UIButtonTypeSystem`。查看[UIButton](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIButton_Class/index.html#//apple_ref/occ/cl/UIButton)学习更多关于在你的代码中定义一个系统按钮的内容。
+
+一个系统按钮：
+* 默认没有边框或者背景外观
+* 可以包含一个图片或者文本标题
+* 支持自定义外观，比如边框或者背景图片（使用UIButtonTypeCustom类型的按钮并提供一个自定义的背景图来添加自定义的外观）
+
+使用系统按钮来初始化一个动作。当你给一个系统按钮提供标题时，遵循下面的方法：
+* `使用一个动词或者动词短语来描述按钮执行的动作。`一个对应动作的标题告诉用户按钮是可交互的以及点击时会发生什么。
+* `使用标题风格的大写。`除了文章、并列连词和少于四个字母的介词以外每个单词都要大写。
+* `不要创建太长的标题。`太长的文本会被截断，这会让用户很难理解。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Controls/16.jpeg)
+
+`合适的话，在内容区域给系统按钮添加边框和背景外观。`大部分情况下，你可以不用给按钮添加外观，只需要制作一个清晰的唤起动作的标题，定义颜色，并提供语境线索。然而在一些内容区域中，添加边框和背景外观来提升按钮的关注度会比较合适。
+
+比如在电话中，带边框的数字键加强了打电话的心理模式，拨打按钮的背景也给用户一个引人注意的目标来点击。
+
+#### 文本域
+
 
 
 
