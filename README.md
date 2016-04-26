@@ -2969,6 +2969,7 @@ iOS定义了两种风格的进度视图：
 
 ### <a name="Temporary Views"/>Temporary Views
 #### 警告框
+警告框给人们影响他们对app或设备使用的重要信息。
 
 
 
