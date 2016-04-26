@@ -2971,6 +2971,55 @@ iOS定义了两种风格的进度视图：
 #### 警告框
 警告框给人们影响他们对app或设备使用的重要信息。
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Temporary%20Views/1.jpeg)
+
+`API NOTE`  
+创建[UIAlertController](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAlertController_class/index.html#//apple_ref/occ/cl/UIAlertController)并定义[UIAlertControllerStyleAlert](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAlertController_class/index.html#//apple_ref/c/econst/UIAlertControllerStyleAlert)来在你的代码中使用警告框。
+
+一个警告框：
+* 显示必须要的标题和可选的信息
+* 包含一个或更多按钮
+
+警告框出现的罕见姓帮助用户重视它们。最好最小化你app的警告框数量，并确保每个都提供了关键的信息和有用的选项。
+
+不要创建不必要的警告框。一般来说，在下面这些情况下警告框不必要：
+
+如果警告框作用于此|用这个替代警告框  
+------------------|----------------  
+提供与app标准功能相关的信息|设计一个吸引眼球且与app风格一致的方式去显示信息  
+更新用户任务的进展|使用进度视图或者活动指示器（[Progress View](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Controls.html#//apple_ref/doc/uid/TP40006556-CH15-SW7)和[Activity Indicator](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Controls.html#//apple_ref/doc/uid/TP40006556-CH15-SW2)中有描述）或者整合状态信息到UI中  
+对用户发起的任务请求确认|使用动作表单（[Action Sheet](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Alerts.html#//apple_ref/doc/uid/TP40006556-CH14-SW36)中有描述）  
+通知用户无能为力的问题|如果问题不严重，则将信息整合到app的UI中；否则使用警告框
+
+当你阅读设计警告文本的指南时，了解下面的定义很有用：
+* 标题风格的大写表示除了文章、并列连词和少于四个字母的介词以外每个字母都要大写。
+* 句子风格的大写表示第一个字母是大写的，其余字母都是小写的，除非是专有名词或者形容词。
+
+`简洁地描述状况并且解释人们可以做什么。`理想情况下，你写的文本可以让人们理解为什么警告框会出现并决定点击哪个按钮。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Temporary%20Views/2.jpeg)
+
+`可能的话保持标题足够简短到在一行中显示。`长标题会让人们难以阅读，并且它可能被截断或者强制警告框信息滚动。
+
+`不要使用单个单词的标题。`单个单词的标题，比如错误或者警告，很少提供有用的信息。
+
+`可能的话，使用句子片段。`一个简短的，有信息量的陈述比一个完整的句子更易于理解。
+
+`尽可能地写一个不用额外添加信息的标题。`比如说，如果你使用一个问题——或者更少的情况下，两个句子——作为警告框标题就不用添加信息了。
+
+`不要当你需要传达消极的信息时不要听起来像责问或者审判。`人们理解很多警告框会告诉他们问题或者关于危险状态的警告。只要你使用友好的语气，直接且消极就比积极但拐弯抹角要好。
+
+`尽可能地不要使用“你”、“你们”、“我”和“我的”。`有时候，直接定义人们的文本会有歧义甚至会被解读为侮辱或者盛气凌人。
+
+`使用大写以及标点符号。`特别地：  
+
+当警告框标题|使用  
+------------|----  
+是一个句子片段或者是非提问的单句|标题风格的大写并且不加标点符号  
+是一个提问的单句|句子风格的大写并加问号  
+由两个或多个句子组成|句子风格的大写并为每个句子加上合适的标点符号
+
+
 
 
 
