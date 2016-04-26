@@ -53,6 +53,7 @@
   * [Bars](#Bars)
   * [Content Views](#Content Views)
   * [Controls](#Controls)
+  * [Temporary Views](#Temporary Views)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -2944,6 +2945,31 @@ iOS定义了两种风格的进度视图：
 
 #### 文本域
 文本域接受单行的用户输入（如下所示包括目标描述和占位文本）。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Controls/17.jpeg)
+
+`API NOTE`  
+查看[UITextField](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITextField_Class/index.html#//apple_ref/occ/cl/UITextField)学习更多关于定义文本域并且自定义显示图像和按钮的内容。
+
+一个文本域：
+* 是一个固定高度的圆角区域
+* 当用户点击它时自动显示键盘
+* 可以包含系统提供的按钮，比如书签按钮
+* 可以显示使用多种风格的文本（查看[UITextView](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITextView_Class/index.html#//apple_ref/occ/cl/UITextView)学习更多关于这个的内容）
+
+使用文本域从用户获取小数量的信息。
+
+`如果能够帮助用户理解如何使用的话，可以自定义一个文本域。`比如说，你可以在文本域的左边或右边显示自定义的图片，或者你可以添加一个系统提供的按钮，比如书签按钮。一般来说，你应该在文本域的左边显示它的用途，在右边显示其额外的特性，比如书签。
+
+`合适的话在文本域的右边显示一个清除按钮。`当这个元素存在的时候，点击它可以清除文本域的内容，不管你在其上显示了任何图片。
+
+`如果能帮助用户理解文本域的用途的话，显示一个示意。`文本域可以显示占位文本——比如名称（或者地址）——当文本域中没有文本的时候。
+
+`定义符合你希望用户输入的内容类型的键盘类型。`比如说，你可能想要让用户输入URL、PIN或者电话号码变得简单。iOS提供了很多不同的键盘类型，每一种都设计了一种不同的输入类型。查看[UIKeyboardType](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITextInputTraits_Protocol/index.html#//apple_ref/c/tdef/UIKeyboardType)和[UITextInputTraits Protocol Reference](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITextInputTraits_Protocol/index.html#//apple_ref/doc/uid/TP40006896)学习关于键盘类型的内容。阅读[Managing the Keyboard](https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html#//apple_ref/doc/uid/TP40009542-CH5)学习更多关于在你的app中管理键盘的内容。注意你无法控制键盘的输入方法和布局，因为这些取决于用于的语言设置。
+
+### <a name="Temporary Views"/>Temporary Views
+#### 警告框
+警告框给人们影响他们对app或设备使用的重要信息。
 
 
 
