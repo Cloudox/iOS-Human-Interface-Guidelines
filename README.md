@@ -3050,6 +3050,40 @@ iOS定义了两种风格的进度视图：
 
 在水平紧凑环境下，操作表单从屏幕底部冒出来
 
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Temporary%20Views/5.jpeg)
+
+在水平常规环境下，操作列表总是在弹框中显示
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Temporary%20Views/6.jpeg)
+
+`API NOTE`  
+创建[UIAlertController](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAlertController_class/index.html#//apple_ref/occ/cl/UIAlertController)并定义[UIAlertControllerStyleActionSheet](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAlertController_class/index.html#//apple_ref/c/econst/UIAlertControllerStyleActionSheet)来在你的代码中使用操作列表。
+
+一个操作列表：
+* 作为用户操作的结果来显示
+* 显示两个或更多按钮
+
+使用操作列表来：
+* `提供完成任务的可选的方式。`操作列表允许你提供对当前任务有意义的一系列选项，并且不在UI中给这些选项稳定的位置。
+* `在完成一个有潜在危险的任务前获取警告。`一个操作列表提示用户考虑他们想要执行的步骤的潜在的危险并给他们一些替代的选择。
+
+`在水平紧凑环境下，包含一个取消按钮这样用户就可以简单安全地放弃任务。`将取消按钮放在操作列表的底部来鼓励用户在做出选择前阅读所有的选项。
+
+`在水平常规环境下，取决于用户发起任务的方式。`特别地：
+
+如果任务发起于|显示操作列表|是否包含取消按钮吗？
+--------------|------------|-------------------
+在弹框之外|无动画——也就是说，操作列表和弹框同时显示|不包含，因为用户可以点击弹框之外来关闭操作列表
+在弹框之内|有动画——也就是说，操作列表从弹框内容的顶部滑出|包含，因为用户需要在不关闭弹框的情况下关闭操作列表
+
+`在所有环境下，对执行有潜在危险的操作的按钮使用红色。`在操作列表的顶部显示一个红色按钮，因为越靠近操作列表的顶部，越吸引眼球。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Temporary%20Views/7.jpeg)
+
+`不要让用户滚动操作列表。`如果你在一个操作列表中包含太多的按钮，用户必须滚动才能看到所有的选项。这对用户来说是一个不好的体验，因为他们必须花费额外的时间来区分选项。而且，要避免不小心点到按钮地滚动也非常难。
+
+#### 模态视图
+
 
 
 
