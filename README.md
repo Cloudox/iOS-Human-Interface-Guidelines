@@ -3122,7 +3122,7 @@ iOS定义了两种风格的进度视图：
 
 ## <a name="Icon and Image Design"/>Icon and Image Design
 ### <a name="Icon and Image Sizes"/>Icon and Image Sizes
-
+#### 图标和图片尺寸
 
 
 
