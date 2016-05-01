@@ -3123,6 +3123,7 @@ iOS定义了两种风格的进度视图：
 ## <a name="Icon and Image Design"/>Icon and Image Design
 ### <a name="Icon and Image Sizes"/>Icon and Image Sizes
 #### 图标和图片尺寸
+每个app都需要一个app图标和一个启动文件或图片。此外，一些app还需要自定义的图标来表示导航栏、工具栏、标签栏和其他区域中app特定的内容、功能或者模式。表45-1列出了这些自定义图标和图片需要的尺寸。
 
 
 
