@@ -52,6 +52,7 @@
   * [Temporary Views](#Temporary Views)
 * [Icon and Image Design](#Icon and Image Design)
   * [Icon and Image Sizes](#Icon and Image Sizes)
+  * [App Icon](#App Icon)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -3127,6 +3128,32 @@ iOS定义了两种风格的进度视图：
 
 `表45-1` 自定义图标和图片的尺寸（像素单位）
 
+用处|iPhone 6s Plus和iPhone 6 Plus（@3x）|iPhone 6s，iPhone 6和iPhone 5（@2x）|iPhone 4s（@2x）|iPad 和iPad mini（@2x）|iPad 2和iPad mini（@1x）|iPad Pro（@2x）
+----|------------------------------------|------------------------------------|----------------|-----------------------|--------------------------|---------------
+App图标（所有app都需要）|180*180|120*120|120*120|152*152|76*76|167*167
+App Store上的App图标（所有app都需要）|1024*1024|1024*1024|1024*1024|1024*1024|1024*1024|1024*1024
+启动文件或图片（所有app都需要）|使用一个启动文件（查看[Launch Files](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/LaunchImages.html#//apple_ref/doc/uid/TP40006556-CH22-SW1)）|对iPhone 6s和iPhone6使用启动文件（查看[Launch Files](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/LaunchImages.html#//apple_ref/doc/uid/TP40006556-CH22-SW1)）对Iphone 5,640*1136|640*960|1536*2048（垂直）
+2048*1536（水平）|768*1024（垂直）
+1024*768（水平）|2048*2732（垂直）
+2732*2048（水平）2048*2732（垂直）
+2732*2048（水平）
+Spotlight搜索结果图标（推荐）|180*180|对iPhone 6s和iPhone 6，使用120*120
+对iPhone 5使用80*80|80*80|120*120|60*60|120*120
+设置图标（推荐）|87*87|58*58|58*58|58*58|29*29|58*58
+工具栏和导航栏图标（可选）|大概66*66|大概44*44|大概44*44|大概44*44|大概22*22|大概44*44
+标签栏图标（可选）|大概75*75（最大144*96）|大概50*50（最大96*64）|大概50*50（最大96*64）|大概50*50（最大96*64）|大概25*25（最大48*32）|大概50*50（最大96*64）
+网页剪辑图标（对web app和网页推荐）|180*180|120*120|120*120|152*152|76*76|167*167
+
+`NOTE`  
+如果你需要创建主屏幕快速操作的自定义图标，查看[Home Screen Quick Actions](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/3DTouch.html#//apple_ref/doc/uid/TP40006556-CH71-SW2)获取细节。你也可以从[https://developer.apple.com/design/downloads/Quick-Action-Guides.zip](https://developer.apple.com/design/downloads/Quick-Action-Guides.zip)下载主屏幕快速操作图标模板。
+
+对于App Store图标的例外——通常称为iTunesArtWork——你可以对你的图标命名任何你想要的名字。在你的Xcode工程中使用图片集合入口来获取你的app图标文件。分配对应的图片文件到你工程的图片集合中来添加图标。在编译期间，Xcode会对你app的Info.plist文件添加合适的键并防止图片到你app的包中。iOS会基于使用目标的尺寸来选择图标。查看[Asset Catalog Help](https://developer.apple.com/library/ios/recipes/xcode_help-image_catalog-1.0/_index.html#//apple_ref/doc/uid/TP40013303)学习更多关于集合目录的内容。
+
+对于所有的图片和图标，PNG格式是推荐的。你应该避免使用交错的PNG。
+
+标准图标和图片的色彩深度是24位。
+
+### <a name="App Icon"/>App Icon
 
 
 
