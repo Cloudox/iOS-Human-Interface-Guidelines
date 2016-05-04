@@ -50,6 +50,9 @@
   * [Content Views](#Content Views)
   * [Controls](#Controls)
   * [Temporary Views](#Temporary Views)
+* [Icon and Image Design](#Icon and Image Design)
+  * [Icon and Image Sizes](#Icon and Image Sizes)
+  * [App Icon](#App Icon)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -3084,6 +3087,75 @@ iOS定义了两种风格的进度视图：
 
 #### 模态视图
 模态视图——即一个模态展示的视图——提供了当前任务或工作流下自包含的功能。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/UI%20Elements/Temporary%20Views/8.jpeg)
+
+`API NOTE`  
+创建一个[UIPresentationController](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIPresentationController_class/index.html#//apple_ref/occ/cl/UIPresentationController)并定义合适的风格（查看[Modal Presentation Styles](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIViewController_Class/index.html#//apple_ref/c/tdef/UIModalPresentationStyle)获取完整的风格清单）来在你的代码中使用模态视图。
+
+一个模态视图：
+* 可以占据整个屏幕、父视图的全部区域（比如一个弹框）或者屏幕的一部分
+* 包含完成任务必须的文本和控件
+* 通常显示一个完成任务的按钮，一个关闭视图的按钮和一个放弃任务并关闭视图的取消按钮
+
+当你需要提供完成一个与你app主要功能相关的自包含的任务的功能的时候使用模态视图。模态视图尤其适合需要不永远显示在主appUI中的UI元素的多级子任务。
+
+`选择一个适合当前任务、当前风格以及你app的视觉风格的模态视图风格。`你可以使用任何定义在下方的风格：
+
+模态视图风格|外观|推荐用于
+------------|----|-------
+全屏|覆盖整个屏幕。|展示一个可能比较复杂的用户可以在模态视图中完成的任务。
+页表|在水平常规环境下，部分覆盖下方内容的风格。所有未被覆盖的区域都会变暗来防止用户与其交互。（在水平紧凑环境下，这个风格和全屏风格表现一致。）|展示一个可能比较复杂的用户可以在模态视图中完成的任务。
+表格|在水平常规环境下，在屏幕中央显示内容的风格。所有未被覆盖的区域都会变暗来防止用户与其交互。在一些情况下，当键盘出现时模态视图的位置会调整。（在水平紧凑环境下，这个风格和全屏风格表现一致。）|从用户处收集结构性的信息。
+当前环境|使用和父视图一致的尺寸。|和一个分栏视图、弹框或者其他非全屏视图一起显示模态内容。
+
+`不要在弹框的顶部显示模态视图。`以防可能出现警告框，任何内容都不应该在弹框的顶部显示。在很少的情况下你可能需要显示一个模态视图作为用户在弹框中操作的结果，这时要在打开模态视图前关闭弹框。
+
+`协调模态视图和你app外观的整体视觉效果。`比如说，模态视图经常包含一个导航栏用来容纳标题和取消以及完成模态视图任务的按钮。当出现这个情况时，导航栏就应该使用与app导航栏一致的外观。
+
+`合适的话显示用以明确任务的标题。`你可能还会在视图的其他区域显示文本来更完整地描述任务或者提供一些指南。
+
+`选择一个合适的显示模态视图的过渡风格。`使用一个和你的app和谐一致且加强用户坠模态视图展示的临时环境的意识的风格。你可以定义下面的过渡风格之一来达成这个效果：
+* `垂直。`在垂直风格下，模态视图从屏幕的底部边缘滑出并在关闭的时候滑回去（这是默认的过渡风格）。
+* `弹出。`在弹出风格下，当前视图水平方向从右到左地显示模态视图。视觉上，模态视图看起来像是当前视图的背部。当模态视图关闭时，它从左到右地水平弹出，显示之前的视图。
+
+`如果你变化一个app的模态视图过渡风格，以对用户有意义的方式去做。`用户会很快发现一个app行为的不同并且认为这意味着什么。最好建立一个逻辑性、统一的模式让用户可以很容易地察觉并记住，并且不要随便更改过渡风格，除非有好的理由。
+
+## <a name="Icon and Image Design"/>Icon and Image Design
+### <a name="Icon and Image Sizes"/>Icon and Image Sizes
+#### 图标和图片尺寸
+每个app都需要一个app图标和一个启动文件或图片。此外，一些app还需要自定义的图标来表示导航栏、工具栏、标签栏和其他区域中app特定的内容、功能或者模式。表45-1列出了这些自定义图标和图片需要的尺寸。
+
+`表45-1` 自定义图标和图片的尺寸（像素单位）
+
+用处|iPhone 6s Plus和iPhone 6 Plus（@3x）|iPhone 6s，iPhone 6和iPhone 5（@2x）|iPhone 4s（@2x）|iPad 和iPad mini（@2x）|iPad 2和iPad mini（@1x）|iPad Pro（@2x）
+----|------------------------------------|------------------------------------|----------------|-----------------------|--------------------------|---------------
+App图标（所有app都需要）|180*180|120*120|120*120|152*152|76*76|167*167
+App Store上的App图标（所有app都需要）|1024*1024|1024*1024|1024*1024|1024*1024|1024*1024|1024*1024
+启动文件或图片（所有app都需要）|使用一个启动文件（查看[Launch Files](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/LaunchImages.html#//apple_ref/doc/uid/TP40006556-CH22-SW1)）|对iPhone 6s和iPhone6使用启动文件（查看[Launch Files](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/LaunchImages.html#//apple_ref/doc/uid/TP40006556-CH22-SW1)）对Iphone 5,640*1136|640*960|1536*2048（垂直）
+2048*1536（水平）|768*1024（垂直）
+1024*768（水平）|2048*2732（垂直）
+2732*2048（水平）2048*2732（垂直）
+2732*2048（水平）
+Spotlight搜索结果图标（推荐）|180*180|对iPhone 6s和iPhone 6，使用120*120
+对iPhone 5使用80*80|80*80|120*120|60*60|120*120
+设置图标（推荐）|87*87|58*58|58*58|58*58|29*29|58*58
+工具栏和导航栏图标（可选）|大概66*66|大概44*44|大概44*44|大概44*44|大概22*22|大概44*44
+标签栏图标（可选）|大概75*75（最大144*96）|大概50*50（最大96*64）|大概50*50（最大96*64）|大概50*50（最大96*64）|大概25*25（最大48*32）|大概50*50（最大96*64）
+网页剪辑图标（对web app和网页推荐）|180*180|120*120|120*120|152*152|76*76|167*167
+
+`NOTE`  
+如果你需要创建主屏幕快速操作的自定义图标，查看[Home Screen Quick Actions](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/3DTouch.html#//apple_ref/doc/uid/TP40006556-CH71-SW2)获取细节。你也可以从[https://developer.apple.com/design/downloads/Quick-Action-Guides.zip](https://developer.apple.com/design/downloads/Quick-Action-Guides.zip)下载主屏幕快速操作图标模板。
+
+对于App Store图标的例外——通常称为iTunesArtWork——你可以对你的图标命名任何你想要的名字。在你的Xcode工程中使用图片集合入口来获取你的app图标文件。分配对应的图片文件到你工程的图片集合中来添加图标。在编译期间，Xcode会对你app的Info.plist文件添加合适的键并防止图片到你app的包中。iOS会基于使用目标的尺寸来选择图标。查看[Asset Catalog Help](https://developer.apple.com/library/ios/recipes/xcode_help-image_catalog-1.0/_index.html#//apple_ref/doc/uid/TP40013303)学习更多关于集合目录的内容。
+
+对于所有的图片和图标，PNG格式是推荐的。你应该避免使用交错的PNG。
+
+标准图标和图片的色彩深度是24位。
+
+### <a name="App Icon"/>App Icon
+#### App 图标
+每个app都需要一个漂亮、难忘的app图标来在App Strore中吸引人们以及在他们的主屏幕中脱颖而出。iOS可以使用游戏中心、搜索结果、设置以及代表app创建的文档的不同版本的app图标。
 
 
 
