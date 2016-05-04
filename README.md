@@ -3154,6 +3154,8 @@ Spotlight搜索结果图标（推荐）|180*180|对iPhone 6s和iPhone 6，使用
 标准图标和图片的色彩深度是24位。
 
 ### <a name="App Icon"/>App Icon
+#### App 图标
+每个app都需要一个漂亮、难忘的app图标来在App Strore中吸引人们以及在他们的主屏幕中脱颖而出。iOS可以使用游戏中心、搜索结果、设置以及代表app创建的文档的不同版本的app图标。
 
 
 
