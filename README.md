@@ -53,6 +53,7 @@
 * [Icon and Image Design](#Icon and Image Design)
   * [Icon and Image Sizes](#Icon and Image Sizes)
   * [App Icon](#App Icon)
+  * [Launch Files](#Launch Files)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -3156,6 +3157,65 @@ Spotlight搜索结果图标（推荐）|180*180|对iPhone 6s和iPhone 6，使用
 ### <a name="App Icon"/>App Icon
 #### App 图标
 每个app都需要一个漂亮、难忘的app图标来在App Strore中吸引人们以及在他们的主屏幕中脱颖而出。iOS可以使用游戏中心、搜索结果、设置以及代表app创建的文档的不同版本的app图标。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/Icon%20and%20Image%20Design/App%20Icon/9.jpeg)
+
+`为了最好的结果，寻求专业的平面设计师的帮助。`一个有经验的平面设计师可以帮助你设计你app整体的视觉风格并应用到内部所有的图标和图片。
+
+`使用通用的图像，这样人们会很容易辨认。`一般来说，不要专注于一个元素次要的或模糊的方面。比如说，邮件app图标使用一个信封，而不是田园的邮箱、邮递员包或者邮局的象征。
+
+`拥抱简单。尤其不要塞一堆不同的图片到你的图标中。`找一个捕捉到你app本质的简单的元素，并以简单、独特地造型表达这个元素。谨慎地添加细节。如果一个图标的内容或造型过于复杂，细节就会变得迷惑并且在小尺寸上可能显示模糊。
+
+`TIP`  
+将你的app移动到主屏幕的一个文件夹中来测试在小尺寸时的表现。进一步地，移动多个app图标到一个文件夹中来查看你的app图标是否看起来不错并且保持区分度。
+
+`创建一个你app主要概念的抽象解释。`在app图标中使用照片或截图很少会好，因为图片细节在小尺寸下会非常难以看清。最好以一种抽象的方式解释现实，因为这样做可以帮助你强调你想要用户注意的主题。
+
+`如果你想要描绘真实的物质，做到准确。`描述真实对象的图标应该准确地复制物质的特征，比如布、玻璃、纸和金属，并且要传达物品的重量和感受。
+
+`确保app图标在多种背景下看起来都不错。`不要只在明亮或阴暗的背景下测试你的图标，因为你不能预测人们会选择哪种墙纸。
+
+`不要透明。`app图标应该是不透明的。如果图标的边界小于推荐的尺寸——或者你使用透明度来创建透明的区域——由此产生的图标会显示得漂浮于一个黑色的背景，这会在用户选择的漂亮的墙纸上看起来特别的没有吸引力。
+
+`不要在你的作品中使用iOS交互元素。`你不会希望你的用户对你的图标或图片与iOS的UI产生迷惑。
+
+`不要在你的作品中复制苹果硬件产品。`代表苹果产品的符号是有版权的，而且不能在你的图标和图片中二次创造。一般来说，最好不要在你的作品中复制任何设备，因为这些设计都改变地很频繁，而基于它们的图标很快就会看起来过期。
+
+`不要在你的界面中重复使用iOS app的图标。`对于用户来说，看到同样的图标在系统的多个地方用于表示不同的事物会迷惑。
+
+`为不同的设备创建不同尺寸的app图标。`你想要确保在所有支持的设备上你的app图标都看起来很好。查看[Icon and Image Sizes](http://blog.csdn.net/cloudox_/article/details/51148635)获取设备对应的值。
+
+`当iOS在主屏幕上显示一个app的图标时，它会自动生成圆角。`确保你的图标有90度的角，这样当生成圆角时就会看起来不会。比如：
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/Icon%20and%20Image%20Design/App%20Icon/10.jpeg)
+
+`创建一个你app图标的大号版本用于现在是App Store中。`即使这个版本被立即辨识为你的app图标很重要，它也可以更加地精细和详细。这个版本你的app图标不添加视觉效果。
+
+如[Icon and Image Sizes](http://blog.csdn.net/cloudox_/article/details/51148635)表中所示，你app图标的大版本应该是1024*1024像素且命名为iTunesArtwork@2x。（如果需要支持一些@1x的设备，创建一个512*512且命名为iTunesArtwork的版本。）查看[Platform Version Information](https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Appendices/Properties.html#//apple_ref/doc/uid/TP40011225-CH26-SW3)获取一些关于这个版本app图标额外的信息。
+
+`NOTE`  
+iOS可能还会在其他地方使用这个大图片。比如在iPad app中，iOS使用大图片来生成大文档的图标。
+
+如果你开发一个用于ad-hoc发布的app（也就是只供内部使用，而不通过App Store），你也必须提供大版本的app图标。这用于在iTunes中定义你的app。
+
+#### 文档图标
+如果你的iOS app创建自定义类型的文档，你会希望用户可以一眼就辨识出这些文档。你不需要因此专门设计一个自定义的图标，因为iOS会使用你的app图标来为你创建文档图标。
+
+#### Spotlight和设置图标
+每个app都应该提供一个小图标供iOS在Spotlight搜索app名字时显示。支持设置的app也应该提供一个小图标来在内置的设置app中标识它们。
+
+这些图标应该清晰地标识你的app，这样人们就可以在搜索结果列表或设置中标识它。比如说，内置的app图标很容易在设置中辨识出来，即使图标很小：
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/Icon%20and%20Image%20Design/App%20Icon/11.jpeg)
+
+与app图标一样，你可以任意命名这些小图标，因为iOS是基于图标的尺寸是否适于使用目标而选择的。
+
+对于所有的设备，为Spotlight搜索结果和设置提供不同的图标。如果你不提供这些图标，可能会收缩你的app图标来在这些地方显示。查看[Icon and Image Sizes](http://blog.csdn.net/cloudox_/article/details/51148635)表来获取关于特定尺寸的细节。
+
+`NOTE`  
+如果你图标的背景是白色的，不要添加灰色的覆盖来增加其在设置中的可见性。iOS会添加一个像素的边框，这样所有的图标都会在设置的白色背景中显示很好。
+
+### <a name="Launch Files"/>Launch Files
 
 
 
