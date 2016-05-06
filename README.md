@@ -3216,6 +3216,29 @@ iOS可能还会在其他地方使用这个大图片。比如在iPad app中，iOS
 如果你图标的背景是白色的，不要添加灰色的覆盖来增加其在设置中的可见性。iOS会添加一个像素的边框，这样所有的图标都会在设置的白色背景中显示很好。
 
 ### <a name="Launch Files"/>Launch Files
+启动文件（或者图片）提供了简单的在你的app启动的时候iOS显示的占位图。这个占位图会让用户觉得你的app很快就有响应，因为它直接显示而且很快会被你的app的第一个屏幕代替。每个app都必须提供一个启动文件或者至少一个静态图片。
+
+在iOS 8及以后的系统中，你可以创建一个XIB或者故事版文件来代替静态启动图片。当你在Interface Builder中创建一个启动文件时，使用尺寸类来定义不同显示环境的不同布局，使用Auto Layout来做小的调整。使用尺寸类和Auto Layout意味着你可以创建一个简单的在所有设备和显示环境下都看起来不错的启动文件。（查看[Build In Adaptivity](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/LayoutandAppearance.html#//apple_ref/doc/uid/TP40006556-CH54-SW2)获取显示环境和尺寸类的概览；查看[Size Classes Design Help](https://developer.apple.com/library/ios/recipes/xcode_help-IB_adaptive_sizes/_index.html#//apple_ref/doc/uid/TP40014436)学习如何在Interface Builder中使用尺寸类。）
+
+如果你还需要支持早期的iOS版本，你可以继续在启动文件之外提供静态启动图片。
+
+`IMPORTANT`  
+使用启动XIB或者故事版文件表明你的app运行在iPhone 6 Plus或者Iphone6上。
+
+下面的设计指南适用于启动文件和静态启动图片。
+
+`设计一个提升用户体验的简单的启动图片。`尤其注意启动图片不是提供这些的时机：
+* 一个“app入口体验”，比如启动画面
+* 一个“关于”窗口
+* 品牌元素，除非它们是你app第一个界面的静态部分
+
+因为用户可能会在app之间频繁切换，你应该尽量将启动时间缩到最短，并且设计一个淡化体验而不是吸引注意力的启动图片。
+
+`设计一个与app第一个界面相同的启动图片，`除了：
+* `文本。`启动图片是静态的，所以所以任何你显示的文本都不应是局部的。
+* `可能更改的UI元素。`如果你包含了app启动完成后可能看起来不同的元素，用户会感受到启动图片和第一个app界面之间不愉快的闪现。
+
+如果你觉得遵循这些指南会导致朴素、无聊的启动图片，你是对的。记住，启动图片不是给你一个艺术表达的机会。它只是致力于通过快速启动和立即可以使用来加强用户对你app的感知。比如说，设置和天气都提供了一个只比背景图多一点点的启动图片。
 
 
 
