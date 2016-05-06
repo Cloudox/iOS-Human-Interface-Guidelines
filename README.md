@@ -54,6 +54,7 @@
   * [Icon and Image Sizes](#Icon and Image Sizes)
   * [App Icon](#App Icon)
   * [Launch Files](#Launch Files)
+  * [Template Icons](#Template Icons)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -3239,6 +3240,23 @@ iOS可能还会在其他地方使用这个大图片。比如在iPad app中，iOS
 * `可能更改的UI元素。`如果你包含了app启动完成后可能看起来不同的元素，用户会感受到启动图片和第一个app界面之间不愉快的闪现。
 
 如果你觉得遵循这些指南会导致朴素、无聊的启动图片，你是对的。记住，启动图片不是给你一个艺术表达的机会。它只是致力于通过快速启动和立即可以使用来加强用户对你app的感知。比如说，设置和天气都提供了一个只比背景图多一点点的启动图片。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/Icon%20and%20Image%20Design/Launch%20Files/1.png)
+
+如果你需要使用静态启动图片，为不同的设备创建不同尺寸的图片。所有设备的静态启动图片都必须包含状态栏区域。查看[Icon and Image Sizes](http://blog.csdn.net/cloudox_/article/details/51148635)获取尺寸信息。
+
+即使最好为iPhone 6和iPhone 6 Plus使用启动文件，必要的话你也可以提供静态启动图片来代替。如果你需要为这些设备创建静态启动图片，使用下面的尺寸：
+
+对iPhone 6：
+* 垂直用750*1334（@2x）
+* 水平用1334*750（@2x）
+
+对iPhone 6 Plus：
+* 垂直用1242*2208（@3x）
+* 水平用2208*1242（@3x）
+
+### <a name="Template Icons"/>Template Icons
+
 
 
 
