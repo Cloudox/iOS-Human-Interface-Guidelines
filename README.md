@@ -3256,6 +3256,7 @@ iOS可能还会在其他地方使用这个大图片。比如在iPad app中，iOS
 * 水平用2208*1242（@3x）
 
 ### <a name="Template Icons"/>Template Icons
+#### 模板图标
 
 
 
