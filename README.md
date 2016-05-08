@@ -3257,6 +3257,7 @@ iOS可能还会在其他地方使用这个大图片。比如在iPad app中，iOS
 
 ### <a name="Template Icons"/>Template Icons
 #### 模板图标
+你为栏或者主屏幕快捷操作创建的自定义图标也称为模板图标或者图像，因为iOS将其用于产生当你app运行时你看到的图标。
 
 
 
