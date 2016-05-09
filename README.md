@@ -55,6 +55,7 @@
   * [App Icon](#App Icon)
   * [Launch Files](#Launch Files)
   * [Template Icons](#Template Icons)
+  * [Web Clip Icons](#Web Clip Icons)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -3272,6 +3273,43 @@ iOS定义了很多标准的小图标，比如刷新、动作、添加和喜欢�
 无论你只使用自定义的图标还是混合自定义和标准的，你的app中所有的图标应该在感知尺寸、细节等级和视觉分量上看起来属于同一个系列。
 
 比如说，看一看iOS栏图标系列，注意它们在尺寸、细节和分量上是如何相似来产生一种和谐统一的感觉的。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/Icon%20and%20Image%20Design/Template%20Icons/1.png)
+
+为了创建连贯的系列图标，一致性是关键：每个图标都应该尽可能地使用相同的透视和笔画粗细。为了确保所有的图标都有一只的感知尺寸，你可能需要创建一些不同实际尺寸的图标。比如说，下面显示的系统提供的图标集合都有相同的感知尺寸，机智喜欢和语音信箱比其他三个图标实际上要大一点点。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/Icon%20and%20Image%20Design/Template%20Icons/2.png)
+
+如果你设计一个自定义的标签栏图标，你应该提供两个版本——一个未选中的外观和一个选中后的外观。选中后的外观往往是未选中外观的填充版本，但是一些设计需要改变这一方式。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/Icon%20and%20Image%20Design/Template%20Icons/3.jpeg)
+
+创建一个与未选中图标内部细节反转的填充版本的图标（例如收音机图标），这样它们就会在选中版中维持特征。键盘图标也有内部细节，但是如果把背景填充并将圆形变成白线，这样的选中版会变得迷惑并且难以识别。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/Icon%20and%20Image%20Design/Template%20Icons/4.jpeg)
+
+有时候，设计需要轻微的修改来使选中时好看。比如说，因为计时器和广播图标包含开放区域，所以选中版浓缩了一点笔触来融入圆形外壳。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/Icon%20and%20Image%20Design/Template%20Icons/5.jpeg)
+
+如果一个图标填充后变得不好辨认，一个好的替代是使用粗一点的笔触来绘制选中版。比如说，语音邮箱和阅读清单图标就使用了2 point的笔触，而不是用来绘制未选中版的1point笔触。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/Icon%20and%20Image%20Design/Template%20Icons/6.jpeg)
+
+有时候，在笔触描绘轮廓时图标的形状有些细节不太好看。当这种情况时——比如音乐和艺术家图标——你可以为图标的两个版本都使用填充外观。对用户来说区分选中和未选中的外观很容易，因为选中的外观颜色深并且有配色。
+
+要设计一个自定义的小图标，要遵循下面的规则：
+* 使用透明来定义图标的形状。iOS忽略所有的颜色信息，所以不必要使用超过一个以上的填充色。
+* 不要包含阴影。
+* 使用反锯齿。
+
+如果你想要设计一个看起来与iOS图标系列相关的小图标，那就使用非常细的笔触来绘制它。特别是1point的笔触（即@2x分辨率用2 pixel笔触）对大部分图标都会非常好。  
+不管图标的视觉风格是什么，都要使用[Icon and Image Sizes(http://blog.csdn.net/cloudox_/article/details/51148635)中的尺寸来创建自定义工具栏、导航栏和标签栏的图标。如果你为主屏幕快捷操作设计自定义图标，查看[Home Screen Quick Actions](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/3DTouch.html#//apple_ref/doc/uid/TP40006556-CH71-SW2)获取细节。
+
+不要在自定义的标签栏图标中包含文本。用标签栏元素API来设置每个标签的标题（查看[initWithTitle:image:tag:](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITabBarItem_Class/index.html#//apple_ref/occ/instm/UITabBarItem/initWithTitle:image:tag:)获取示例）。如果你需要调整标题的自动布局，你可以使用标题调整的API，比如[setTitlePositionAdjustment:](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITabBarItem_Class/index.html#//apple_ref/occ/instm/UITabBarItem/setTitlePositionAdjustment:)。
+
+### <a name="Web Clip Icons"/>Web Clip Icons
+#### Web图标
 
 
 
