@@ -54,6 +54,7 @@
   * [Icon and Image Sizes](#Icon and Image Sizes)
   * [App Icon](#App Icon)
   * [Launch Files](#Launch Files)
+  * [Template Icons](#Template Icons)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -3239,6 +3240,39 @@ iOS可能还会在其他地方使用这个大图片。比如在iPad app中，iOS
 * `可能更改的UI元素。`如果你包含了app启动完成后可能看起来不同的元素，用户会感受到启动图片和第一个app界面之间不愉快的闪现。
 
 如果你觉得遵循这些指南会导致朴素、无聊的启动图片，你是对的。记住，启动图片不是给你一个艺术表达的机会。它只是致力于通过快速启动和立即可以使用来加强用户对你app的感知。比如说，设置和天气都提供了一个只比背景图多一点点的启动图片。
+
+![](https://github.com/Cloudox/iOS-Human-Interface-Guidelines/blob/master/Icon%20and%20Image%20Design/Launch%20Files/1.png)
+
+如果你需要使用静态启动图片，为不同的设备创建不同尺寸的图片。所有设备的静态启动图片都必须包含状态栏区域。查看[Icon and Image Sizes](http://blog.csdn.net/cloudox_/article/details/51148635)获取尺寸信息。
+
+即使最好为iPhone 6和iPhone 6 Plus使用启动文件，必要的话你也可以提供静态启动图片来代替。如果你需要为这些设备创建静态启动图片，使用下面的尺寸：
+
+对iPhone 6：
+* 垂直用750*1334（@2x）
+* 水平用1334*750（@2x）
+
+对iPhone 6 Plus：
+* 垂直用1242*2208（@3x）
+* 水平用2208*1242（@3x）
+
+### <a name="Template Icons"/>Template Icons
+#### 模板图标
+你为栏或者主屏幕快捷操作创建的自定义图标也称为模板图标或者图像，因为iOS将其用于产生当你app运行时你看到的图标。
+
+iOS定义了很多标准的小图标，比如刷新、动作、添加和喜欢。你应该尽可能地使用这些按钮和图标来代表你app中的标准任务。（查看[Toolbar and Navigation Bar Buttons](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Bars.html#//apple_ref/doc/uid/TP40006556-CH12-SW33)和[Tab Bar Icons](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Bars.html#//apple_ref/doc/uid/TP40006556-CH12-SW34)来学习更多关于你可以在栏中使用的标准按钮和图标的内容。）
+
+如果你的app包含了不能被标准图标代表的任务或模式——或者如果标准图标与你的app风格不协调——你可以设计你自己的小图标。在高层面上，你应该以这样的图标为目标：
+* `简单合理。`太多的细节会让图标显得草率或者难以辨认。
+* `不会很容易被误认为系统提供的图标之一。`用户应该能够一眼区分你的自定义图标和标准图标。
+* `易于理解并且广泛接受。`尽量创建一个大部分用户都能正确理解且没有用户会觉得被冒犯的符号。
+
+`IMPORTANT`  
+确保不要在你的设计中使用复制苹果产品的图像。这些符号是有版权的，并且产品的设计可能会频繁地更改。
+
+无论你只使用自定义的图标还是混合自定义和标准的，你的app中所有的图标应该在感知尺寸、细节等级和视觉分量上看起来属于同一个系列。
+
+比如说，看一看iOS栏图标系列，注意它们在尺寸、细节和分量上是如何相似来产生一种和谐统一的感觉的。
+
 
 
 
