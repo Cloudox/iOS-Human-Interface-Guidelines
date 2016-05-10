@@ -56,6 +56,7 @@
   * [Launch Files](#Launch Files)
   * [Template Icons](#Template Icons)
   * [Web Clip Icons](#Web Clip Icons)
+  * [Creating Resizable Images](#Creating Resizable Images)
 
 ## <a name="UI Design Basics"/>UI Design Basics
 ### <a name="Designing for iOS"/>Designing for iOS
@@ -3310,6 +3311,19 @@ iOS定义了很多标准的小图标，比如刷新、动作、添加和喜欢�
 
 ### <a name="Web Clip Icons"/>Web Clip Icons
 #### Web图标
+如果你有一个web app或者网站，你可以提供一个自定义的图标让用户在他们的主屏幕上显示并使用web特性。用户通过一次简单的点击图标来到达你的网站内容。你可以创建一个图标来代表你的整个网站或者单个页面。
+
+iOS还会在Safari收藏夹中显示web图标，这是一个在用户点击URL区域或者打开新标签时显示的由图标组成的网格。
+
+如果你的web内容可以通过熟悉的图像或者有识别度的颜色来区分，将其包含在你的图标中就有意义。但是要确保你的图标在设备上看起来好看，你也应该遵循本节的指南。（查看[Specifying a Webpage Icon for Web Clip](https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4)学习如何在你的web内容中添加代码来提供一个自定义图标。）
+
+查看[Icon and Image Sizes](http://blog.csdn.net/cloudox_/article/details/51148635)获取图标的尺寸。
+
+`NOTE`  
+你可以通过命名你的图标为apple-touch-icon-precomposed.png来防止其他的影响。
+
+### <a name="Creating Resizable Images"/>Creating Resizable Images
+#### 创建可调整大小的图片
 
 
 
